@@ -163,7 +163,9 @@ body.dark{background:var(--dark);color:#fff}
   #archive #peek{display:none}
   #about .grid{grid-template-columns:1fr;gap:32px}
   .foot .dk .g{grid-template-columns:1fr;gap:28px}
-  .foot .big{font-size:34px}
+  .foot{margin-top:60px}
+  .foot .big{font-size:32px;padding-bottom:44px}
+  .foot .dk{padding:40px var(--pad)}
 }
 </style>
 </head>
@@ -332,6 +334,7 @@ P.forEach((p,k)=>{
 });
 
 let curF='all',curS='all';
+const isMob = () => window.matchMedia('(max-width:860px)').matches;
 function applyFilter(){
   const vis=[];
   field.querySelectorAll('.sp').forEach(sp=>{
@@ -341,17 +344,34 @@ function applyFilter(){
     sp.classList.toggle('hide',!ok);
     if(ok) vis.push(sp);
   });
-  vis.forEach((sp,k)=>{
-    const L=LAY[k%LAY.length];
-    const wrapN=Math.floor(k/LAY.length);
-    sp.style.top=(L.t + wrapN*1980)+'px';
-    sp.style.left=L.l; sp.style.width=L.w;
-  });
-  const maxT=vis.length?Math.max(...vis.map((_,k)=>LAY[k%LAY.length].t+Math.floor(k/LAY.length)*1980)):0;
-  field.style.height=(maxT+520)+'px';
+  if(isMob()){
+    /* su mobile le immagini stanno in colonna: nessuna posizione assoluta, nessuna altezza forzata */
+    vis.forEach(sp=>{sp.style.top='';sp.style.left='';sp.style.width='';});
+    field.style.height='auto';
+  } else {
+    vis.forEach((sp,k)=>{
+      const L=LAY[k%LAY.length];
+      const wrapN=Math.floor(k/LAY.length);
+      sp.style.top=(L.t + wrapN*1980)+'px';
+      sp.style.left=L.l; sp.style.width=L.w;
+    });
+    measure(vis);
+  }
   $('#subfilters').classList.toggle('show', curF==='Styling');
 }
-applyFilter();
+/* l'altezza del campo si misura sulle immagini vere, non sui valori teorici,
+   altrimenti l'ultima riga finisce sotto al footer */
+function measure(vis){
+  if(isMob()) return;
+  let bottom=0;
+  vis.forEach(sp=>{bottom=Math.max(bottom, sp.offsetTop+sp.offsetHeight);});
+  field.style.height=(bottom+140)+'px';
+}
+field.querySelectorAll('img').forEach(im=>im.addEventListener('load',()=>{
+  if(!isMob()) measure([...field.querySelectorAll('.sp:not(.hide)')]);
+}));
+
+let rsz; window.addEventListener('resize',()=>{clearTimeout(rsz);rsz=setTimeout(applyFilter,180);});
 
 $('#filters').addEventListener('click',e=>{
   const s=e.target.closest('span'); if(!s)return;
@@ -400,7 +420,7 @@ $('#pw').addEventListener('keydown',e=>{
 /* ---------- PROGETTO ---------- */
 let pIdx=0;
 function openProject(id,silent){
-  if(!silent) location.hash='p/'+id;
+  if(!silent) location.hash='/p/'+id;
   pIdx=P.findIndex(p=>p.id===id);
   const p=P[pIdx];
   $('#pTitle').textContent=p.n;
@@ -427,13 +447,15 @@ $('#pNext').addEventListener('click',()=>openProject(P[(pIdx+1)%P.length].id));
 
 /* ---------- ROUTING ---------- */
 function go(id,silent){
-  if(!silent) location.hash = id==='home' ? '' : id;
+  if(!silent) location.hash = id==='home' ? '' : '/'+id;
   document.querySelectorAll('.page').forEach(s=>s.classList.toggle('on',s.id===id));
   document.body.classList.toggle('dark',id==='archive');
   document.body.classList.toggle('athome',id==='home');
   document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.go===id));
-  if(id==='archive') setTimeout(()=>$('#pw').focus(),80);
+  if(id==='archive') setTimeout(()=>{const i=$('#pw'); if(i&&!isMob()) i.focus();},80);
   window.scrollTo(0,0);
+  requestAnimationFrame(()=>window.scrollTo(0,0));
+  setTimeout(()=>window.scrollTo(0,0),60);
 }
 function setFilter(cat){
   const btn=[...$('#filters').querySelectorAll('span')].find(x=>x.dataset.f===cat);
@@ -452,7 +474,7 @@ document.addEventListener('keydown',e=>{
 });
 /* indirizzo condivisibile: #work #archive #about #p/thr */
 function syncHash(){
-  const h=location.hash.replace('#','');
+  const h=location.hash.replace('#','').replace(/^\//,'');
   if(!h){go('home');return;}
   if(h.startsWith('p/')){const id=h.slice(2);if(P.find(x=>x.id===id)){openProject(id,true);return;}}
   if(['work','archive','about','home'].includes(h)){go(h,true);return;}
