@@ -498,6 +498,17 @@ function syncHash(){
 window.addEventListener('hashchange',syncHash);
 syncHash();
 
+/* ---------- EMAIL: apre il programma di posta e intanto copia l'indirizzo ---------- */
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="mailto:"]'); if(!a)return;
+  const addr=a.getAttribute('href').replace('mailto:','');
+  if(navigator.clipboard) navigator.clipboard.writeText(addr).catch(()=>{});
+  const old=a.textContent, w=a.offsetWidth;
+  a.style.display='inline-block'; a.style.minWidth=w+'px';
+  a.textContent='Copied';
+  setTimeout(()=>{a.textContent=old;a.style.minWidth='';},1400);
+});
+
 /* ---------- OROLOGI ---------- */
 function clocks(){
   const f=z=>new Date().toLocaleTimeString('en-GB',{timeZone:z,hour12:false});
