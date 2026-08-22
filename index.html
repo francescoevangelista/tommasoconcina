@@ -102,6 +102,14 @@ body.dark #corner .mono{color:var(--darkdim)}
 #project .nextp a{font-family:var(--serif);font-size:clamp(22px,2vw,30px);cursor:pointer}
 #project .nextp a:hover{opacity:.45}
 
+#toast{position:fixed;left:var(--pad);bottom:22px;z-index:500;
+  font-family:var(--mono);font-size:var(--t-mono);letter-spacing:.02em;
+  background:var(--ink);color:#fff;padding:9px 14px;
+  opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .3s ease;pointer-events:none}
+#toast.on{opacity:1;transform:translateY(0)}
+a:focus{outline:none}
+a:focus-visible{outline:1px solid currentColor;outline-offset:3px}
+
 /* ---------- ARCHIVIO ---------- */
 body.dark{background:var(--dark);color:#fff}
 #archive{background:var(--dark);color:#fff}
@@ -499,14 +507,17 @@ window.addEventListener('hashchange',syncHash);
 syncHash();
 
 /* ---------- EMAIL: apre il programma di posta e intanto copia l'indirizzo ---------- */
+let toastEl,toastT;
+function toast(msg){
+  if(!toastEl){toastEl=document.createElement('div');toastEl.id='toast';document.body.appendChild(toastEl);}
+  toastEl.textContent=msg; toastEl.classList.add('on');
+  clearTimeout(toastT); toastT=setTimeout(()=>toastEl.classList.remove('on'),1800);
+}
 document.addEventListener('click',e=>{
   const a=e.target.closest('a[href^="mailto:"]'); if(!a)return;
   const addr=a.getAttribute('href').replace('mailto:','');
   if(navigator.clipboard) navigator.clipboard.writeText(addr).catch(()=>{});
-  const old=a.textContent, w=a.offsetWidth;
-  a.style.display='inline-block'; a.style.minWidth=w+'px';
-  a.textContent='Copied';
-  setTimeout(()=>{a.textContent=old;a.style.minWidth='';},1400);
+  toast(addr+' copied');
 });
 
 /* ---------- OROLOGI ---------- */
