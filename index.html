@@ -12,7 +12,7 @@
   --bg:#fff; --ink:#111; --dim:#9a9a9a; --line:#e9e7e2; --tint:#f2f0eb;
   --dark:#0d0d0d; --darkdim:#6f6f6f;
   --pad:34px;
-  --t-nav:12px; --t-micro:10px; --t-mono:11px; --t-list:14px; --t-body:16px;
+  --t-nav:15px; --t-micro:10px; --t-mono:13px; --t-list:15px; --t-body:17px;
   --ls:.14em;
 }
 /* --- tre set tipografici, si cambiano con i tasti 1 2 3 --- */
@@ -30,8 +30,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 
 /* ================= NAV PERSISTENTE ================= */
 #nav{position:absolute;top:0;left:0;z-index:200;padding:var(--pad) 30px 18px var(--pad)}
-#nav .wm{font-size:var(--t-nav);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;margin-bottom:22px}
-#nav a{display:block;font-size:var(--t-nav);letter-spacing:.1em;text-transform:uppercase;line-height:2;color:var(--dim);cursor:pointer}
+#nav .wm{font-size:var(--t-nav);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;margin-bottom:26px}
+#nav a{display:block;font-size:14px;letter-spacing:.14em;text-transform:uppercase;line-height:2.05;color:var(--dim);cursor:pointer}
 #nav a:hover,#nav a.on{color:var(--ink)}
 body.dark #nav .wm{color:#fff}
 body.dark #nav a{color:var(--darkdim)}
@@ -53,7 +53,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 #home .r{position:relative;overflow:hidden;background:var(--tint)}
 #home .sel{position:absolute;top:50%;left:var(--pad);transform:translateY(-50%)}
 #home .sel .lbl{display:block;margin-bottom:24px}
-#home .sel a{display:block;font-size:clamp(20px,2.1vw,30px);line-height:1.62;letter-spacing:-.01em;color:var(--ink)}
+#home .sel a{display:block;font-size:clamp(18px,1.75vw,26px);line-height:1.7;letter-spacing:-.005em;color:var(--ink)}
 #home .sel a:hover{opacity:.4}
 #home .clocks{position:absolute;left:var(--pad);bottom:var(--pad)}
 #home .clocks .mono{display:block;color:var(--dim);line-height:1.9}
@@ -90,13 +90,17 @@ body.dark #corner .mono{color:var(--darkdim)}
 /* ---------- PROGETTO ---------- */
 #project .head{position:absolute;top:calc(var(--pad) + 150px);left:var(--pad);z-index:60;width:20%}
 #project .head h2{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2vw,30px);line-height:1.15;margin-bottom:18px}
-#project .head .pn{font-family:var(--mono);font-size:var(--t-mono);color:var(--dim);line-height:2;cursor:pointer;display:block}
+#project .head .pn{font-family:var(--mono);font-size:var(--t-mono);color:var(--dim);line-height:2;cursor:pointer;display:block;margin-top:6px}
 #project .head .pn:hover{color:var(--ink)}
 #project .head .pn.idx{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 #project .stream{width:56%;margin:0 auto;padding-top:20px;position:relative}
 #project .stream .it{margin-bottom:70px}
 #project .stream .it .ph{background:var(--tint)}
 #project .stream .cap{text-align:center;margin-top:14px;font-family:var(--mono);font-size:var(--t-mono);color:var(--dim)}
+#project .nextp{margin:110px 0 40px;text-align:center}
+#project .nextp .lbl{display:block;margin-bottom:14px}
+#project .nextp a{font-family:var(--serif);font-size:clamp(22px,2vw,30px);cursor:pointer}
+#project .nextp a:hover{opacity:.45}
 
 /* ---------- ARCHIVIO ---------- */
 body.dark{background:var(--dark);color:#fff}
@@ -110,9 +114,9 @@ body.dark{background:var(--dark);color:#fff}
 #gate input:focus{border-color:#fff}
 #gate .err{color:#b04a3a;margin-top:12px;height:14px;text-transform:none;letter-spacing:0}
 #archive .rows{padding-bottom:140px}
-#archive .yr{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:var(--ls);color:#3d3d3d;margin:44px 0 14px}
+#archive .yr{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:var(--ls);color:#5e5e5e;margin:44px 0 14px}
 #archive .row{display:grid;grid-template-columns:1fr 200px 90px;gap:20px;padding:9px 0;cursor:pointer;
-  color:#5c5c5c;transition:color .25s ease}
+  color:#b3b3b3;transition:color .25s ease}
 #archive .row:hover{color:#fff}
 #archive .row .n{font-family:var(--serif);font-size:17px}
 #archive .row .c,#archive .row .y{font-family:var(--mono);font-size:var(--t-mono);text-align:right}
@@ -121,23 +125,25 @@ body.dark{background:var(--dark);color:#fff}
 
 /* ---------- ABOUT ---------- */
 #about .grid{display:grid;grid-template-columns:minmax(0,4fr) 2.2fr 2.2fr;gap:56px;max-width:1400px}
-#about .desc p{font-size:var(--t-body);line-height:1.55;margin-bottom:14px;max-width:40ch}
+#about .desc p{font-size:var(--t-body);line-height:1.6;margin-bottom:16px;max-width:42ch}
+#about .desc a.ln{border-bottom:1px solid var(--line);padding-bottom:1px}
+#about .desc a.ln:hover{border-color:var(--ink)}
+#about .col .sp{height:22px}
 #about .lbl{display:block;margin-bottom:24px}
 #about .col a,#about .col .li{display:block;font-size:var(--t-list);line-height:1.95}
 #about .col a:hover{opacity:.45}
 
 /* ---------- FOOTER ---------- */
 .foot{margin-top:150px}
-.foot .big{padding:0 var(--pad) 70px;font-weight:300;line-height:1.02;
-  font-size:clamp(38px,6.4vw,104px);letter-spacing:-.02em;text-transform:uppercase}
-.foot .big i{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0}
+.foot .cities{padding:0 var(--pad) 76px;display:flex;flex-direction:column;gap:14px}
+.foot .cities .c{display:flex;align-items:baseline;gap:26px}
+.foot .cities .c>span:first-child{font-weight:300;font-size:clamp(20px,2vw,28px);letter-spacing:-.01em}
+.foot .cities .c .mono{font-size:16px;color:var(--dim)}
 .foot .dk{background:var(--dark);color:#fff;padding:56px var(--pad)}
 .foot .dk .g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
 .foot .dk .lbl{display:block;margin-bottom:22px;color:#4a4a4a}
 .foot .dk a,.foot .dk .li{display:block;font-family:var(--serif);font-size:16px;line-height:1.9;color:#cfcfcf}
 .foot .dk a:hover{color:#fff}
-.foot .dk .cl{margin-top:44px}
-.foot .dk .cl .mono{color:#4a4a4a;display:inline-block;margin-right:40px}
 
 /* ---------- MOBILE ---------- */
 @media(max-width:860px){
@@ -164,7 +170,9 @@ body.dark{background:var(--dark);color:#fff}
   #about .grid{grid-template-columns:1fr;gap:32px}
   .foot .dk .g{grid-template-columns:1fr;gap:28px}
   .foot{margin-top:60px}
-  .foot .big{font-size:32px;padding-bottom:44px}
+  .foot .cities{padding-bottom:44px;gap:10px}
+  .foot .cities .c{flex-direction:column;gap:2px}
+  .foot .cities .c>span:first-child{font-size:20px}
   .foot .dk{padding:40px var(--pad)}
 }
 </style>
@@ -221,9 +229,7 @@ body.dark{background:var(--dark);color:#fff}
   <div class="wrap" style="padding-top:0">
     <div class="head">
       <h2 id="pTitle"></h2>
-      <span class="pn" id="pPrev">Previous</span>
-      <span class="pn idx" data-go="work">Index</span>
-      <span class="pn" id="pNext">Next</span>
+      <span class="pn idx" data-go="work">Back</span>
     </div>
     <div class="stream" id="pStream"></div>
   </div>
@@ -253,11 +259,18 @@ body.dark{background:var(--dark);color:#fff}
         <span class="lbl">Info</span>
         <p>Born in New York, Tommaso Concina is a Rome based creative director and stylist, working internationally.</p>
         <p>During 25 years based in NYC he styled fashion editorials for Esquire, GQ, Style Corriere della Sera, Surface, D La Repubblica and advertising clients including Rolex, Nokia, L'Oréal, Sony. He simultaneously specialised in digital media, from interactive commerce to publishing, brand consulting and web design.</p>
-        <p>He is currently Professor in Fashion Design and Art Direction, Graduate and Master, at NABA, Nuova Accademia di Belle Arti.</p>
+        <p>He is currently Professor in Fashion Design and Art Direction, Graduate and Master, at <a class="ln" href="https://www.naba.it/en" target="_blank" rel="noopener">NABA, Nuova Accademia di Belle Arti</a>.</p>
       </div>
       <div class="col">
         <span class="lbl">Contact</span>
         <a href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a>
+        <div class="sp"></div>
+        <div class="li">Rome, Italy</div>
+        <a href="mailto:rome@tommasoconcina.com">rome@tommasoconcina.com</a>
+        <div class="sp"></div>
+        <div class="li">New York, NY</div>
+        <a href="mailto:ny@tommasoconcina.com">ny@tommasoconcina.com</a>
+        <div class="sp"></div>
         <a href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">Instagram</a>
       </div>
       <div class="col">
@@ -280,13 +293,16 @@ const el = (t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=
 
 /* ---------- footer condiviso ---------- */
 const FOOT = `
-  <div class="big">Rome, <i>Italia</i><br>New York, <i>U.S.</i></div>
-  <div class="dk"><div class="g">
-    <div><span class="lbl">Selected Work</span>${P.slice(0,6).map(p=>`<a data-open="${p.id}">${p.n}</a>`).join('')}<a data-go="work">All work</a></div>
-    <div><span class="lbl">Practice</span><a data-filter="Creative Direction">Creative Direction</a><a data-filter="Styling">Styling</a><a data-go="archive">Archive</a></div>
-    <div><span class="lbl">Studio</span><a data-go="about">About &amp; Contact</a><a href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a><a href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">Instagram</a></div>
+  <div class="cities">
+    <div class="c"><span>Rome, Italy</span><span class="mono tR"></span></div>
+    <div class="c"><span>New York, NY</span><span class="mono tN"></span></div>
   </div>
-  <div class="cl"><span class="mono fR">Rome</span><span class="mono fN">New York</span></div></div>`;
+  <div class="dk"><div class="g">
+    <div><span class="lbl">Selected Work</span>${P.slice(0,4).map(p=>`<a data-open="${p.id}">${p.n}</a>`).join('')}<a data-go="work">All work</a></div>
+    <div><span class="lbl">Practice</span><a data-filter="Creative Direction">Creative Direction</a><a data-filter="Styling">Styling</a><a data-go="archive">Archive</a></div>
+    <div><span class="lbl">Studio</span><a data-go="about">About &amp; Contact</a><a href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a><a href="mailto:rome@tommasoconcina.com">rome@tommasoconcina.com</a><a href="mailto:ny@tommasoconcina.com">ny@tommasoconcina.com</a><a href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  </div>`;
 ['#foot1','#foot2','#foot3'].forEach(s=>$(s).innerHTML=FOOT);
 
 /* ---------- HOME ---------- */
@@ -424,9 +440,7 @@ function openProject(id,silent){
   pIdx=P.findIndex(p=>p.id===id);
   const p=P[pIdx];
   $('#pTitle').textContent=p.n;
-  const prev=P[(pIdx-1+P.length)%P.length], next=P[(pIdx+1)%P.length];
-  $('#pPrev').textContent='Previous: '+prev.n;
-  $('#pNext').textContent='Next: '+next.n;
+  const next=P[(pIdx+1)%P.length];
   const st=$('#pStream');st.innerHTML='';
   if(p.v){
     const iv=el('div','it');
@@ -437,13 +451,14 @@ function openProject(id,silent){
   p.i.forEach((src,i)=>{
     const it=el('div','it');
     it.innerHTML=`<div class="ph"><img src="${src}" loading="lazy" alt=""></div>`;
-    if(i===p.i.length-1) it.innerHTML+=`<div class="cap">${p.c}${p.s?' / '+p.s:''} · ${p.y}</div>`;
+    if(i===p.i.length-1) it.innerHTML+=`<div class="cap">${p.c}${p.s?' / '+p.s:''}${p.y?' · '+p.y:''}</div>`;
     st.appendChild(it);
   });
+  const nx=el('div','nextp');
+  nx.innerHTML=`<span class="lbl">Next</span><a data-open="${next.id}">${next.n}</a>`;
+  st.appendChild(nx);
   go('project',true);window.scrollTo(0,0);
 }
-$('#pPrev').addEventListener('click',()=>openProject(P[(pIdx-1+P.length)%P.length].id));
-$('#pNext').addEventListener('click',()=>openProject(P[(pIdx+1)%P.length].id));
 
 /* ---------- ROUTING ---------- */
 function go(id,silent){
@@ -490,6 +505,8 @@ function clocks(){
   $('#ckR').textContent=r;$('#ckN').textContent=n;
   document.querySelectorAll('.fR').forEach(x=>x.textContent=r);
   document.querySelectorAll('.fN').forEach(x=>x.textContent=n);
+  document.querySelectorAll('.tR').forEach(x=>x.textContent=f('Europe/Rome')+' (CET)');
+  document.querySelectorAll('.tN').forEach(x=>x.textContent=f('America/New_York')+' (EST)');
 }
 clocks();setInterval(clocks,1000);
 
