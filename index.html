@@ -129,8 +129,13 @@ body.dark{background:var(--dark);color:#fff}
   font-family:var(--mono);font-size:13px;padding:8px 0;outline:none}
 #gate input:focus{border-color:#fff}
 #gate .err{color:#b04a3a;margin-top:12px;height:14px;text-transform:none;letter-spacing:0}
-#gate .gback{margin-top:34px;font-family:var(--mono);font-size:var(--t-mono);
-  letter-spacing:var(--ls);text-transform:uppercase;color:var(--darkdim);cursor:pointer}
+#gate .grow{display:flex;align-items:center;justify-content:space-between;margin-top:30px}
+#gate .gbtn{appearance:none;background:none;border:1px solid #3a3a3a;color:#fff;
+  font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  padding:11px 22px;cursor:pointer;transition:border-color .25s ease,background .25s ease}
+#gate .gbtn:hover{border-color:#fff;background:#fff;color:var(--dark)}
+#gate .gback{font-family:var(--sans);font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:#6f6f6f;cursor:pointer}
 #gate .gback:hover{color:#fff}
 #archive .rows{padding-bottom:140px}
 #archive .yr{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:#7a7a7a;margin:44px 0 14px}
@@ -269,9 +274,13 @@ body.dark{background:var(--dark);color:#fff}
   <div id="gate">
     <div class="box">
       <p>Archive · Private</p>
-      <input id="pw" type="password" placeholder="Password" autocomplete="off">
+      <input id="pw" type="password" placeholder="Password" autocomplete="off"
+             autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
       <p class="err mono" id="pwErr"></p>
-      <div class="gback" data-go="home">Back</div>
+      <div class="grow">
+        <button class="gbtn" id="pwGo" type="button">Enter</button>
+        <span class="gback" data-go="home">Back</span>
+      </div>
     </div>
   </div>
   <div class="wrap">
@@ -461,11 +470,14 @@ rows.addEventListener('mouseleave',()=>peek.classList.remove('show'));
 
 /* gate: per ora finto, la password sta nel codice. Da sostituire con edge function. */
 const PASS='concina';
-$('#pw').addEventListener('keydown',e=>{
-  if(e.key!=='Enter')return;
-  if(e.target.value.trim().toLowerCase()===PASS){$('#gate').classList.add('off');}
-  else{$('#pwErr').textContent='Not correct';e.target.value='';}
-});
+function tryPass(){
+  const i=$('#pw');
+  if(i.value.trim().toLowerCase()===PASS){ $('#gate').classList.add('off'); i.blur(); }
+  else{ $('#pwErr').textContent='Not correct'; i.value=''; i.focus(); }
+}
+$('#pw').addEventListener('keydown',e=>{ if(e.key==='Enter'){e.preventDefault();tryPass();} });
+$('#pw').addEventListener('input',()=>{ $('#pwErr').textContent=''; });
+$('#pwGo').addEventListener('click',tryPass);
 
 /* ---------- PROGETTO ---------- */
 let pIdx=0;
