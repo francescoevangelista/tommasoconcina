@@ -24,8 +24,8 @@ body[data-font="A"]{--sans:'Avenir Next','Avenir','Mulish',sans-serif;
 /* B · come dice Tommy: sans per l'interfaccia, mono sui metadati, corsivo sui lavori */
 body[data-font="B"]{--sans:'Avenir Next','Avenir','Mulish',sans-serif;
   --meta:'Space Mono',monospace;--serif:'Instrument Serif',serif}
-/* C · senza Avenir, piu marcato e leggibile */
-body[data-font="C"]{--sans:'Archivo',sans-serif;
+/* C · quello che vede chi non ha Avenir installato */
+body[data-font="C"]{--sans:'Mulish',sans-serif;
   --meta:'Space Mono',monospace;--serif:'Instrument Serif',serif}
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -59,9 +59,9 @@ body.dark #corner .mono{color:var(--darkdim)}
 #home.on{display:grid;grid-template-columns:1fr 1fr}
 #home .l{position:relative;border-right:1px solid var(--line);padding:var(--pad)}
 #home .r{position:relative;overflow:hidden;background:var(--tint)}
-#home .sel{position:absolute;top:54%;left:var(--pad);transform:translateY(-50%)}
+#home .sel{position:absolute;top:58%;left:var(--pad);transform:translateY(-50%)}
 #home .sel .lbl{display:block;margin-bottom:24px}
-#home .sel a{display:block;font-weight:400;font-size:clamp(15px,1.15vw,17px);line-height:2.1;letter-spacing:-.005em;color:var(--ink)}
+#home .sel a{display:block;font-weight:400;font-style:italic;font-size:clamp(16px,1.25vw,19px);line-height:2.05;letter-spacing:0;color:var(--ink)}
 #home .sel a:hover{opacity:.4}
 #home .clocks{position:absolute;left:var(--pad);bottom:var(--pad)}
 #home .clocks .mono{display:grid;grid-template-columns:96px auto;column-gap:10px;color:#7c7c7c;line-height:1.9}
@@ -115,6 +115,8 @@ body.dark #corner .mono{color:var(--darkdim)}
   text-decoration:underline;text-underline-offset:3px}
 #project .links a:hover{color:var(--ink)}
 #project .stream{flex:1;column-count:2;column-gap:60px}
+#project .stream.few{column-count:1;max-width:900px}
+#project .stream.few .it{width:100%!important;margin:0 0 46px!important}
 #project .it{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 52px}
 #project .it .ph{background:var(--tint);overflow:hidden}
 /* larghezze alternate: il ritmo lo fa la misura, non lo spazio vuoto */
@@ -124,10 +126,34 @@ body.dark #corner .mono{color:var(--darkdim)}
 #project .it:nth-child(6n+4){width:62%;margin-left:auto;margin-right:8%}
 #project .it:nth-child(6n+5){width:92%;margin-left:auto}
 #project .it:nth-child(6n+6){width:70%;margin-left:6%}
+#project .film{position:relative;background:#0d0d0d;overflow:hidden;max-width:900px}
+#project .film video{width:100%;height:auto;display:block}
+#project .film .play{position:absolute;inset:0;width:100%;height:100%;
+  background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#project .film.on .play{display:none}
+#project .film .play span{font-family:var(--meta);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);
+  padding:13px 30px;transition:background .25s ease,color .25s ease,border-color .25s ease}
+#project .film .play:hover span{background:#fff;color:#0d0d0d;border-color:#fff}
 #project .nextwrap{padding:90px var(--pad) 0;text-align:right}
 #project .nextwrap .lbl{display:block;margin-bottom:10px}
 #project .nextwrap a{font-family:var(--serif);font-size:clamp(19px,1.6vw,24px);cursor:pointer}
 #project .nextwrap a:hover{opacity:.45}
+
+#lb{position:fixed;inset:0;z-index:600;background:rgba(255,255,255,.985);
+  display:none;align-items:center;justify-content:center}
+#lb.on{display:flex}
+#lb .lbstage{max-width:88vw;max-height:82vh;display:flex;align-items:center;justify-content:center}
+#lb img{max-width:88vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+#lb .lbbar{position:absolute;top:var(--pad);left:var(--pad);right:var(--pad);z-index:3;
+  display:flex;justify-content:space-between;align-items:baseline}
+#lb .lbn{color:var(--dim)}
+#lb .lbx{font-family:var(--meta);font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+#lb .lbx:hover{opacity:.5}
+#lb .lbnav{position:absolute;top:90px;bottom:0;width:26%;background:none;border:none;cursor:pointer;z-index:1}
+#lb .lbnav.prev{left:0}#lb .lbnav.next{right:0}
+@media(max-width:860px){#lb .lbnav{display:none}#lb img{max-width:94vw;max-height:76vh}}
+#project .it .ph{cursor:zoom-in}
 
 /* ---------- ARCHIVIO ---------- */
 body.dark{background:var(--dark);color:#fff}
@@ -279,6 +305,13 @@ body.dark{background:var(--dark);color:#fff}
   <div class="nextwrap"><span class="lbl">Next</span><a id="pNextA"></a></div>
   <div class="foot" id="foot2"></div>
 </section>
+
+<div id="lb">
+  <div class="lbbar"><span class="lbn mono" id="lbN"></span><span class="lbx" id="lbClose">Close</span></div>
+  <div class="lbstage"><img id="lbImg" alt=""></div>
+  <button class="lbnav prev" id="lbPrev" type="button" aria-label="Previous"></button>
+  <button class="lbnav next" id="lbNext" type="button" aria-label="Next"></button>
+</div>
 
 <!-- ============ ARCHIVIO ============ -->
 <section class="page" id="archive">
@@ -507,11 +540,22 @@ function openProject(id,silent){
   const st=$('#pStream');st.innerHTML='';
   const add=(html)=>{const it=el('div','it');it.innerHTML=html;st.appendChild(it);};
   (p.media||[]).forEach(m=>{
-    if(m.t==='vid') add(`<video src="${m.s}" poster="${m.p||''}" ${m.ctl?'controls':'autoplay muted loop'} playsinline
+    if(m.t==='vid' && m.ctl) add(`<div class="film">
+        <video src="${m.s}" poster="${m.p||''}" playsinline preload="metadata"></video>
+        <button class="play" type="button"><span>Play</span></button></div>`);
+    else if(m.t==='vid') add(`<video src="${m.s}" poster="${m.p||''}" autoplay muted loop playsinline
         style="width:100%;height:auto;display:block;background:var(--tint)"></video>`);
     else add(`<div class="ph"><img src="${m.s}" loading="lazy" alt=""></div>`);
   });
   p.i.forEach(src=>add(`<div class="ph"><img src="${src}" loading="lazy" alt=""></div>`));
+  st.classList.toggle('few', st.children.length<=2);
+  lbList=[...st.querySelectorAll('.ph img')].map(im=>im.src);
+  st.querySelectorAll('.ph').forEach((ph,k)=>ph.addEventListener('click',()=>lbOpen(k)));
+  st.querySelectorAll('.film').forEach(f=>{
+    const v=f.querySelector('video'), btn=f.querySelector('.play');
+    btn.addEventListener('click',()=>{ f.classList.add('on'); v.controls=true; v.play(); });
+    v.addEventListener('pause',()=>{ if(v.currentTime===0) f.classList.remove('on'); });
+  });
   $('#pCat').textContent = p.c + (p.s?' / '+p.s:'') + (p.y?' · '+p.y:'');
   let lk='';
   if(p.url) lk+=`<a href="${p.url}" target="_blank" rel="noopener">${p.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>`;
@@ -521,6 +565,25 @@ function openProject(id,silent){
 
   go('project',true);window.scrollTo(0,0);
 }
+
+/* ---------- LIGHTBOX ---------- */
+let lbList=[], lbI=0;
+const lb=$('#lb');
+function lbOpen(i){ lbI=i; $('#lbImg').src=lbList[lbI];
+  $('#lbN').textContent=(lbI+1)+' / '+lbList.length;
+  lb.classList.add('on'); document.body.style.overflow='hidden'; }
+function lbGo(d){ if(!lbList.length)return; lbOpen((lbI+d+lbList.length)%lbList.length); }
+function lbClose(){ lb.classList.remove('on'); document.body.style.overflow=''; }
+$('#lbClose').addEventListener('click',lbClose);
+$('#lbPrev').addEventListener('click',()=>lbGo(-1));
+$('#lbNext').addEventListener('click',()=>lbGo(1));
+$('#lb .lbstage').addEventListener('click',lbClose);
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')lbClose();
+  if(e.key==='ArrowLeft')lbGo(-1);
+  if(e.key==='ArrowRight')lbGo(1);
+});
 
 /* ---------- ROUTING ---------- */
 function go(id,silent){
@@ -547,6 +610,7 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape')return;
+  if(lb.classList.contains('on'))return;
   const cur=document.querySelector('.page.on').id;
   go(cur==='project'?'work':'home');
 });
