@@ -6,7 +6,7 @@
 <title>Tommaso Concina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&family=Archivo:wght@400;500&family=Hanken+Grotesk:wght@300;400&family=Jost:wght@300;400&family=Space+Mono:wght@400&family=IBM+Plex+Mono:wght@400&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Figtree:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Hanken+Grotesk:wght@300;400&family=Jost:wght@300;400&family=Space+Mono:wght@400&family=IBM+Plex+Mono:wght@400&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#fff; --ink:#111; --dim:#9a9a9a; --line:#e9e7e2; --tint:#f2f0eb;
@@ -17,16 +17,15 @@
 }
 /* --- tre set tipografici, si cambiano con i tasti 1 2 3 --- */
 /* A: Avenir se installato sul computer, altrimenti Mulish. Una sola famiglia ovunque. */
-/* --meta = orari, citta, riga in alto a destra, etichette piccole */
-/* A · una sola famiglia ovunque */
-body[data-font="A"]{--sans:'Avenir Next','Avenir','Mulish',sans-serif;
-  --meta:'Avenir Next','Avenir','Mulish',sans-serif;--serif:'Instrument Serif',serif}
-/* B · come dice Tommy: sans per l'interfaccia, mono sui metadati, corsivo sui lavori */
-body[data-font="B"]{--sans:'Avenir Next','Avenir','Mulish',sans-serif;
-  --meta:'Space Mono',monospace;--serif:'Instrument Serif',serif}
-/* C · quello che vede chi non ha Avenir installato */
-body[data-font="C"]{--sans:'Mulish',sans-serif;
-  --meta:'Space Mono',monospace;--serif:'Instrument Serif',serif}
+/* Una sola famiglia per tutto il sito, declinata nei suoi pesi e nel corsivo.
+   Il monospace resta solo su orari e citta, come voleva Tommy.
+   Tasti 1 2 3 4 5 per confrontare. */
+body{--meta:'Space Mono',monospace}
+body[data-font="A"]{--sans:'Avenir Next','Avenir',sans-serif;--serif:'Avenir Next','Avenir',sans-serif}
+body[data-font="B"]{--sans:'Mulish',sans-serif;--serif:'Mulish',sans-serif}
+body[data-font="C"]{--sans:'Nunito Sans',sans-serif;--serif:'Nunito Sans',sans-serif}
+body[data-font="D"]{--sans:'Figtree',sans-serif;--serif:'Figtree',sans-serif}
+body[data-font="E"]{--sans:'Hanken Grotesk',sans-serif;--serif:'Hanken Grotesk',sans-serif}
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased}
@@ -97,7 +96,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 .sp .ph img{transition:transform 1.4s cubic-bezier(.2,0,.1,1)}
 .sp:hover .ph img{transform:scale(1.03)}
 .sp .cap{margin-top:10px;font-family:var(--meta);font-size:var(--t-mono);color:var(--dim)}
-.sp .cap i{font-family:var(--serif);font-style:italic;font-size:17px;letter-spacing:0;color:var(--ink)}
+.sp .cap i{font-family:var(--serif);font-style:italic;font-weight:400;font-size:14px;letter-spacing:0;color:var(--ink)}
 .sp{transition:top .6s cubic-bezier(.72,0,.12,1),left .6s cubic-bezier(.72,0,.12,1),opacity .45s ease}
 .sp.hide{display:none}
 
@@ -150,7 +149,12 @@ body.dark #corner .mono{color:var(--darkdim)}
 #lb .lbn{color:var(--dim)}
 #lb .lbx{font-family:var(--meta);font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
 #lb .lbx:hover{opacity:.5}
-#lb .lbnav{position:absolute;top:90px;bottom:0;width:26%;background:none;border:none;cursor:pointer;z-index:1}
+#lb .lbnav{position:absolute;top:90px;bottom:0;width:26%;background:none;border:none;cursor:pointer;z-index:1;
+  display:flex;align-items:center}
+#lb .lbnav.prev{justify-content:flex-start;padding-left:var(--pad)}
+#lb .lbnav.next{justify-content:flex-end;padding-right:var(--pad)}
+#lb .lbnav span{font-family:var(--sans);font-size:22px;line-height:1;color:#bdbdbd;transition:color .2s ease}
+#lb .lbnav:hover span{color:var(--ink)}
 #lb .lbnav.prev{left:0}#lb .lbnav.next{right:0}
 @media(max-width:860px){#lb .lbnav{display:none}#lb img{max-width:94vw;max-height:76vh}}
 #project .it .ph{cursor:zoom-in}
@@ -179,7 +183,7 @@ body.dark{background:var(--dark);color:#fff}
 #archive .row{display:grid;grid-template-columns:1fr 200px 90px;gap:20px;padding:9px 0;cursor:pointer;
   color:#b3b3b3;transition:color .25s ease}
 #archive .row:hover{color:#fff}
-#archive .row .n{font-family:var(--serif);font-size:18px;letter-spacing:0}
+#archive .row .n{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:0}
 #archive .row .c,#archive .row .y{font-family:var(--meta);font-size:var(--t-mono);text-align:right}
 #archive #peek{position:fixed;width:240px;pointer-events:none;opacity:0;transition:opacity .3s ease;z-index:120}
 #archive #peek.show{opacity:1}
@@ -309,8 +313,8 @@ body.dark{background:var(--dark);color:#fff}
 <div id="lb">
   <div class="lbbar"><span class="lbn mono" id="lbN"></span><span class="lbx" id="lbClose">Close</span></div>
   <div class="lbstage"><img id="lbImg" alt=""></div>
-  <button class="lbnav prev" id="lbPrev" type="button" aria-label="Previous"></button>
-  <button class="lbnav next" id="lbNext" type="button" aria-label="Next"></button>
+  <button class="lbnav prev" id="lbPrev" type="button" aria-label="Previous"><span>←</span></button>
+  <button class="lbnav next" id="lbNext" type="button" aria-label="Next"><span>→</span></button>
 </div>
 
 <!-- ============ ARCHIVIO ============ -->
@@ -641,11 +645,11 @@ clocks();setInterval(clocks,1000);
 /* ---------- prova font: tasti 1 2 3 (solo per noi) ---------- */
 let fTag;
 document.addEventListener('keydown',e=>{
-  if(!['1','2','3'].includes(e.key))return;
-  const set={'1':'A','2':'B','3':'C'}[e.key];
+  if(!['1','2','3','4','5'].includes(e.key))return;
+  const set={'1':'A','2':'B','3':'C','4':'D','5':'E'}[e.key];
   document.body.dataset.font=set;
   if(!fTag){fTag=document.createElement('div');fTag.id='ftag';document.body.appendChild(fTag);}
-  fTag.textContent='Font '+set;
+  fTag.textContent={'A':'1 Avenir','B':'2 Mulish','C':'3 Nunito Sans','D':'4 Figtree','E':'5 Hanken Grotesk'}[set];
   fTag.classList.add('on');
   clearTimeout(fTag._t); fTag._t=setTimeout(()=>fTag.classList.remove('on'),1400);
 });
