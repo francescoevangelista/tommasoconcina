@@ -713,6 +713,21 @@ function syncHash(){
 window.addEventListener('hashchange',syncHash);
 syncHash();
 
+/* ---------- EMAIL ----------
+   Il link mailto resta. In piu l'indirizzo viene selezionato e copiato:
+   cosi qualcosa succede anche su computer senza programma di posta. */
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="mailto:"]'); if(!a)return;
+  const addr=a.getAttribute('href').replace('mailto:','');
+  if(navigator.clipboard) navigator.clipboard.writeText(addr).catch(()=>{});
+  try{
+    const r=document.createRange(); r.selectNodeContents(a);
+    const sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  }catch(_){}
+  a.classList.add('mailhit');
+  setTimeout(()=>a.classList.remove('mailhit'),1100);
+});
+
 /* ---------- OROLOGI ---------- */
 function clocks(){
   const f=z=>new Date().toLocaleTimeString('en-GB',{timeZone:z,hour12:false});
