@@ -143,7 +143,9 @@ body.dark #corner .mono{color:var(--darkdim)}
   display:none;align-items:center;justify-content:center}
 #lb.on{display:flex}
 #lb .lbstage{max-width:88vw;max-height:82vh;display:flex;align-items:center;justify-content:center}
-#lb img{max-width:88vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+#lb img,#lb video{max-width:88vw;max-height:82vh;width:auto;height:auto;object-fit:contain;display:none}
+#lb.isimg img{display:block}
+#lb.isvid video{display:block}
 #lb .lbbar{position:absolute;top:var(--pad);left:var(--pad);right:var(--pad);z-index:3;
   display:flex;justify-content:space-between;align-items:baseline}
 #lb .lbn{color:var(--dim)}
@@ -161,7 +163,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 #lb .lbnav:hover span{color:var(--ink)}
 #lb .lbnav.prev{left:0}#lb .lbnav.next{right:0}
 @media(max-width:860px){
-  #lb img{max-width:94vw;max-height:70vh}
+  #lb img,#lb video{max-width:94vw;max-height:70vh}
   /* su telefono le frecce diventano due pulsanti veri in basso */
   #lb .lbnav{top:auto;bottom:26px;width:auto;height:auto;padding:0}
   #lb .lbnav.prev{left:50%;transform:translateX(-58px)}
@@ -326,7 +328,7 @@ body.dark{background:var(--dark);color:#fff}
 
 <div id="lb">
   <div class="lbbar"><span class="lbn mono" id="lbN"></span><span class="lbx" id="lbClose">Close</span></div>
-  <div class="lbstage"><img id="lbImg" alt=""></div>
+  <div class="lbstage"><img id="lbImg" alt=""><video id="lbVid" playsinline></video></div>
   <div class="hintbar">Swipe</div>
   <button class="lbnav prev" id="lbPrev" type="button" aria-label="Previous"><span>←</span></button>
   <button class="lbnav next" id="lbNext" type="button" aria-label="Next"><span>→</span></button>
@@ -568,8 +570,22 @@ function openProject(id,silent){
   });
   p.i.forEach(src=>add(`<div class="ph"><img src="${src}" loading="lazy" alt=""></div>`));
   st.classList.toggle('few', st.children.length<=2);
-  lbList=[...st.querySelectorAll('.ph img')].map(im=>im.src);
-  st.querySelectorAll('.ph').forEach((ph,k)=>ph.addEventListener('click',()=>lbOpen(k)));
+  lbList=[];
+  [...st.querySelectorAll('.it')].forEach(it=>{
+    const im=it.querySelector('.ph img'), vd=it.querySelector('video');
+    if(im) lbList.push({t:'img', s:im.src});
+    else if(vd) lbList.push({t:'vid', s:vd.currentSrc||vd.src, p:vd.poster, ctl:it.classList.contains('film')||!!it.querySelector('.film')});
+    else lbList.push(null);
+  });
+  const idx=[];
+  lbList=lbList.filter((x,i)=>{ if(x){idx.push(i);return true;} return false; });
+  [...st.querySelectorAll('.it')].forEach((it,i)=>{
+    const k=idx.indexOf(i); if(k<0)return;
+    const target = it.querySelector('.ph') || it.querySelector('.film') || it;
+    if(it.querySelector('.film')) return;          // il corto si guarda in pagina
+    target.style.cursor='zoom-in';
+    target.addEventListener('click',()=>lbOpen(k));
+  });
   st.querySelectorAll('.film').forEach(f=>{
     const v=f.querySelector('video'), btn=f.querySelector('.play');
     btn.addEventListener('click',()=>{ f.classList.add('on'); v.controls=true; v.play(); });
@@ -589,7 +605,19 @@ function openProject(id,silent){
 let lbList=[], lbI=0;
 const lb=$('#lb');
 let lbHinted=false;
-function lbOpen(i){ lbI=i; $('#lbImg').src=lbList[lbI];
+function lbOpen(i){
+  lbI=i; const it=lbList[lbI];
+  const v=$('#lbVid'); v.pause();
+  if(it.t==='vid'){
+    lb.classList.add('isvid'); lb.classList.remove('isimg');
+    v.src=it.s; v.poster=it.p||''; v.muted=!it.ctl; v.loop=!it.ctl;
+    v.controls=!!it.ctl;
+    if(!it.ctl) v.play().catch(()=>{});
+  } else {
+    lb.classList.add('isimg'); lb.classList.remove('isvid');
+    v.removeAttribute('src'); v.load();
+    $('#lbImg').src=it.s;
+  }
   $('#lbN').textContent=(lbI+1)+' / '+lbList.length;
   lb.classList.add('on'); document.body.style.overflow='hidden';
   if(!lbHinted && isMob() && lbList.length>1){
@@ -597,7 +625,7 @@ function lbOpen(i){ lbI=i; $('#lbImg').src=lbList[lbI];
     setTimeout(()=>lb.classList.remove('hint'),2600);
   }}
 function lbGo(d){ if(!lbList.length)return; lbOpen((lbI+d+lbList.length)%lbList.length); }
-function lbClose(){ lb.classList.remove('on'); document.body.style.overflow=''; }
+function lbClose(){ $('#lbVid').pause(); lb.classList.remove('on'); document.body.style.overflow=''; }
 $('#lbClose').addEventListener('click',lbClose);
 $('#lbPrev').addEventListener('click',()=>lbGo(-1));
 $('#lbNext').addEventListener('click',()=>lbGo(1));
@@ -624,10 +652,26 @@ stage.addEventListener('touchend',()=>{
 });
 document.addEventListener('keydown',e=>{
   if(!lb.classList.contains('on'))return;
+  if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' ','PageUp','PageDown','Home','End'].includes(e.key)) e.preventDefault();
   if(e.key==='Escape')lbClose();
-  if(e.key==='ArrowLeft')lbGo(-1);
-  if(e.key==='ArrowRight')lbGo(1);
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp')lbGo(-1);
+  if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ')lbGo(1);
+  if(e.key==='Home')lbOpen(0);
+  if(e.key==='End')lbOpen(lbList.length-1);
 });
+
+/* trackpad e rotella: due dita in orizzontale o in verticale */
+let wheelLock=false, wheelAcc=0;
+lb.addEventListener('wheel',e=>{
+  if(!lb.classList.contains('on'))return;
+  e.preventDefault();
+  const d = Math.abs(e.deltaX)>Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+  wheelAcc+=d;
+  if(wheelLock || Math.abs(wheelAcc)<40) return;
+  lbGo(wheelAcc>0?1:-1);
+  wheelAcc=0; wheelLock=true;
+  setTimeout(()=>{wheelLock=false;},420);
+},{passive:false});
 
 /* ---------- ROUTING ---------- */
 function go(id,silent){
