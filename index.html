@@ -33,7 +33,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:4
 a{color:inherit;text-decoration:none}
 img{display:block;width:100%;height:100%;object-fit:cover}
 .mono{font-family:var(--meta);font-size:var(--t-mono);letter-spacing:.05em;font-variant-numeric:tabular-nums}
-.lbl{font-family:var(--meta);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6e6e6e}
+.lbl{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6e6e6e}
 
 /* ================= NAV PERSISTENTE ================= */
 #nav{position:absolute;top:0;left:0;z-index:200;padding:var(--pad) 30px 18px var(--pad)}
@@ -45,7 +45,7 @@ body.dark #nav a{color:var(--darkdim)}
 body.dark #nav a:hover,body.dark #nav a.on{color:#fff}
 #corner{position:absolute;top:0;right:0;z-index:200;text-align:right;padding:var(--pad) var(--pad) 14px 30px}
 body.athome #corner{display:none}
-#corner .mono{color:#7c7c7c;display:block;line-height:1.9}
+#corner .mono{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a;display:block;line-height:2}
 body.dark #corner .mono{color:var(--darkdim)}
 
 /* ================= PAGINE ================= */
@@ -82,7 +82,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 
 /* ---------- WORK: campo sparso ---------- */
 .filters{display:flex;gap:14px;margin-bottom:16px;flex-wrap:wrap}
-.filters span{font-family:var(--meta);font-size:11px;letter-spacing:.16em;
+.filters span{font-family:var(--sans);font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:#8a8a8a;cursor:pointer;
   padding:10px 16px;margin:-10px 0;user-select:none;-webkit-tap-highlight-color:transparent;
   transition:color .2s ease}
@@ -95,7 +95,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 .sp .ph{background:var(--tint);overflow:hidden}
 .sp .ph img{transition:transform 1.4s cubic-bezier(.2,0,.1,1)}
 .sp:hover .ph img{transform:scale(1.03)}
-.sp .cap{margin-top:10px;font-family:var(--meta);font-size:var(--t-mono);color:var(--dim)}
+.sp .cap{margin-top:10px;font-family:var(--sans);font-size:var(--t-mono);color:var(--dim)}
 .sp .cap i{font-family:var(--serif);font-style:italic;font-weight:400;font-size:14px;letter-spacing:0;color:var(--ink)}
 .sp{transition:top .6s cubic-bezier(.72,0,.12,1),left .6s cubic-bezier(.72,0,.12,1),opacity .45s ease}
 .sp.hide{display:none}
@@ -105,7 +105,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 #project .head{position:sticky;top:40px;width:210px;flex:none}
 #project .head h2{font-family:var(--serif);font-weight:400;font-size:clamp(21px,1.8vw,27px);
   line-height:1.15;margin-bottom:16px}
-#project .head .pn{font-family:var(--meta);font-size:var(--t-mono);color:var(--dim);
+#project .head .pn{font-family:var(--sans);font-size:var(--t-mono);color:var(--dim);
   line-height:2;cursor:pointer;display:inline-block;text-decoration:underline;text-underline-offset:3px}
 #project .head .pn:hover{color:var(--ink)}
 #project .pmeta{margin-top:44px}
@@ -153,7 +153,7 @@ body.dark #corner .mono{color:var(--darkdim)}
   font-family:var(--meta);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
   color:#b0b0b0;opacity:0;transition:opacity .5s ease;pointer-events:none}
 #lb.hint .hintbar{opacity:1}
-#lb .lbx{font-family:var(--meta);font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+#lb .lbx{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
 #lb .lbx:hover{opacity:.5}
 #lb .lbnav{position:absolute;top:90px;bottom:0;width:26%;background:none;border:none;cursor:pointer;z-index:1;
   display:flex;align-items:center}
@@ -181,7 +181,7 @@ body.dark{background:var(--dark);color:#fff}
 #gate{position:fixed;inset:0;background:var(--dark);z-index:150;display:flex;align-items:center;justify-content:center}
 #gate.off{display:none}
 #gate .box{width:280px}
-#gate p{font-family:var(--meta);font-size:var(--t-mono);letter-spacing:var(--ls);text-transform:uppercase;color:var(--darkdim);margin-bottom:18px}
+#gate p{font-family:var(--sans);font-size:var(--t-mono);letter-spacing:var(--ls);text-transform:uppercase;color:var(--darkdim);margin-bottom:18px}
 #gate input{width:100%;background:none;border:none;border-bottom:1px solid #333;color:#fff;
   font-family:var(--meta);font-size:13px;padding:8px 0;outline:none}
 #gate input:focus{border-color:#fff}
@@ -200,13 +200,24 @@ body.dark{background:var(--dark);color:#fff}
   color:#b3b3b3;transition:color .25s ease}
 #archive .row:hover{color:#fff}
 #archive .row .n{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:0}
-#archive .row .c,#archive .row .y{font-family:var(--meta);font-size:var(--t-mono);text-align:right}
+#archive .row .c{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+#archive .row .y{font-family:var(--meta);font-size:var(--t-mono);text-align:right}
 #archive #peek{position:fixed;width:240px;pointer-events:none;opacity:0;transition:opacity .3s ease;z-index:120}
 #archive #peek.show{opacity:1}
 
 /* ---------- ABOUT ---------- */
 #about .grid{display:grid;grid-template-columns:minmax(0,4fr) 3fr;gap:80px;max-width:1200px;padding-top:40px}
 #about .desc p{font-weight:400;font-size:var(--t-body);line-height:1.6;margin-bottom:16px;max-width:42ch}
+#about .slide,#contact .slide{position:relative;width:100%;max-width:380px;aspect-ratio:3/4;background:var(--tint);overflow:hidden}
+#about .slide .f,#contact .slide .f{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+#about .slide .f.on,#contact .slide .f.on{opacity:1}
+#contact .desc a.cm{display:block;font-size:var(--t-list);line-height:2;color:var(--ink)}
+#contact .desc a.cm:hover{opacity:.45}
+#contact .desc .li{font-size:var(--t-list);line-height:2}
+#contact .desc .lbl2{display:block;margin-top:44px}
+#contact .desc .sp2{margin-top:26px}
+#contact .grid{display:grid;grid-template-columns:minmax(0,4fr) 3fr;gap:80px;max-width:1200px;padding-top:40px}
+@media(max-width:1100px){#contact .grid{grid-template-columns:1fr;gap:40px}}
 #about .desc a.ln{border-bottom:1px solid var(--line);padding-bottom:1px}
 #about .desc a.ln:hover{border-color:var(--ink)}
 #about .col .gap{height:22px}
@@ -220,11 +231,11 @@ body.dark{background:var(--dark);color:#fff}
 .foot .cities .c{display:grid;grid-template-columns:150px auto;align-items:baseline}
 .foot .cities .c .city{font-size:19px;color:var(--ink);letter-spacing:.02em}
 .foot .cities .c .mono{font-size:16px;color:#7c7c7c}
-.foot .dk{background:var(--dark);color:#fff;padding:56px var(--pad)}
-.foot .dk .g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
-.foot .dk .lbl{display:block;margin-bottom:22px;color:#8a8a8a}
-.foot .dk a,.foot .dk .li{display:block;font-family:var(--sans);font-size:14px;letter-spacing:.01em;line-height:1.9;color:#cfcfcf}
+.foot .dk{background:var(--dark);color:#fff;padding:26px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot .dk a{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f}
 .foot .dk a:hover{color:#fff}
+.foot .dk nav{display:flex;gap:28px}
 
 /* ---------- MOBILE ---------- */
 @media(max-width:860px){
@@ -253,27 +264,28 @@ body.dark{background:var(--dark);color:#fff}
   #archive .row .c{display:none}
   #archive #peek{display:none}
   #about .grid{grid-template-columns:1fr;gap:32px}
-  .foot .dk .g{grid-template-columns:1fr;gap:28px}
   .foot{margin-top:60px}
   .foot .cities{padding-bottom:44px;gap:10px}
   .foot .cities .c{flex-direction:column;gap:2px}
   .foot .cities .c .city{font-size:16px}
-  .foot .dk{padding:40px var(--pad)}
+  .foot .dk{padding:22px var(--pad);flex-direction:column;align-items:flex-start;gap:16px}
+  .foot .dk nav{flex-wrap:wrap;gap:18px}
 }
 </style>
 </head>
-<body data-font="B" class="athome">
+<body data-font="C" class="athome">
 
 <div id="nav">
   <div class="wm" data-go="home">Tommaso Concina</div>
   <a data-go="work">Work</a>
   <a data-go="archive">Archive</a>
   <a data-go="about">About</a>
+  <a data-go="contact">Contact</a>
 </div>
 
 <div id="corner">
-  <span class="mono">Creative Direction / Styling</span>
-  <span class="mono">Rome, New York</span>
+  <span class="mono">Creative Direction + Styling</span>
+  <span class="mono">Rome / New York</span>
 </div>
 
 <!-- ============ HOME ============ -->
@@ -334,6 +346,26 @@ body.dark{background:var(--dark);color:#fff}
   <button class="lbnav next" id="lbNext" type="button" aria-label="Next"><span>→</span></button>
 </div>
 
+<!-- ============ CONTACT ============ -->
+<section class="page" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div class="desc">
+        <span class="lbl">Contact</span>
+        <a class="cm" href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a>
+        <span class="lbl lbl2">Studio</span>
+        <div class="li">Rome, Italy</div>
+        <a class="cm" href="mailto:rome@tommasoconcina.com">rome@tommasoconcina.com</a>
+        <div class="li sp2">New York, NY</div>
+        <a class="cm" href="mailto:ny@tommasoconcina.com">ny@tommasoconcina.com</a>
+        <a class="cm sp2" href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="slide" id="slideContact"></div>
+    </div>
+  </div>
+  <div class="foot" id="foot4"></div>
+</section>
+
 <!-- ============ ARCHIVIO ============ -->
 <section class="page" id="archive">
   <div id="gate">
@@ -364,18 +396,7 @@ body.dark{background:var(--dark);color:#fff}
         <p>During 25 years based in NYC he styled fashion editorials for Esquire, GQ, Style Corriere della Sera, Surface, D La Repubblica and advertising clients including Rolex, Nokia, L'Oréal, Sony. He simultaneously specialised in digital media, from interactive commerce to publishing, brand consulting and web design.</p>
         <p>He is currently Professor in Fashion Design and Art Direction, Graduate and Master, at <a class="ln" href="https://www.naba.it/en" target="_blank" rel="noopener">NABA, Nuova Accademia di Belle Arti</a>.</p>
       </div>
-      <div class="col">
-        <span class="lbl">Contact</span>
-        <a href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a>
-        <div class="gap"></div>
-        <div class="li">Rome, Italy</div>
-        <a href="mailto:rome@tommasoconcina.com">rome@tommasoconcina.com</a>
-        <div class="gap"></div>
-        <div class="li">New York, NY</div>
-        <a href="mailto:ny@tommasoconcina.com">ny@tommasoconcina.com</a>
-        <div class="gap"></div>
-        <a href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">Instagram</a>
-      </div>
+      <div class="slide" id="slideAbout"></div>
     </div>
   </div>
   <div class="foot" id="foot3"></div>
@@ -392,13 +413,12 @@ const FOOT = `
     <div class="c"><span class="mono city">Rome, Italy</span><span class="mono tR"></span></div>
     <div class="c"><span class="mono city">New York, NY</span><span class="mono tN"></span></div>
   </div>
-  <div class="dk"><div class="g">
-    <div><span class="lbl">Selected Work</span>${P.slice(0,4).map(p=>`<a data-open="${p.id}">${p.n}</a>`).join('')}<a data-go="work">All work</a></div>
-    <div><span class="lbl">Index</span><a data-filter="Creative Direction">Creative Direction</a><a data-filter="Styling">Styling</a><a data-go="archive">Archive</a></div>
-    <div><span class="lbl">Studio</span><a data-go="about">About &amp; Contact</a><a href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a><a href="mailto:rome@tommasoconcina.com">rome@tommasoconcina.com</a><a href="mailto:ny@tommasoconcina.com">ny@tommasoconcina.com</a><a href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">Instagram</a></div>
-  </div>
+  <div class="dk">
+    <a data-go="home">Back to homepage</a>
+    <nav><a data-go="work">Work</a><a data-go="archive">Archive</a><a data-go="about">About</a><a data-go="contact">Contact</a></nav>
+    <a href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a>
   </div>`;
-['#foot1','#foot2','#foot3'].forEach(s=>$(s).innerHTML=FOOT);
+['#foot1','#foot2','#foot3','#foot4'].forEach(s=>{const el=$(s); if(el) el.innerHTML=FOOT;});
 
 /* ---------- HOME ---------- */
 const FEAT = ['nac','thr','rolex','holden'];
@@ -591,7 +611,7 @@ function openProject(id,silent){
     btn.addEventListener('click',()=>{ f.classList.add('on'); v.controls=true; v.play(); });
     v.addEventListener('pause',()=>{ if(v.currentTime===0) f.classList.remove('on'); });
   });
-  $('#pCat').textContent = p.c + (p.s?' / '+p.s:'') + (p.y?' · '+p.y:'');
+  $('#pCat').innerHTML = p.c + (p.s?' / '+p.s:'') + (p.y?'<br>'+p.y.replace('—',' / '):'');
   let lk='';
   if(p.url) lk+=`<a href="${p.url}" target="_blank" rel="noopener">${p.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>`;
   if(p.ig)  lk+=`<a href="${p.ig}" target="_blank" rel="noopener">Instagram</a>`;
@@ -600,6 +620,21 @@ function openProject(id,silent){
 
   go('project',true);window.scrollTo(0,0);
 }
+
+/* ---------- SLIDE LATERALI DI ABOUT E CONTACT ---------- */
+function buildSlide(el, srcs){
+  if(!el) return;
+  srcs.forEach((src,i)=>{
+    const f=document.createElement('div'); f.className='f'+(i?'':' on');
+    f.innerHTML='<img src="'+src+'" loading="lazy" alt="">'; el.appendChild(f);
+  });
+  let i=0;
+  setInterval(()=>{ i=(i+1)%srcs.length;
+    [...el.children].forEach((f,k)=>f.classList.toggle('on',k===i)); },3400);
+}
+const pick=(id,n)=>{const p=P.find(x=>x.id===id); return p&&p.i?p.i.slice(0,n):[];};
+buildSlide($('#slideAbout'), [...pick('women',2), ...pick('thr',2), ...pick('men',2)]);
+buildSlide($('#slideContact'), [...pick('rolex',2), ...pick('book',2), ...pick('holden',2)]);
 
 /* ---------- LIGHTBOX ---------- */
 let lbList=[], lbI=0;
@@ -707,7 +742,7 @@ function syncHash(){
   const h=location.hash.replace('#','').replace(/^\//,'');
   if(!h){go('home');return;}
   if(h.startsWith('p/')){const id=h.slice(2);if(P.find(x=>x.id===id)){openProject(id,true);return;}}
-  if(['work','archive','about','home'].includes(h)){go(h,true);return;}
+  if(['work','archive','about','contact','home'].includes(h)){go(h,true);return;}
   go('home');
 }
 window.addEventListener('hashchange',syncHash);
