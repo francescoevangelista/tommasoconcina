@@ -501,7 +501,7 @@ P.forEach(p=>{
 CARDS.forEach((c,k)=>{
   const L=LAY[k%LAY.length];
   const d=el('div','sp');
-  d.dataset.open=c.p.id;d.dataset.cat=c.p.c;d.dataset.sub=c.p.s||'';
+  d.dataset.open=c.p.id;d.dataset.fc=c.p.c;d.dataset.fs=c.p.s||'';
   d.dataset.k=k;
   d.innerHTML=`<div class="ph" style="aspect-ratio:${L.r}"><img src="${c.src}" loading="lazy" alt=""></div>`
     + (c.last?`<div class="cap"><i>${c.p.n}</i>, ${c.p.c}</div>`:'');
@@ -540,8 +540,8 @@ function layoutField(vis){
 function applyFilter(){
   const vis=[];
   field.querySelectorAll('.sp').forEach(sp=>{
-    const okC = curF==='all' || sp.dataset.cat===curF;
-    const okS = curS==='all' || sp.dataset.sub===curS;
+    const okC = curF==='all' || sp.dataset.fc===curF;
+    const okS = curS==='all' || sp.dataset.fs===curS;
     const ok = okC&&okS;
     sp.classList.toggle('hide',!ok);
     if(ok) vis.push(sp);
@@ -581,7 +581,7 @@ keys.forEach(y=>{
   rows.appendChild(el('div','yr',y));
   byYear[y].forEach(p=>{
     const r=el('div','row',`<div class="n">${p.n}</div><div class="c">${p.c}${p.s?' / '+p.s:''}</div><div class="y">${p.y||'—'}</div>`);
-    r.dataset.open=p.id;r.dataset.img=p.i[0];
+    r.dataset.open=p.id;r.dataset.img=coverOf(p);
     rows.appendChild(r);
   });
 });
@@ -767,8 +767,8 @@ function go(id,silent){
   setTimeout(()=>window.scrollTo(0,0),60);
 }
 document.addEventListener('click',e=>{
-  const c=e.target.closest('[data-cat]'); if(c){openWork(c.dataset.cat,'all');return;}
-  const s2=e.target.closest('[data-sub]'); if(s2){openWork(SUBOF[s2.dataset.sub]||'all',s2.dataset.sub);return;}
+  const c=e.target.closest('#nav [data-cat],#pCat [data-cat]'); if(c){openWork(c.dataset.cat,'all');return;}
+  const s2=e.target.closest('#nav [data-sub],#pCat [data-sub]'); if(s2){openWork(SUBOF[s2.dataset.sub]||'all',s2.dataset.sub);return;}
   const g=e.target.closest('[data-go]');
   if(g){ if(g.dataset.go==='work'){openWork('all','all');return;} go(g.dataset.go);return;}
   const o=e.target.closest('[data-open]'); if(o){openProject(o.dataset.open);}
