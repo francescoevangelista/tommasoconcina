@@ -57,7 +57,7 @@ SEL = os.path.join(HERE, 'selezione.txt')
 INV = os.path.join(HERE, 'TC-inventario-unico.tsv')
 
 # lato lungo di pubblicazione, diverso per misura: una piccola non serve grande
-LATI = {'L': 2000, 'M': 1400, 'S': 900}
+LATI = {'L': 2400, 'M': 1800, 'S': 1200}
 QUALITA = 82
 BUONE = ('.jpg', '.jpeg', '.png', '.tif', '.tiff', '.webp')
 
@@ -238,7 +238,7 @@ def lato_di(mis):
     if mis in LATI:
         return LATI[mis]
     n = int(re.match(r'^(\d{1,2})', mis).group(1))
-    return 2000 if n >= 9 else (1400 if n >= 5 else 900)
+    return 2400 if n >= 9 else (1800 if n >= 5 else 1200)
 
 def prepara():
     from PIL import Image
