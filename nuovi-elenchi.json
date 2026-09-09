@@ -1,0 +1,9 @@
+{
+ "patty": [
+  "img/patty/01.jpg|3@2",
+  "img/patty/02.jpg|3@6^70",
+  "img/patty/03.jpg|3@4^60",
+  "img/patty/04.jpg|3@8",
+  "img/patty/05.jpg|5@5^40"
+ ]
+}

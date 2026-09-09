@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tommaso Concina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff; --ink:#111; --dim:#9a9a9a; --line:#e9e7e2; --tint:#f2f0eb;
+  --dark:#0d0d0d; --darkdim:#6f6f6f;
+  --pad:34px;
+  --t-nav:17px; --t-micro:10px; --t-mono:14px; --t-list:15px; --t-body:17px;
+  --ls:.14em;
+}
+/* Nunito Sans nel disegno originale, non quello rifatto oggi da Google.
+   Cambia solo una cosa e serviva: la l e dritta, senza la coda che curva.
+   Licenza aperta, file serviti da jsDelivr, versione bloccata. */
+@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300;font-display:swap;
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/nunito-sans@4.4.5/files/nunito-sans-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:400;font-display:swap;
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/nunito-sans@4.4.5/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:600;font-display:swap;
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/nunito-sans@4.4.5/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:300;font-display:swap;
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/nunito-sans@4.4.5/files/nunito-sans-latin-300-italic.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;font-display:swap;
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/nunito-sans@4.4.5/files/nunito-sans-latin-400-italic.woff2') format('woff2')}
+body{--meta:'Space Mono',monospace;
+     --sans:'Nunito Sans',sans-serif; --serif:'Nunito Sans',sans-serif}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+/* il trackpad in orizzontale non deve far tornare indietro nella cronologia */
+html,body{overscroll-behavior-x:none;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:var(--t-list);line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.mono{font-family:var(--meta);font-size:var(--t-mono);letter-spacing:.05em;font-variant-numeric:tabular-nums}
+.lbl{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6e6e6e}
+
+/* ================= NAV PERSISTENTE ================= */
+#nav{position:absolute;top:0;left:0;z-index:200;padding:var(--pad) 30px 18px var(--pad)}
+#nav .wm{font-weight:600;font-size:var(--t-nav);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;margin-bottom:26px}
+#nav a{display:block;font-weight:400;font-size:15px;letter-spacing:.14em;text-transform:uppercase;line-height:2.05;color:var(--dim);cursor:pointer}
+#nav a:hover,#nav a.on{color:var(--ink)}
+#nav .sub{max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .5s cubic-bezier(.72,0,.12,1),opacity .35s ease}
+#nav .sub.open{max-height:260px;opacity:1}
+#nav .sub a{font-style:italic;font-size:11.5px;letter-spacing:.12em;line-height:1.85;padding-left:15px}
+#nav .sub2{max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .45s cubic-bezier(.72,0,.12,1),opacity .3s ease}
+#nav .sub2.open{max-height:160px;opacity:1}
+#nav .sub2 a{font-size:11px;line-height:1.85;padding-left:31px}
+body.dark #nav .wm{color:#fff}
+body.dark #nav a{color:var(--darkdim)}
+body.dark #nav a:hover,body.dark #nav a.on{color:#fff}
+#corner{position:absolute;top:0;right:0;z-index:200;text-align:right;padding:var(--pad) var(--pad) 14px 30px}
+body.athome #corner{display:none}
+#corner .mono{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a;display:block;line-height:2}
+body.dark #corner .mono{color:var(--darkdim)}
+
+/* ================= PAGINE ================= */
+.page{display:none;min-height:100vh}
+.page.on{display:block}
+.wrap{padding:calc(var(--pad) + 230px) var(--pad) 0}
+
+/* ---------- HOME: spaccata a metà ---------- */
+#home{display:none;position:fixed;inset:0}
+#home.on{display:grid;grid-template-columns:1fr 1fr}
+#home .l{position:relative;border-right:1px solid var(--line);padding:var(--pad)}
+#home .r{position:relative;overflow:hidden;background:var(--tint)}
+#home .sel{position:absolute;top:58%;left:var(--pad);transform:translateY(-50%)}
+#home .sel .lbl{display:block;margin-bottom:24px}
+#home .sel a{display:block;font-weight:400;font-style:italic;font-size:clamp(16px,1.25vw,19px);line-height:2.05;letter-spacing:0;color:var(--ink)}
+#home .sel a:hover{opacity:.4}
+#home .clocks{position:absolute;left:var(--pad);bottom:var(--pad)}
+#home .clocks .mono{display:grid;grid-template-columns:104px auto;column-gap:10px;
+  font-size:13px;color:#7c7c7c;line-height:1.75}
+#home .clocks .mono b{font-weight:inherit}
+#home .clocks .mono i{font-style:normal}
+#home .slot{position:absolute;inset:0;overflow:hidden;background:#FDFDFE}
+#home .slot::before,#home .slot::after{content:'';position:absolute;inset:-30%}
+#home .slot::before{
+  background:linear-gradient(140deg,#FFFFFF 0%,#F4F5F7 26%,#DDE0E6 52%,#EFF1F4 76%,#FFFFFF 100%);
+  background-size:200% 200%;animation:drift 26s ease-in-out infinite}
+#home .slot::after{
+  background:radial-gradient(60% 55% at 30% 35%,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 70%);
+  animation:glow 34s ease-in-out infinite}
+@keyframes drift{0%{background-position:0% 20%}50%{background-position:100% 80%}100%{background-position:0% 20%}}
+@keyframes glow{0%{transform:translate3d(-6%,-4%,0)}50%{transform:translate3d(8%,6%,0)}100%{transform:translate3d(-6%,-4%,0)}}
+@media(prefers-reduced-motion:reduce){#home .slot::before,#home .slot::after{animation:none}}
+#home video.reel{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;z-index:2}
+#home video.reel.on{opacity:1}
+
+/* ---------- WORK: campo sparso ---------- */
+.filters{display:flex;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.filters span{font-family:var(--sans);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:#8a8a8a;cursor:pointer;
+  padding:10px 16px;margin:-10px 0;user-select:none;-webkit-tap-highlight-color:transparent;
+  transition:color .2s ease}
+.filters span:first-child{padding-left:0}
+.filters span:hover,.filters span.on{color:var(--ink)}
+#field{position:relative;padding-bottom:40px;margin-top:124px}
+.sp{position:absolute;cursor:pointer;transition:top .5s cubic-bezier(.72,0,.12,1),left .5s cubic-bezier(.72,0,.12,1),width .5s cubic-bezier(.72,0,.12,1)}
+.sp .ph{background:var(--tint);overflow:hidden}
+.sp .ph img,.sp .ph video{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.4s cubic-bezier(.2,0,.1,1)}
+.sp:hover .ph img,.sp:hover .ph video{transform:scale(1.03)}
+.sp .cap{margin-top:10px;font-family:var(--sans);font-size:var(--t-mono);color:var(--dim)}
+.sp .cap i{font-family:var(--serif);font-style:italic;font-weight:400;font-size:14px;letter-spacing:0;color:var(--ink)}
+.sp{transition:top .6s cubic-bezier(.72,0,.12,1),left .6s cubic-bezier(.72,0,.12,1),opacity .45s ease}
+.sp.hide{display:none}
+
+/* ---------- PROGETTO ---------- */
+#project .pj{display:flex;gap:70px;align-items:flex-start}
+#project .head{position:sticky;top:40px;width:230px;flex:none;padding-top:150px}
+#project .head h2{font-family:var(--serif);font-weight:400;font-style:italic;
+  font-size:clamp(21px,1.8vw,27px);line-height:1.15;letter-spacing:0}
+#project .pmeta{margin-top:60px}
+#project .pcat{margin-bottom:22px}
+#project .pcat a,#project .pcat span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:#6e6e6e;line-height:2}
+#project .pcat a{cursor:pointer}
+#project .pcat a:hover{color:var(--ink)}
+#project .pcat .yr{display:block;color:#9a9a9a}
+#project .links a{display:block;font-size:13px;color:var(--dim);line-height:1.9;
+  text-decoration:underline;text-underline-offset:3px}
+#project .links a:hover{color:var(--ink)}
+/* Impaginazione libera su dodici colonne.
+   Di ogni immagine si decidono larghezza, colonna di partenza e scarto
+   verticale: e quello che serve per avere pagine mosse invece che file
+   allineate. Le proporzioni delle foto non si toccano mai. */
+#project .stream{flex:1;display:grid;grid-template-columns:repeat(12,1fr);
+  column-gap:2%;row-gap:58px;align-items:start}
+#project .it{grid-column:auto/span 6}
+#project .it.L{grid-column:1/span 12}
+#project .it.M{grid-column:auto/span 6}
+#project .it.S{grid-column:auto/span 4}
+#project .it .ph{background:var(--tint);overflow:hidden}
+/* I video partono da soli, senza audio e senza scritte sopra.
+   Un clic li porta a tutto schermo. Solo quelli con la traccia audio
+   mostrano l'interruttore del suono. */
+#project .vid{position:relative;background:#0d0d0d;overflow:hidden;cursor:pointer}
+#project .vid video{width:100%;height:auto;display:block}
+#project .vid .snd{position:absolute;right:22px;bottom:20px;z-index:3;cursor:pointer;
+  font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);transition:color .25s ease}
+#project .vid .snd:hover{color:#fff}
+@media(max-width:860px){#project .vid .snd{right:14px;bottom:14px;font-size:10px}}
+#project .nextwrap{padding:90px var(--pad) 0;text-align:right}
+#project .nextwrap .lbl{display:block;margin-bottom:10px}
+#project .nextwrap a{font-family:var(--serif);font-size:clamp(19px,1.6vw,24px);cursor:pointer}
+#project .nextwrap a:hover{opacity:.45}
+
+#lb{position:fixed;inset:0;z-index:600;background:#fff;
+  display:none;align-items:center;justify-content:center}
+#lb.on{display:flex}
+#lb .lbstage{max-width:88vw;max-height:82vh;display:flex;align-items:center;justify-content:center}
+#lb img,#lb video{max-width:88vw;max-height:82vh;width:auto;height:auto;object-fit:contain;display:none}
+#lb.isimg img{display:block}
+#lb.isvid video{display:block}
+#lb .lbbar{position:absolute;top:var(--pad);left:var(--pad);right:var(--pad);z-index:3;
+  display:flex;justify-content:space-between;align-items:baseline}
+#lb .lbn{font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+  font-variant-numeric:tabular-nums;color:var(--dim)}
+#lb .hintbar{position:absolute;left:0;right:0;bottom:96px;text-align:center;
+  font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:#b0b0b0;opacity:0;transition:opacity .5s ease;pointer-events:none}
+#lb.hint .hintbar{opacity:1}
+#lb .lbx{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+#lb .lbx:hover{opacity:.5}
+#lb .lbbtns{display:contents}
+#lb .lbrow{display:contents}
+#lb .lbnav{position:absolute;top:90px;bottom:0;width:26%;background:none;border:none;cursor:pointer;z-index:1;
+  display:flex;align-items:center;outline:none;-webkit-tap-highlight-color:transparent;
+  user-select:none;-webkit-user-select:none}
+#lb .lbnav::-moz-focus-inner{border:0}
+#lb,#lb *{-webkit-tap-highlight-color:transparent}
+#lb .lbx,#lb .lbn{user-select:none;-webkit-user-select:none}
+#lb .lbnav.prev{justify-content:flex-start;padding-left:var(--pad)}
+#lb .lbnav.next{justify-content:flex-end;padding-right:var(--pad)}
+#lb .lbnav span{display:flex;color:#c4c4c4;transition:color .2s ease}
+#lb .lbnav:hover span{color:var(--ink)}
+#lb .lbnav:focus{outline:none}
+#lb .lbnav.prev{left:0}#lb .lbnav.next{right:0}
+@media(max-width:860px){
+  #lb img,#lb video{max-width:94vw;max-height:70vh}
+  /* su telefono le frecce diventano due pulsanti veri in basso */
+  /* i due pulsanti stanno in una barra centrata: niente calcoli a mano */
+  #lb .lbnav{position:static;width:auto;height:auto;padding:0}
+  #lb .lbbtns{position:absolute;left:0;right:0;bottom:26px;
+    display:flex;justify-content:center;gap:14px}
+  #lb .lbnav span{display:flex;align-items:center;justify-content:center;
+    width:46px;height:46px;border:1px solid var(--line);border-radius:50%;
+    color:var(--ink);background:#fff}
+  #lb .lbbar{top:18px;left:18px;right:18px}
+}
+#project .it .ph{cursor:zoom-in}
+
+/* ---------- ARCHIVIO ---------- */
+body.dark{background:var(--dark);color:#fff}
+#archive{background:var(--dark);color:#fff}
+#gate{position:fixed;inset:0;background:var(--dark);z-index:150;display:flex;align-items:center;justify-content:center}
+#gate.off{display:none}
+#gate .box{width:280px}
+#gate p{font-family:var(--sans);font-size:var(--t-mono);letter-spacing:var(--ls);text-transform:uppercase;color:var(--darkdim);margin-bottom:18px}
+#gate input{width:100%;background:none;border:none;border-bottom:1px solid #333;color:#fff;
+  font-family:var(--sans);font-size:13px;letter-spacing:.08em;padding:8px 0;outline:none}
+#gate input:focus{border-color:#fff}
+#gate .err{color:#b04a3a;margin-top:12px;height:14px;text-transform:none;letter-spacing:0}
+#gate .grow{display:flex;align-items:center;justify-content:space-between;margin-top:30px}
+#gate .gbtn{appearance:none;background:none;border:none;color:#fff;padding:0;
+  font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  cursor:pointer;opacity:.85;transition:opacity .25s ease}
+#gate .gbtn:hover{opacity:1}
+#gate .gback{font-family:var(--sans);font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:#6f6f6f;cursor:pointer}
+#gate .gback:hover{color:#fff}
+#archive .rows{padding-top:30px;padding-bottom:140px}
+#archive .yr{font-family:var(--meta);font-size:11px;letter-spacing:.16em;color:#7a7a7a;margin:44px 0 14px}
+#archive .row{display:grid;grid-template-columns:1fr 200px 90px;gap:20px;padding:9px 0;cursor:pointer;
+  color:#b3b3b3;transition:color .25s ease}
+#archive .row:hover{color:#fff}
+#archive .row .n{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:0}
+#archive .row .c{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+#archive .row .y{font-family:var(--meta);font-size:var(--t-mono);text-align:right}
+#archive #peek{position:fixed;width:240px;pointer-events:none;opacity:0;transition:opacity .3s ease;z-index:120}
+#archive #peek.show{opacity:1}
+
+/* ---------- ABOUT ---------- */
+#about .grid{display:grid;grid-template-columns:minmax(0,4fr) 3fr;gap:80px;max-width:1200px;padding-top:40px}
+#about .desc p{font-weight:300;font-size:var(--t-body);line-height:1.7;margin-bottom:18px;max-width:42ch}
+#about .slide,#contact .slide{position:relative;width:100%;max-width:380px;aspect-ratio:3/4;background:var(--tint);overflow:hidden}
+#about .slide .f,#contact .slide .f{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+#about .slide .f.on,#contact .slide .f.on{opacity:1}
+#contact .desc a.cm{display:block;font-weight:300;font-size:var(--t-list);line-height:2;color:var(--ink)}
+#contact .desc a.cm:hover{opacity:.45}
+#contact .desc .li{font-weight:300;font-size:var(--t-list);line-height:2}
+#contact .desc .lbl{display:block;margin-bottom:16px}
+#contact .desc .lbl2{display:block;margin-top:62px}
+#contact .desc .sp2{margin-top:34px}
+#contact .desc a.ig{margin-top:52px}
+#contact .grid{display:grid;grid-template-columns:minmax(0,4fr) 3fr;gap:80px;max-width:1200px;padding-top:40px}
+@media(max-width:1100px){#contact .grid{grid-template-columns:1fr;gap:40px}}
+#about .desc a.ln{border-bottom:1px solid var(--line);padding-bottom:1px}
+#about .desc a.ln:hover{border-color:var(--ink)}
+#about .col .gap{height:22px}
+#about .lbl{display:block;margin-bottom:24px}
+#about .col a,#about .col .li{display:block;font-weight:400;font-size:var(--t-list);line-height:1.95}
+#about .col a:hover{opacity:.45}
+
+/* ---------- RITORNO IN ALTO ---------- */
+/* Solo testo. Il fondo non esiste: la scritta si inverte su quello che ha sotto,
+   quindi resta leggibile sia sul bianco sia su una foto scura. */
+#top{position:fixed;right:var(--pad);bottom:30px;z-index:400;
+  display:flex;align-items:center;gap:10px;
+  background:none;border:none;cursor:pointer;padding:0;
+  font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;mix-blend-mode:difference;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s ease;-webkit-tap-highlight-color:transparent}
+#top i{display:block;width:26px;height:1px;background:currentColor}
+#top.show{opacity:.85;pointer-events:auto}
+#top.show:hover{opacity:1}
+@media(max-width:860px){#top{bottom:20px;font-size:10px}#top i{width:16px}}
+
+/* ---------- FOOTER ---------- */
+.foot{margin-top:100px}
+.foot .cities{padding:0 var(--pad) 46px;display:flex;flex-direction:column;gap:5px}
+.foot .cities .c{display:grid;grid-template-columns:118px auto;align-items:baseline}
+.foot .cities .c .city,.foot .cities .c .mono{white-space:nowrap}
+.foot .cities .c .city{font-size:14px;color:var(--ink);letter-spacing:.02em}
+.foot .cities .c .mono{font-size:13px;color:#7c7c7c}
+.foot .dk{background:var(--dark);color:#fff;padding:26px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot .dk a{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f}
+.foot .dk a:hover{color:#fff}
+.foot .dk nav{display:flex;gap:28px}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:860px){
+  :root{--pad:18px}
+  #nav{position:static;padding:18px var(--pad) 0}
+  #nav .wm{margin-bottom:12px}
+  #nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 16px}
+  #nav .wm{width:100%;margin-bottom:10px}
+  #nav a{display:inline-block;margin:0;font-size:11px;letter-spacing:.11em;line-height:2}
+  #nav .sub{width:100%;display:flex;flex-wrap:wrap;gap:0 14px}
+  #nav .sub.open{max-height:120px}
+  #nav .sub a{padding-left:0;font-size:10.5px;letter-spacing:.1em}
+  #nav .sub2{width:100%;display:flex;flex-wrap:wrap;gap:0 14px}
+  #nav .sub2 a{padding-left:0}
+  #corner{display:none}
+  .wrap{padding:26px var(--pad) 0}
+  #home.on{display:block;position:static;min-height:auto}
+  #home .r{height:52vh}
+  #home .l{border-right:none;padding:0}
+  #home .sel{position:static;transform:none;padding:30px var(--pad)}
+  #home .sel a{font-size:20px}
+  #home .clocks{position:static;padding:0 var(--pad) 34px}
+  #field{padding-bottom:40px;margin-top:34px}
+  /* New York, NY non deve spezzarsi su due righe */
+  .foot .cities .c{grid-template-columns:max-content auto;column-gap:16px}
+  #home .clocks .mono{grid-template-columns:max-content auto;column-gap:16px}
+  #home .clocks .mono span,#home .clocks .mono{white-space:nowrap}
+  .sp{position:relative!important;top:auto!important;left:auto!important;right:auto!important;
+    width:100%!important;margin-bottom:34px}
+  #project .pj{display:block}
+  #project .head{position:static;width:auto;margin-bottom:30px;padding-top:0}
+  #project .pmeta{margin-top:26px}
+  /* sul telefono tutto a piena larghezza, in ordine, senza scarti */
+  #project .stream{grid-template-columns:1fr;row-gap:30px}
+  #project .it,#project .it.L,#project .it.M,#project .it.S{
+    grid-column:1/span 1!important;margin-top:0!important}
+  #project .nextwrap{padding:50px var(--pad) 0;text-align:left}
+  #archive .row{grid-template-columns:1fr 84px;gap:10px}
+  #archive .row .c{display:none}
+  #archive #peek{display:none}
+  #about .grid{grid-template-columns:1fr;gap:32px}
+  .foot{margin-top:60px}
+  .foot .cities{padding-bottom:44px;gap:10px}
+  .foot .cities .c{flex-direction:column;gap:2px}
+  .foot .cities .c .city{font-size:16px}
+  .foot{margin-top:70px}
+  .foot .dk{padding:22px var(--pad);flex-direction:column;align-items:flex-start;gap:14px}
+  .foot .dk a{font-size:11px;letter-spacing:.11em}
+  .foot .dk nav{flex-wrap:wrap;gap:0 16px}
+  .foot .cities{padding-bottom:40px}
+}
+</style>
+</head>
+<body data-font="C" class="athome">
+
+<div id="nav">
+  <div class="wm" data-go="home">Tommaso Concina</div>
+  <a data-go="work">Work</a>
+  <div class="sub" id="navSub">
+    <a data-cat="Creative Direction">Creative Direction</a>
+    <a data-cat="Styling">Styling</a>
+    <div class="sub2" id="navSub2">
+      <a data-sub="Women">Women</a>
+      <a data-sub="Men">Men</a>
+      <a data-sub="Rolex">Rolex</a>
+    </div>
+  </div>
+  <a data-go="archive">Archive</a>
+  <a data-go="about">About</a>
+  <a data-go="contact">Contact</a>
+</div>
+
+<div id="corner">
+  <span class="mono">Creative Direction + Styling</span>
+  <span class="mono">Rome / New York</span>
+</div>
+
+<!-- ============ HOME ============ -->
+<section class="page on" id="home">
+  <div class="l">
+    <div class="sel">
+      <span class="lbl">Selected Work</span>
+      <div id="homeSel"></div>
+    </div>
+    <div class="clocks">
+      <span class="mono ck"><b>Rome</b><i id="ckR"></i></span>
+      <span class="mono ck"><b>New York</b><i id="ckN"></i></span>
+    </div>
+  </div>
+  <div class="r" id="homeR"></div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="page" id="work">
+  <div class="wrap">
+    <div id="field"></div>
+  </div>
+  <div class="foot" id="foot1"></div>
+</section>
+
+<!-- ============ PROGETTO ============ -->
+<section class="page" id="project">
+  <div class="wrap pj">
+    <aside class="head">
+      <h2 id="pTitle"></h2>
+      <div class="pmeta">
+        <div class="pcat" id="pCat"></div>
+        <div class="links" id="pLinks"></div>
+      </div>
+    </aside>
+    <div class="stream" id="pStream"></div>
+  </div>
+  <div class="nextwrap"><span class="lbl">Next</span><a id="pNextA"></a></div>
+  <div class="foot" id="foot2"></div>
+</section>
+
+<button id="top" type="button" aria-label="Top"><i></i>Top</button>
+
+<div id="lb">
+  <div class="lbbar"><span class="lbn" id="lbN"></span><span class="lbx" id="lbClose">Close</span></div>
+  <div class="lbstage"><img id="lbImg" alt=""><video id="lbVid" playsinline></video></div>
+  <div class="hintbar">Swipe</div>
+  <div class="lbbtns">
+    <button class="lbnav prev" id="lbPrev" type="button" aria-label="Previous"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1"><path d="M15 4 L7 12 L15 20"/></svg></span></button>
+    <button class="lbnav next" id="lbNext" type="button" aria-label="Next"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1"><path d="M9 4 L17 12 L9 20"/></svg></span></button>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="page" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div class="desc">
+        <span class="lbl">Contact</span>
+        <a class="cm" href="mailto:tommaso@tommasoconcina.com">tommaso@tommasoconcina.com</a>
+        <span class="lbl lbl2">Studio</span>
+        <div class="li">Rome, Italy</div>
+        <a class="cm" href="mailto:rome@tommasoconcina.com">rome@tommasoconcina.com</a>
+        <div class="li sp2">New York, NY</div>
+        <a class="cm" href="mailto:ny@tommasoconcina.com">ny@tommasoconcina.com</a>
+        <a class="cm ig" href="https://www.instagram.com/tommasoconcina/" target="_blank" rel="noopener">@tommasoconcina</a>
+      </div>
+      <div class="slide" id="slideContact"></div>
+    </div>
+  </div>
+  <div class="foot" id="foot4"></div>
+</section>
+
+<!-- ============ ARCHIVIO ============ -->
+<section class="page" id="archive">
+  <div id="gate">
+    <div class="box">
+      <p>Private archive</p>
+      <input id="pw" type="password" placeholder="Password" autocomplete="off"
+             autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
+      <p class="err" id="pwErr"></p>
+      <div class="grow">
+        <button class="gbtn" id="pwGo" type="button">Enter</button>
+        <span class="gback" data-go="home">Back</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="rows" id="rows"></div>
+  </div>
+  <div id="peek"><div class="ph"><img id="peekImg" alt=""></div></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="page" id="about">
+  <div class="wrap">
+    <div class="grid">
+      <div class="desc">
+        <span class="lbl">Bio</span>
+        <p>Born in New York, Tommaso Concina is a Rome based creative director and stylist, working internationally.</p>
+        <p>During 25 years based in NYC he styled fashion editorials for Esquire, GQ, Style Corriere della Sera, Surface, D La Repubblica and advertising clients including Rolex, Nokia, L'Oréal, Sony. He simultaneously specialised in digital media, from interactive commerce to publishing, brand consulting and web design.</p>
+        <p>He is currently Professor in Fashion Design and Art Direction, Graduate and Master, at <a class="ln" href="https://www.naba.it/en" target="_blank" rel="noopener">NABA, Nuova Accademia di Belle Arti</a>.</p>
+      </div>
+      <div class="slide" id="slideAbout"></div>
+    </div>
+  </div>
+  <div class="foot" id="foot3"></div>
+</section>
+
+<script>
+const P = [{"id": "thr", "n": "The Hollywood Reporter Roma", "c": "Creative Direction", "s": null, "y": "2023—2025", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9512992_MICHELE-BRAVI-1200-X-1493.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9352216_DIGITAL-COVER-OSCARS-2025-1080-x-1350-nuovo-formato-IG.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9095689_CULTURE-CLUB-FNALE.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9041142_mina-salome-B-N-giallo.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9041134_GASCON-DIGITAL-COVER.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8949853_COVER-SOPHIA-FINALE3-scelta.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8851703_tomas-arana-digital-cover.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8819878_cover-paul-gere-finale.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8720879_jolie-finale.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8691136_gaga-mars1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8581442_brancale1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8439377_ROSAMUND-PIKE.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8415101_SCHISANO-finale-x-sito.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8452550_Fotini-Peluso-THR2-copy.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378170_Screenshot-2024-05-17-at-12-19-56.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390450_nicolas-maupas-ps.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354826_SAVIANO.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354834_COVERS-THR-finale-jpeg.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354810_michele-con-testo.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354802_michela-con-testo.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354794_linda-con-testo.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354786_kasia-con-testo.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8392009_GIUSEPPE-MAGGIO.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8354850_cover-finale-ppp.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8373382_COVER-BERLINALE.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380277_berlino1.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380285_berlino2.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380293_berlino3.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380309_berlino5.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380301_berlino4.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378862_veduta-t3dv-X-SITO-sex.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380405_bolle.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380365_MP5-1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380373_MP5-2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380381_MP5-3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380389_svelarsi1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380397_svelarsi2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380357_glossario.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380325_fumetti1.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380333_fumetti2.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380341_fumetti3.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380317_drusilla.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8380349_garrone.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9352208_milano-fashion-week-opening.jpg"], "tiles": 2}, {"id": "nac", "n": "New Art Corps", "c": "Creative Direction", "s": null, "y": "2025—2026", "i": [], "url": "https://www.newartcorps.com/", "ig": "https://www.instagram.com/newartcorps/", "media": [{"t": "img", "s": "video/nac-logo.png", "w": "S"}, {"t": "vid", "s": "video/nac-lettering.mp4", "p": "video/nac-lettering-poster.jpg", "a": 1, "w": "M"}, {"t": "vid", "s": "video/nac-logo.mp4", "p": "video/nac-logo-poster.jpg", "w": "S", "card": 1}, {"t": "vid", "s": "video/newartcorps-scroll-vertical.mp4", "p": "video/newartcorps-scroll-poster.jpg", "w": "S"}]}, {"id": "holden", "n": "Holden Outerwear", "c": "Creative Direction", "s": null, "y": "2024—2025", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390377_foto-cover-holden-x-newsletter-valentine-s-day.jpg|7@1", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046865_holden-pelouche.jpg|4@9^150", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046833_holden-site-winter-24-25.jpg|5@2^70", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390401_holden-ns-duo2.jpg|6@8^-30", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390393_holden-ns-duo1.jpg|12@1", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8433753_holden-ns-duo-x-sito2.jpg|4@1", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390353_holden-x-sito-mio-3.jpg|4@6^100", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390441_holden-x-sito-mio-4.jpg|3@10^-20", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046746_holden-blurry3.jpg|8@3", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046738_holden-blurry2.jpg|4@1^-50", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046762_holden-marrone.jpg|5@8^50", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046754_holden-green.jpg|6@1", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046730_holden-blurry.jpg|5@8^40", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046778_holden-rosa.jpg|12@1", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046770_holden-orange-2.jpg|3@2", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/9046786_holden-seduto.jpg|3@6^80", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8433779_homepage-x-sito-mio1.jpg|4@9^-30", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390417_homepage-x-sito-mio1copy.jpg|7@5", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390433_holden-x-sito-mio-2.jpg|4@1^70", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390425_holden-x-sito-mio-1.jpg|6@7^-20"], "url": "https://www.holdenouterwear.com/", "ig": "https://www.instagram.com/holdenouterwear/"}, {"id": "rolex", "n": "Rolex", "c": "Styling", "s": "Rolex", "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114902_YUNDI-LI-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114972_GUSTAVO-DUDAMEL-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114993_PLACIDO-DOMINGO-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115091_VONN-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115140_GUILLEM-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115147_YUJA-WANG-ROLEX-JWT-copy.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115049_ROLEX-HERITAGE-DANIELA-URZI.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115021_ROLEX-BIANCA.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115035_ROLEX-ICE-STEPPER.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115056_ROLEX-EVEREST-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114909_TOM-KRISTENSEN-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114916_PAUL-CAYARD-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114923_RODRIGO-PESSOA-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114930_ROBERT-SCHEIDT-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114937_MATTEO-MANASSERO-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114944_CARLO-JANKA-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114951_JO-TSONGA-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114958_MARTIN-KAYMER-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114965_CAMILO-VILLEGAS-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114979_GONZALO-PIERES-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114986_ADAM-SCOTT-ROLEX-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115000_ROLEX-LOG-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115007_ROLEX-TULUM-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115014_ROLEX-TREE-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115028_ROLEX-LAVA-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115042_ROLEX-BAHAMAS-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115063_ROLEX-FERNANDA-HERITAGE-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115070_ROLEX-LUCIANA-HERITAGE-JWT.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115077_LUCIANA-FERNANDA-DOUBLE.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115084_WERTH-WEBSITE-FINAL-copy.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115098_WOZNIACKI-X-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115105_SHANKAR-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115112_PHILLIPS-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115119_KRALL1-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115126_IVANOVIC-WEBSITE-FINAL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115133_BARTOLI-WEBSITE-FINAL.jpg"], "url": "https://www.rolex.com/", "ig": "https://www.instagram.com/rolex/", "tiles": 2}, {"id": "overyou", "n": "Over You", "c": "Creative Direction", "s": null, "y": "", "media": [{"t": "vid", "s": "video/overyou.mp4", "p": "video/overyou-poster.jpg", "a": 1, "w": "L"}], "i": []}, {"id": "book", "n": "Book Magazine", "c": "Creative Direction", "s": null, "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114279_Cover-BOOK-Fernanda-22Touch-22.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114293_DOPPIA-FERNANDA-SURREALE5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114300_DOPPIA-FERNANDA-SURREALE3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114307_DOPPIA-FERNANDA-SURREALE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114342_DOPPIA-COVERS-FOCUS.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114349_DOPPIA-APERTURA-ALAIA.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114356_DOPPIA-ALAIA.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114363_DOPPIA-LACROIX-SCHIAPARELLI1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114370_DOPPIA-LACROIX-SCHIAPARELLI2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114377_DOPPIA-SKETCH-ROGER-VIVIER.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114391_DOPPIA-DIOR-IMPRESSIONS.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114419_DOPPIA-JEWELRY-TIFFANY1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114426_DOPPIA-JEWELRY-TIFFANY2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114433_DOPPIA-JEWELRY-TESORI1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114440_DOPPIA-JEWELRY-TESORI2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114454_DOPPIA-JEWELRY-CHOPARD.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114461_DOPPIA-VAN-CLEEF.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114468_DOPPIA-TARTARUGA-CARTIER.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114475_DOPPIA-UCCELLI-CARTIER.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114482_DOPPIA-JEWELRY-BULGARI1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114489_DOPPIA-JEWELRY-BULGARI2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114531_DOPPIA-BOOK-COUTURE-CATHLEEN1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114538_DOPPIA-BOOK-COUTURE-CATHLEEN3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114545_DOPPIA-BOOK-COUTURE-CATHLEEN2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114552_DOPPIA-BOOK-COUTURE-CATHLEEN4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114601_DOPPIA-BACKSTAGE1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114608_DOPPIA-BACKSTAGE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114629_DOPPIA-CARTIER1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114636_DOPPIA-AUDEMARS-PIGUET.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114643_DOPPIA-WATCHES-RALPH-LAUREN.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114650_DOPPIA-JUDE-LAW.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114657_DOPPIA-JUDE-LAW1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114664_DOPPIA-SURF-CLUB1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114671_DOPPIA-BACKSTAGE-UOMO1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114678_DOPPIA-BACKSTAGE-UOMO2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114692_DOPPIA-BEAUTY-PROFUMI.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114699_DOPPIA-AVEDON1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114706_DOPPIA-AVEDON2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114713_DOPPIA-BEYOND-THE-VEIL.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114727_DOPPIA-SELON-KARL1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114734_DOPPIA-SELON-KARL.jpg"], "tiles": 2}, {"id": "roma", "n": "Roma Magazine", "c": "Creative Direction", "s": null, "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114174_DOPPIA-FERNANDA-DIES1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114181_DOPPIA-FERNANDA-DIES4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114188_DOPPIA-FERNANDA-DIES2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114195_DOPPIA-FERNANDA-DIES3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114202_DOPPIA-IOULEX-ROMAN1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114209_DOPPIA-IOULEX-ROMAN2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114216_DOPPIA-IOULEX-ROMAN3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114237_DOPPIA-SALVATI1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114244_DOPPIA-SALVATI2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114251_DOPPIA-SALVATI3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114258_DOPPIA-DELFINA2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114265_DOPPIA-DELFINA1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114272_DOPPIA-GATTA.jpg"]}, {"id": "batt", "n": "Battistoni", "c": "Creative Direction", "s": null, "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114790_Screen-Shot-2017-07-22-at-12-53-14.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114797_Screen-Shot-2017-07-22-at-12-52-48.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114804_Screen-Shot-2017-07-22-at-12-55-41.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114853_Screen-Shot-2017-07-22-at-12-54-10.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114860_Screen-Shot-2017-07-22-at-12-54-20.jpg"]}, {"id": "loden", "n": "Lodental", "c": "Creative Direction", "s": null, "y": "2024", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390799_lodental-x-sito7.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390783_lodental-x-sito5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390791_lodental-x-sito6.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390767_lodental-x-sito3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390759_lodental-x-sito2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390743_lodental-x-sito1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8391830_lodental-x-sito4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8390807_lodental-x-sito8.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8393541_cappe-lodental.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8391846_lodental-iacovissi2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8391838_lodental-iacovissi.jpg"]}, {"id": "patty", "n": "Patty B.", "c": "Creative Direction", "s": null, "y": "2024", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8440992_patty-b-singola3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8439965_patty-b6363.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8440012_patty-basta.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8440855_patty-b-singola2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8441097_patty-b-singola5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8439957_patty-nerella-joe.jpg"]}, {"id": "ecom", "n": "Interactive E-Commerce", "c": "Creative Direction", "s": null, "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378202_t3dv-finalone-X-SITO.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378186_floral-finalone.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378194_HALL-ROTUNDA-X-SITO.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378778_veduta-t3dv-X-SITO-6.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378210_watches-t3dv-x-sito.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8392263_veduta-t3dv-X-SITO-7.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8392279_scena-t3dv-sito-mio.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/8378698_veduta-t3dv-X-SITO-1.jpg"]}, {"id": "men", "n": "Men", "c": "Styling", "s": "Men", "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115154_Scamarcio2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115161_Scamarcio1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115168_DOPPIA-GRUPPO-MILANO1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115175_DOPPIA-GRUPPO-MILANO2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115182_DOPPIA-GRUPPO-MILANO3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115189_DOPPIA-GRUPPO-MILANO4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115196_Stratton2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115203_Stratton1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115210_Williams-Rumble1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115217_Williams-Rumble2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115224_Stephanie-Noah2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115231_Stephanie-Noah4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115238_Stephanie-Noah6.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115245_Stephanie-Noah5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115252_Stephanie-Noah3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115259_Stephanie-Desert3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115266_Stephanie-Desert2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115273_Stephanie-Desert1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115280_Neil-Kirk-roof3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115287_Neil-Kirk-roof2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115294_Neil-Kirk-roof1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115301_Neil-Kirk-roof4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115308_Lutz-Roma2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115315_Lutz-Roma1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115322_Josh-snow2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115329_Josh-snow1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115336_Josh-Studio2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115343_Josh-Studio1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115350_Josh-Surface1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115357_Josh-Surface7.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115364_Josh-Surface6.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115371_Josh-Surface5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115378_Josh-Surface2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115385_Josh-sand1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115392_Josh-sand3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115399_Josh-sand2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115406_Josh-roof1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115413_Josh-roof2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115420_Josh-Miami1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115427_Josh-Miami4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115434_Josh-Miami2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115441_Josh-Floyd2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115448_Josh-Floyd1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115455_Josh-Actors2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115462_Josh-Actors3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115469_Josh-Actors1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115476_Dimitri1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115483_Dimitri2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115490_Ioulex-Wall-street4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115497_Ioulex-Wall-street2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115504_Ioulex-Wall-street5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115511_Ioulex-Wall-street6.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115518_Ioulex-Wall-street3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115525_Ioulex-Wall-street1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115532_Stephanie-Yard2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115539_Stephanie-Yard1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115546_D-Este-Metcalfe2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115553_D-Este-Metcalfe1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115560_D-Este-Danny-Fuller-1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115567_D-Este-Danny-Fuller-2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115574_Anaya-street1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115581_Anaya-street2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115588_Bell-Men-LA3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115595_Bell-Men-LA1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115602_Bell-Men-LA2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115609_Anaya-Bill3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115616_Anaya-Bill-2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115623_Abrahams3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115630_Abrahams1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115637_Abrahams2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115644_Luca4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115651_Luca3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115658_Luca2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115665_Luca1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115672_Accorsi2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115679_Accorsi4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115686_Accorsi1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115693_Accorsi3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115700_Smoking-D-Este5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115707_Smoking-D-Este2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115714_Smoking-D-Este3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115721_Smoking-D-Este4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115728_Smoking-D-Este1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115735_DOPPIA-BOOK-EDITORIAL-UOMO.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115742_DOPPIA-BOOK-EDITORIAL-UOMO3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115749_DOPPIA-BOOK-EDITORIAL-UOMO2.jpg"], "tiles": 5}, {"id": "women", "n": "Women", "c": "Styling", "s": "Women", "y": "", "i": ["https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115756_Tuxedo-Pinet3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115763_Tuxedo-Pinet1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115770_Tuxedo-Pinet2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115777_Punk-Pinet2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115784_Punk-Pinet1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115791_Punk-Pinet3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115798_Country-Rock-Pinet3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115805_Country-Rock-Pinet1-jpg.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115812_Country-Rock-Pinet2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115819_Josh-Flowers.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115826_Josh-Flowers2-jpg.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115833_Josh-Flowers3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115840_White-Noise-Fernanda1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115847_White-Noise-Fernanda2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115854_White-Noise-Fernanda3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115861_Bell-Soto-beach3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115868_Bell-Soto-beach2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115875_Bell-Soto-beach1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115882_70s-Anastasia-double1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115889_70s-Anastasia-double3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115896_70s-Anastasia-double4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115903_70s-Anastasia-double2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115910_Wayne1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115917_Wayne2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115924_Wayne3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115931_B-W-Josh-2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115938_B-W-Josh-3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115945_B-W-Josh-4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115952_B-W-Josh-1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115959_Stephanie-Courtney3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115966_Stephanie-Courtney1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115973_Stephanie-Courtney2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115980_Squaw1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115987_Squaw4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3115994_Squaw2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116001_Sepp1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116008_Sepp2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116015_Sepp3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116022_Alexandra1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116029_Alexandra2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116036_Alexandra4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116043_Alexandra3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116050_ROMA-D-ESTE.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116057_ROMA-D-Este1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116064_ROMA-D-Este2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116071_Minimal1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116078_MInimal3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116085_Minimal2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116092_Marocco2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116099_Marocco1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116106_Blondie1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116113_Blondie2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116120_Josh-Rachel3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116127_Josh-Rachel1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116134_Josh-Rachel4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116141_Josh-Rachel2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116148_Josh-Rachel5.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116155_Josh-Drielle1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116162_Josh-Drielle2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116169_Josh-Drielle3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116176_Isabeli2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116183_Isabeli1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116190_Achtung1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116197_Achtung3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116204_Achtung2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116211_DOPPIA-GRUNGE-D-ESTE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116218_DOPPIA-GRUNGE-D-ESTE1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116225_Flowers2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116232_Flowers1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116239_Flowers3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116246_Amanda2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116253_Amanda1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116260_Amanda3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116267_DOPPIA-MOD-60-D-ESTE1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116274_DOPPIA-MOD-60-D-ESTE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116281_DOPPIA-MOD-60-D-ESTE3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116288_DOPPIA-MOD-60-D-ESTE4.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116295_DOPPIA-PUNK-D-ESTE1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116302_DOPPIA-PUNK-D-ESTE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116309_DOPPIA-HIPPY-D-ESTE3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116316_DOPPIA-HIPPY-D-ESTE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116323_DOPPIA-HIPPY-D-ESTE1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116330_DOPPIA-COLORE-D-ESTE2.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116337_DOPPIA-COLORE-D-ESTE3.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3116344_DOPPIA-COLORE-D-ESTE1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/6352838_maneskin-x-site-vittoria3.png", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/6352846_maneskin-x-site-vittoria1.jpg", "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/6352866_maneskin-x-site-vittoria2-no-logo.png"], "tiles": 5}];
+/* una voce di elenco puo essere "indirizzo" oppure "indirizzo|L": misura opzionale */
+const SRC = e => String(e).split('|')[0];
+/* Dopo la barra verticale si puo scrivere:
+     L, M, S            le tre misure di sempre
+     7                  larghezza in colonne su dodici, posizione automatica
+     7@2                larghezza 7, che parte dalla colonna 2
+     7@2^-90            come sopra, alzata di 90 pixel
+   Serve a comporre pagine mosse invece che file allineate. */
+function SZ(e){
+  const q = (String(e).split('|')[1] || '').trim();
+  if(!q) return {cls:'M'};
+  const L = {L:12, M:6, S:4}[q.toUpperCase()];
+  if(L) return {cls:q.toUpperCase()};
+  const m = q.match(/^(\d{1,2})(?:@(\d{1,2}))?(?:\^(-?\d{1,3}))?$/);
+  if(!m) return {cls:'M'};
+  return {sp:Math.min(12,Math.max(1,+m[1])), st:m[2]?+m[2]:0, dy:m[3]?+m[3]:0};
+}
+const $ = s => document.querySelector(s);
+const el = (t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!==undefined)e.innerHTML=h;return e;};
+
+/* ---------- footer condiviso ---------- */
+const FOOT = `
+  <div class="cities">
+    <div class="c"><span class="mono city">Rome, Italy</span><span class="mono tR"></span></div>
+    <div class="c"><span class="mono city">New York, NY</span><span class="mono tN"></span></div>
+  </div>
+  <div class="dk">
+    <a data-go="home">Homepage</a>
+    <nav><a data-go="work">Work</a><a data-go="archive">Archive</a><a data-go="about">About</a><a data-go="contact">Contact</a></nav>
+  </div>`;
+['#foot1','#foot2','#foot3','#foot4'].forEach(s=>{const el=$(s); if(el) el.innerHTML=FOOT;});
+
+/* ---------- HOME ---------- */
+const FEAT = ['nac','thr','rolex','holden'];
+const homeSel = $('#homeSel');
+FEAT.forEach(id=>{const p=P.find(x=>x.id===id);
+  const a=el('a',null,p.n); a.dataset.open=id; homeSel.appendChild(a);});
+
+const homeR=$('#homeR');
+homeR.innerHTML='<div class="slot"></div>';
+
+/* video della home: se il file c'è prende il posto del crossfade */
+const v=document.createElement('video');
+v.className='reel';v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;
+v.setAttribute('muted','');v.setAttribute('playsinline','');v.preload='auto';
+v.poster='video/tc-poster.jpg';
+[['video/tc-home.webm','video/webm'],['video/tc-home.mp4','video/mp4']].forEach(([src,type])=>{
+  const so=document.createElement('source');so.src=src;so.type=type;v.appendChild(so);});
+v.addEventListener('playing',()=>{v.classList.add('on');});
+homeR.appendChild(v);v.play().catch(()=>{});
+
+/* ---------- WORK: campo sparso ---------- */
+/* proporzione e larghezza relativa di ogni scheda, si ripetono a ciclo */
+const LAY=[
+  {r:'4/5',  f:.92, o:.04},
+  {r:'1/1',  f:.68, o:.22},
+  {r:'4/5',  f:.86, o:.00},
+  {r:'3/4',  f:.74, o:.18},
+  {r:'16/10',f:.98, o:.02},
+  {r:'4/5',  f:.62, o:.28},
+  {r:'1/1',  f:.80, o:.10},
+  {r:'3/4',  f:.90, o:.06},
+  {r:'1/1',  f:.70, o:.24},
+  {r:'4/5',  f:.84, o:.12},
+  {r:'3/4',  f:.66, o:.20}
+];
+function ratio(str){const [a,b]=str.split('/').map(Number);return a/b;}
+const field=$('#field');
+const CARDS=[];
+const coverOf=p=>{
+  if(p.i && p.i.length) return SRC(p.i[0]);
+  const m=(p.media||[]).find(x=>x.p||x.t==='img');
+  return m ? (m.p||m.s) : '';
+};
+/* Se un progetto e fatto di video, nella griglia si vede il video e non un fermo
+   immagine. Parte da solo, senza audio, e solo quando entra nello schermo. */
+const clipOf=p=>{
+  if(p.i && p.i.length) return null;
+  /* solo i video marcati card: gli altri restano fermo immagine, per non far
+     scaricare decine di megabyte a chi apre la pagina Work */
+  return (p.media||[]).find(x=>x.t==='vid' && x.card) || null;
+};
+P.forEach(p=>{
+  const pool = (p.i && p.i.length) ? p.i.map(SRC) : [coverOf(p)];
+  const n=Math.min(p.tiles||1, pool.length);
+  for(let j=0;j<n;j++) CARDS.push({p, src:pool[j % pool.length], last:j===n-1});
+});
+CARDS.forEach((c,k)=>{
+  const L=LAY[k%LAY.length];
+  const d=el('div','sp');
+  d.dataset.open=c.p.id;d.dataset.fc=c.p.c;d.dataset.fs=c.p.s||'';
+  d.dataset.k=k;
+  const clip=clipOf(c.p);
+  d.innerHTML=`<div class="ph" style="aspect-ratio:${L.r}">`
+    + (clip ? `<video src="${clip.s}" poster="${clip.p||''}" muted loop playsinline preload="none"></video>`
+            : `<img src="${c.src}" loading="lazy" alt="">`)
+    + `</div>`
+    + (c.last?`<div class="cap"><i>${c.p.n}</i>, ${c.p.c}</div>`:'');
+  field.appendChild(d);
+});
+
+/* i video della griglia partono quando si vedono e si fermano quando escono */
+if('IntersectionObserver' in window){
+  const oss=new IntersectionObserver(es=>es.forEach(e=>{
+    const v=e.target, sp=v.closest('.sp');
+    if(e.isIntersecting && sp && !sp.classList.contains('hide')) v.play().catch(()=>{});
+    else v.pause();
+  }),{rootMargin:'200px 0px',threshold:0});
+  field.querySelectorAll('.sp video').forEach(v=>oss.observe(v));
+} else {
+  field.querySelectorAll('.sp video').forEach(v=>{v.autoplay=true;v.play().catch(()=>{});});
+}
+
+let curF='all',curS='all';
+const isMob = () => window.matchMedia('(max-width:860px)').matches;
+
+/* Le schede vengono impilate nella colonna piu corta: niente sovrapposizioni,
+   niente vuoti in fondo, e si ricalcola a ogni cambio di larghezza. */
+function layoutField(vis){
+  if(isMob()){
+    vis.forEach(sp=>{sp.style.top='';sp.style.left='';sp.style.width='';});
+    field.style.height='auto'; return;
+  }
+  const W=field.clientWidth;
+  if(!W) return;              // la pagina non e ancora visibile
+  const cols = W>1500 ? 4 : W>1050 ? 3 : 2;
+  const colW = W/cols;
+  const heights=new Array(cols).fill(0);
+  vis.forEach((sp,k)=>{
+    const L=LAY[(+sp.dataset.k)%LAY.length];
+    let ci=0; for(let i=1;i<cols;i++) if(heights[i]<heights[ci]) ci=i;
+    const w=colW*L.f*0.86;
+    const left=ci*colW + colW*L.o*0.5;
+    sp.style.width=w+'px';
+    sp.style.left=Math.min(left, W-w)+'px';
+    sp.style.top=heights[ci]+'px';
+    const capH = sp.querySelector('.cap') ? 46 : 0;
+    heights[ci] += w/ratio(L.r) + capH + 64;
+  });
+  field.style.height=(Math.max(...heights)+20)+'px';
+}
+
+function applyFilter(){
+  const vis=[];
+  field.querySelectorAll('.sp').forEach(sp=>{
+    const okC = curF==='all' || sp.dataset.fc===curF;
+    const okS = curS==='all' || sp.dataset.fs===curS;
+    const ok = okC&&okS;
+    sp.classList.toggle('hide',!ok);
+    if(ok) vis.push(sp);
+  });
+  layoutField(vis);
+}
+
+applyFilter();
+window.addEventListener('load',applyFilter);
+let rsz; window.addEventListener('resize',()=>{clearTimeout(rsz);rsz=setTimeout(applyFilter,180);});
+
+/* Le categorie stanno nel menu, non piu sopra le immagini.
+   Si aprono quando si e dentro Work o dentro un progetto. */
+const SUBOF={'Women':'Styling','Men':'Styling','Rolex':'Styling'};
+const slug=t=>t.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+function syncNav(page){
+  const inWork = page==='work' || page==='project';
+  $('#navSub').classList.toggle('open',inWork);
+  $('#navSub2').classList.toggle('open',inWork && curF==='Styling');
+  document.querySelectorAll('#nav [data-cat]').forEach(a=>a.classList.toggle('on',a.dataset.cat===curF));
+  document.querySelectorAll('#nav [data-sub]').forEach(a=>a.classList.toggle('on',a.dataset.sub===curS));
+}
+function openWork(cat,sub,silent){
+  curF=cat||'all'; curS=sub||'all';
+  if(!silent){
+    location.hash='/work'+(curF!=='all'?'/'+slug(curF):'')+(curS!=='all'?'/'+slug(curS):'');
+  }
+  go('work',true); applyFilter();
+}
+
+/* ---------- ARCHIVIO ---------- */
+const rows=$('#rows');
+const byYear={};P.forEach(p=>{const k=p.y||'Undated';(byYear[k]=byYear[k]||[]).push(p);});
+const keys=Object.keys(byYear).filter(k=>k!=='Undated').sort().reverse();
+if(byYear['Undated']) keys.push('Undated');
+keys.forEach(y=>{
+  rows.appendChild(el('div','yr',y));
+  byYear[y].forEach(p=>{
+    const r=el('div','row',`<div class="n">${p.n}</div><div class="c">${p.c}${p.s?' / '+p.s:''}</div><div class="y">${p.y||'—'}</div>`);
+    r.dataset.open=p.id;r.dataset.img=coverOf(p);
+    rows.appendChild(r);
+  });
+});
+const peek=$('#peek'),peekImg=$('#peekImg');
+rows.addEventListener('mousemove',e=>{
+  const r=e.target.closest('.row'); if(!r){peek.classList.remove('show');return;}
+  peekImg.src=r.dataset.img;peek.classList.add('show');
+  peek.style.left=Math.min(e.clientX+28,window.innerWidth-270)+'px';
+  peek.style.top=Math.min(e.clientY-60,window.innerHeight-320)+'px';
+});
+rows.addEventListener('mouseleave',()=>peek.classList.remove('show'));
+
+/* gate: per ora finto, la password sta nel codice. Da sostituire con edge function. */
+const PASS='concina';
+function tryPass(){
+  const i=$('#pw');
+  if(i.value.trim().toLowerCase()===PASS){ $('#gate').classList.add('off'); i.blur(); }
+  else{ $('#pwErr').textContent='Not correct'; i.value=''; i.focus(); }
+}
+$('#pw').addEventListener('keydown',e=>{ if(e.key==='Enter'){e.preventDefault();tryPass();} });
+$('#pw').addEventListener('input',()=>{ $('#pwErr').textContent=''; });
+$('#pwGo').addEventListener('click',tryPass);
+
+/* ---------- PROGETTO ---------- */
+let pIdx=0;
+function openProject(id,silent){
+  if(!silent) location.hash='/p/'+id;
+  pIdx=P.findIndex(p=>p.id===id);
+  const p=P[pIdx];
+  $('#pTitle').textContent=p.n;
+  curF=p.c; curS=p.s||'all';
+  const next=P[(pIdx+1)%P.length];
+  const st=$('#pStream'); stopMedia(st); st.innerHTML='';
+  const add=(html,sz)=>{
+    const b = (typeof sz==='string' || !sz) ? {cls:(sz||'M')} : sz;
+    const it=el('div','it '+(b.cls||''));
+    if(b.sp) it.style.gridColumn = (b.st?b.st:'auto')+'/span '+b.sp;
+    if(b.dy) it.style.marginTop = b.dy+'px';
+    it.innerHTML=html; st.appendChild(it);
+  };
+  (p.media||[]).forEach(m=>{
+    const mz=(m.w||'M').toUpperCase();
+    if(m.t==='vid') add(`<div class="vid">
+        <video src="${m.s}" poster="${m.p||''}" muted loop playsinline preload="metadata"></video>
+        ${m.a?'<span class="snd">Sound</span>':''}</div>`, mz);
+    else add(`<div class="ph"><img src="${m.s}" loading="lazy" alt=""></div>`, mz);
+  });
+  p.i.forEach(e=>add(`<div class="ph"><img src="${SRC(e)}" loading="lazy" alt=""></div>`, SZ(e)));
+  /* La lightbox e solo per le fotografie. I video vanno a tutto schermo. */
+  lbList=[]; const idx=[];
+  [...st.querySelectorAll('.it')].forEach((it,i)=>{
+    const im=it.querySelector('.ph img');
+    if(!im) return;
+    lbList.push({t:'img', s:im.src}); idx.push(i);
+  });
+  [...st.querySelectorAll('.it')].forEach((it,i)=>{
+    const k=idx.indexOf(i); if(k<0)return;
+    const target=it.querySelector('.ph');
+    target.style.cursor='zoom-in';
+    target.addEventListener('click',()=>lbOpen(k));
+  });
+  st.querySelectorAll('.vid').forEach(box=>{
+    const v=box.querySelector('video'), snd=box.querySelector('.snd');
+    v.controls=false;
+    /* parte solo quando entra nello schermo: cosi tre video non si scaricano insieme */
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(es=>es.forEach(e=>{
+        if(e.isIntersecting) v.play().catch(()=>{}); else v.pause();
+      }),{rootMargin:'300px 0px',threshold:0}).observe(box);
+    } else { v.autoplay=true; v.play().catch(()=>{}); }
+    box.addEventListener('click',()=>aTuttoSchermo(v));
+    if(snd) snd.addEventListener('click',e=>{ e.stopPropagation();
+      v.muted=!v.muted; snd.textContent=v.muted?'Sound':'Mute'; });
+  });
+  $('#pCat').innerHTML =
+      '<a data-cat="'+p.c+'">'+p.c+'</a>'
+    + (p.s?' <span>/</span> <a data-sub="'+p.s+'">'+p.s+'</a>':'')
+    + (p.y?'<span class="yr">'+p.y.replace('—',' / ')+'</span>':'');
+  let lk='';
+  if(p.url) lk+=`<a href="${p.url}" target="_blank" rel="noopener">${p.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>`;
+  if(p.ig)  lk+=`<a href="${p.ig}" target="_blank" rel="noopener">Instagram</a>`;
+  $('#pLinks').innerHTML=lk;
+  const na=$('#pNextA'); na.textContent=next.n; na.dataset.open=next.id;
+
+  go('project',true);window.scrollTo(0,0);
+}
+
+/* ---------- SLIDE LATERALI DI ABOUT E CONTACT ---------- */
+function buildSlide(el, srcs){
+  if(!el) return;
+  srcs.forEach((src,i)=>{
+    const f=document.createElement('div'); f.className='f'+(i?'':' on');
+    f.innerHTML='<img src="'+src+'" loading="lazy" alt="">'; el.appendChild(f);
+  });
+  let i=0;
+  setInterval(()=>{ i=(i+1)%srcs.length;
+    [...el.children].forEach((f,k)=>f.classList.toggle('on',k===i)); },3400);
+}
+const pick=(id,n)=>{const p=P.find(x=>x.id===id); return p&&p.i?p.i.slice(0,n).map(SRC):[];};
+buildSlide($('#slideAbout'), [...pick('women',2), ...pick('thr',2), ...pick('men',2)]);
+buildSlide($('#slideContact'), [...pick('rolex',2), ...pick('book',2), ...pick('holden',2)]);
+
+/* ---------- LIGHTBOX ---------- */
+let lbList=[], lbI=0;
+const lb=$('#lb');
+let lbHinted=false;
+function lbOpen(i){
+  lbI=i; const it=lbList[lbI];
+  const v=$('#lbVid'); v.pause();
+  if(it.t==='vid'){
+    lb.classList.add('isvid'); lb.classList.remove('isimg');
+    v.src=it.s; v.poster=it.p||''; v.muted=!it.ctl; v.loop=!it.ctl;
+    v.controls=!!it.ctl;
+    if(!it.ctl) v.play().catch(()=>{});
+  } else {
+    lb.classList.add('isimg'); lb.classList.remove('isvid');
+    v.removeAttribute('src'); v.load();
+    $('#lbImg').src=it.s;
+  }
+  $('#lbN').textContent=(lbI+1)+' / '+lbList.length;
+  lb.classList.add('on'); document.body.style.overflow='hidden';
+  topCheck();
+  if(!lbHinted && isMob() && lbList.length>1){
+    lbHinted=true; lb.classList.add('hint');
+    setTimeout(()=>lb.classList.remove('hint'),2600);
+  }}
+function lbGo(d){ if(!lbList.length)return; lbOpen((lbI+d+lbList.length)%lbList.length); }
+function lbClose(){ const lv=$('#lbVid'); lv.pause(); try{lv.currentTime=0;}catch(_){}
+   lb.classList.remove('on'); document.body.style.overflow='';
+   topCheck(); }
+$('#lbClose').addEventListener('click',lbClose);
+$('#lbPrev').addEventListener('click',()=>lbGo(-1));
+$('#lbNext').addEventListener('click',()=>lbGo(1));
+$('#lb .lbstage').addEventListener('click',e=>{ if(!lbMoved) lbClose(); });
+
+/* scorrimento col dito: l'immagine segue il pollice e scatta al rilascio */
+let lbX=0, lbDx=0, lbMoved=false;
+const stage=$('#lb .lbstage'), lbImgEl=$('#lbImg');
+stage.addEventListener('touchstart',e=>{
+  lbX=e.touches[0].clientX; lbDx=0; lbMoved=false;
+  lbImgEl.style.transition='none';
+},{passive:true});
+stage.addEventListener('touchmove',e=>{
+  lbDx=e.touches[0].clientX-lbX;
+  if(Math.abs(lbDx)>6) lbMoved=true;
+  lbImgEl.style.transform='translateX('+(lbDx*0.4)+'px)';
+  lbImgEl.style.opacity = 1-Math.min(Math.abs(lbDx)/520,.35);
+},{passive:true});
+stage.addEventListener('touchend',()=>{
+  lbImgEl.style.transition='transform .3s ease, opacity .3s ease';
+  if(Math.abs(lbDx)>55) lbGo(lbDx<0?1:-1);
+  lbImgEl.style.transform=''; lbImgEl.style.opacity='';
+  setTimeout(()=>{lbMoved=false;},60);
+});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('on'))return;
+  if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' ','PageUp','PageDown','Home','End'].includes(e.key)) e.preventDefault();
+  if(e.key==='Escape')lbClose();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp')lbGo(-1);
+  if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ')lbGo(1);
+  if(e.key==='Home')lbOpen(0);
+  if(e.key==='End')lbOpen(lbList.length-1);
+});
+
+/* trackpad e rotella: due dita in orizzontale o in verticale */
+/* Il trackpad manda decine di eventi per un solo gesto, piu la coda dell'inerzia.
+   Si scorre di uno e poi si resta fermi finche il gesto non e davvero finito. */
+let wheelFatto=false, wheelAcc=0, wheelFine;
+lb.addEventListener('wheel',e=>{
+  if(!lb.classList.contains('on'))return;
+  e.preventDefault();
+  const d = Math.abs(e.deltaX)>Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+  clearTimeout(wheelFine);
+  wheelFine=setTimeout(()=>{ wheelFatto=false; wheelAcc=0; },260);
+  if(wheelFatto) return;
+  wheelAcc+=d;
+  if(Math.abs(wheelAcc)<50) return;
+  lbGo(wheelAcc>0?1:-1);
+  wheelAcc=0; wheelFatto=true;
+},{passive:false});
+
+/* ---------- ROUTING ---------- */
+/* A tutto schermo con i comandi del sistema, verticale o orizzontale che sia. */
+function aTuttoSchermo(v){
+  v.controls=true;
+  const fine=()=>{ if(!document.fullscreenElement){ v.controls=false;
+      document.removeEventListener('fullscreenchange',fine); } };
+  document.addEventListener('fullscreenchange',fine);
+  const r = v.requestFullscreen || v.webkitRequestFullscreen || v.webkitEnterFullscreen;
+  if(r) { try{ r.call(v); }catch(_){ v.controls=false; } }
+  else v.controls=false;
+}
+function stopMedia(scope){
+  (scope||document).querySelectorAll('video').forEach(v=>{ try{v.pause(); v.currentTime=0;}catch(_){} });
+}
+function go(id,silent){
+  stopMedia();
+  if(!silent) location.hash = id==='home' ? '' : '/'+id;
+  document.querySelectorAll('.page').forEach(s=>s.classList.toggle('on',s.id===id));
+  document.body.classList.toggle('dark',id==='archive');
+  document.body.classList.toggle('athome',id==='home');
+  document.querySelectorAll('#nav a[data-go]').forEach(a=>a.classList.toggle('on',a.dataset.go===id));
+  syncNav(id);
+  if(id==='archive') setTimeout(()=>{const i=$('#pw'); if(i&&!isMob()) i.focus();},80);
+  if(id==='work') requestAnimationFrame(applyFilter);
+  window.scrollTo(0,0);
+  requestAnimationFrame(()=>window.scrollTo(0,0));
+  setTimeout(()=>window.scrollTo(0,0),60);
+  topCheck();
+}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('#nav [data-cat],#pCat [data-cat]'); if(c){openWork(c.dataset.cat,'all');return;}
+  const s2=e.target.closest('#nav [data-sub],#pCat [data-sub]'); if(s2){openWork(SUBOF[s2.dataset.sub]||'all',s2.dataset.sub);return;}
+  const g=e.target.closest('[data-go]');
+  if(g){ if(g.dataset.go==='work'){openWork('all','all');return;} go(g.dataset.go);return;}
+  const o=e.target.closest('[data-open]'); if(o){openProject(o.dataset.open);}
+});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape')return;
+  if(lb.classList.contains('on'))return;
+  const cur=document.querySelector('.page.on').id;
+  go(cur==='project'?'work':'home');
+});
+/* indirizzo condivisibile: #work #archive #about #p/thr */
+function syncHash(){
+  const h=location.hash.replace('#','').replace(/^\//,'');
+  if(!h){go('home');return;}
+  if(h.startsWith('p/')){const id=h.slice(2);if(P.find(x=>x.id===id)){openProject(id,true);return;}}
+  if(h.startsWith('work')){
+    const q=h.split('/').slice(1);
+    const cats=['Creative Direction','Styling'], subs=['Women','Men','Rolex'];
+    const cat=cats.find(c=>slug(c)===q[0])||'all';
+    const sub=subs.find(c=>slug(c)===q[1])||'all';
+    openWork(cat,sub,true); return;
+  }
+  if(['archive','about','contact','home'].includes(h)){go(h,true);return;}
+  go('home');
+}
+window.addEventListener('hashchange',syncHash);
+syncHash();
+
+/* ---------- EMAIL ----------
+   Il link mailto resta. In piu l'indirizzo viene selezionato e copiato:
+   cosi qualcosa succede anche su computer senza programma di posta. */
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="mailto:"]'); if(!a)return;
+  const addr=a.getAttribute('href').replace('mailto:','');
+  if(navigator.clipboard) navigator.clipboard.writeText(addr).catch(()=>{});
+  try{
+    const r=document.createRange(); r.selectNodeContents(a);
+    const sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  }catch(_){}
+  a.classList.add('mailhit');
+  setTimeout(()=>a.classList.remove('mailhit'),1100);
+});
+
+/* ---------- RITORNO IN ALTO ---------- */
+function topCheck(){
+  const t=document.getElementById('top'); if(!t) return;
+  const dentro=document.querySelector('.page.on');
+  const aperta=document.getElementById('lb').classList.contains('on');
+  let sopraFooter=false;
+  const dk=dentro && dentro.querySelector('.foot .dk');
+  if(dk) sopraFooter = dk.getBoundingClientRect().top < window.innerHeight - 10;
+  t.classList.toggle('show',
+    window.scrollY>640 && dentro && dentro.id!=='home' && !aperta && !sopraFooter);
+}
+window.addEventListener('scroll',topCheck,{passive:true});
+document.getElementById('top').addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('top').classList.remove('show');
+});
+
+/* ---------- OROLOGI ---------- */
+function clocks(){
+  const f=z=>new Date().toLocaleTimeString('en-GB',{timeZone:z,hour12:false});
+  const r='Rome '+f('Europe/Rome')+' (CET)', n='New York '+f('America/New_York')+' (EST)';
+  $('#ckR').textContent=f('Europe/Rome')+' (CET)';
+  $('#ckN').textContent=f('America/New_York')+' (EST)';
+  document.querySelectorAll('.fR').forEach(x=>x.textContent=r);
+  document.querySelectorAll('.fN').forEach(x=>x.textContent=n);
+  document.querySelectorAll('.tR').forEach(x=>x.textContent=f('Europe/Rome')+' (CET)');
+  document.querySelectorAll('.tN').forEach(x=>x.textContent=f('America/New_York')+' (EST)');
+}
+clocks();setInterval(clocks,1000);
+
+</script>
+</body>
+</html>
