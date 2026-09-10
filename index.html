@@ -345,10 +345,17 @@ body.dark{background:var(--dark);color:#fff}
   .foot .cities{padding-bottom:44px;column-gap:7px;row-gap:1px}
   .foot .cities .c .city,.foot .cities .c .mono{font-size:10px}
   .foot{margin-top:70px}
-  .foot .dk{padding:22px var(--pad);flex-direction:column;align-items:flex-start;gap:14px}
-  .foot .dk a{font-size:11px;letter-spacing:.11em}
-  .foot .dk nav{flex-wrap:wrap;gap:0 16px}
+  /* Footer mobile: Homepage non deve stare sopra le altre voci.
+     Tutte le voci restano sulla stessa riga, con spaziatura compatta. */
+  .foot .dk{padding:22px var(--pad);flex-direction:row;align-items:center;gap:10px;flex-wrap:nowrap}
+  .foot .dk a{font-size:10px;letter-spacing:.07em;white-space:nowrap}
+  .foot .dk nav{display:flex;flex-wrap:nowrap;gap:10px}
   .foot .cities{padding-bottom:40px}
+}
+@media(max-width:360px){
+  .foot .dk{gap:7px}
+  .foot .dk nav{gap:7px}
+  .foot .dk a{font-size:9px;letter-spacing:.04em}
 }
 </style>
 </head>
