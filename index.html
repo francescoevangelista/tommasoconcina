@@ -78,9 +78,13 @@ body.dark #corner .mono{color:var(--darkdim)}
 #home .tag{position:absolute;top:46%;left:var(--pad)}
 #home .tag .mono{font-family:var(--sans);font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:#8a8a8a;display:block;line-height:2}
-#home .clocks{position:absolute;left:var(--pad);bottom:var(--pad)}
-#home .clocks .mono{display:grid;grid-template-columns:max-content auto;column-gap:10px;
-  font-size:11px;letter-spacing:.02em;word-spacing:0;color:#7c7c7c;line-height:1.7;white-space:nowrap}
+#home .clocks{position:absolute;left:var(--pad);bottom:var(--pad);
+  display:grid;grid-template-columns:max-content max-content;column-gap:8px;row-gap:1px;
+  align-items:baseline;font-family:var(--meta);font-size:10px;letter-spacing:0;
+  word-spacing:0;color:#7c7c7c;line-height:1.55;white-space:nowrap}
+/* display:contents fa partecipare entrambe le righe alla STESSA griglia:
+   gli orari iniziano quindi sullo stesso asse verticale. */
+#home .clocks .mono{display:contents;font:inherit;color:inherit;letter-spacing:inherit}
 #home .clocks .mono b{font-weight:inherit}
 #home .clocks .mono i{font-style:normal}
 #home .slot{position:absolute;inset:0;overflow:hidden;background:#FDFDFE}
@@ -280,11 +284,12 @@ body.dark{background:var(--dark);color:#fff}
 
 /* ---------- FOOTER ---------- */
 .foot{margin-top:100px}
-.foot .cities{padding:0 var(--pad) 46px;display:flex;flex-direction:column;gap:5px}
-.foot .cities .c{display:grid;grid-template-columns:max-content auto;column-gap:10px;align-items:baseline}
-.foot .cities .c .city,.foot .cities .c .mono{white-space:nowrap;word-spacing:0}
-.foot .cities .c .city{font-size:11px;color:#7c7c7c;letter-spacing:.02em}
-.foot .cities .c .mono{font-size:11px;color:#7c7c7c;letter-spacing:.02em}
+.foot .cities{padding:0 var(--pad) 46px;display:grid;
+  grid-template-columns:max-content max-content;column-gap:8px;row-gap:1px;align-items:baseline}
+/* Anche nel footer e nelle pagine progetto le due righe condividono le colonne. */
+.foot .cities .c{display:contents}
+.foot .cities .c .city,.foot .cities .c .mono{white-space:nowrap;word-spacing:0;
+  font-size:10px;color:#7c7c7c;letter-spacing:0;line-height:1.55}
 .foot .dk{background:var(--dark);color:#fff;padding:26px var(--pad);
   display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
 .foot .dk a{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f}
@@ -299,8 +304,9 @@ body.dark{background:var(--dark);color:#fff}
   #nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 16px}
   #nav .wm{width:100%;margin-bottom:10px}
   #nav a{display:inline-block;margin:0;font-size:11px;letter-spacing:.11em;line-height:2}
-  body.athome #nav{gap:0 18px}
-  body.athome #nav > a[data-go="work"]{width:100%}
+  /* Nella prova mobile approvata: WORK / ARCHIVE / ABOUT / CONTACT sulla stessa riga. */
+  body.athome #nav{gap:0 16px}
+  body.athome #nav > a[data-go]{white-space:nowrap}
   body.athome #nav .sub,body.athome #nav .sub2{display:none}
   #nav .sub{width:100%;display:flex;flex-wrap:wrap;gap:0 14px}
   #nav .sub.open{max-height:120px}
@@ -317,8 +323,8 @@ body.dark{background:var(--dark);color:#fff}
   #field{padding-bottom:40px;margin-top:34px}
   /* la citta non si spezza, non si allarga dopo la virgola, e sta staccata
      dall'orario invece che appiccicata */
-  .foot .cities .c{column-gap:9px}
-  #home .clocks .mono{column-gap:9px;font-size:10.5px}
+  #home .clocks{column-gap:7px;font-size:10px;row-gap:1px}
+  .foot .cities{column-gap:7px;row-gap:1px}
   .sp{position:relative!important;top:auto!important;left:auto!important;right:auto!important;
     width:100%!important;margin-bottom:34px}
   #project .pj{display:block}
@@ -336,9 +342,8 @@ body.dark{background:var(--dark);color:#fff}
   #archive #peek{display:none}
   #about .grid{grid-template-columns:1fr;gap:32px}
   .foot{margin-top:60px}
-  .foot .cities{padding-bottom:44px;gap:10px}
-  .foot .cities .c{column-gap:12px}
-  .foot .cities .c .city,.foot .cities .c .mono{font-size:11px}
+  .foot .cities{padding-bottom:44px;column-gap:7px;row-gap:1px}
+  .foot .cities .c .city,.foot .cities .c .mono{font-size:10px}
   .foot{margin-top:70px}
   .foot .dk{padding:22px var(--pad);flex-direction:column;align-items:flex-start;gap:14px}
   .foot .dk a{font-size:11px;letter-spacing:.11em}
@@ -967,15 +972,38 @@ document.getElementById('top').addEventListener('click',()=>{
 });
 
 /* ---------- OROLOGI ---------- */
+/* L'ora e la sigla del fuso sono entrambe dinamiche. CET/CEST e EST/EDT
+   cambiano automaticamente con ora solare/legale: niente correzioni manuali. */
+function tzOffsetMinutes(zone,d){
+  const parts=new Intl.DateTimeFormat('en-GB',{
+    timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit',
+    hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'
+  }).formatToParts(d);
+  const v={}; parts.forEach(p=>{if(p.type!=='literal')v[p.type]=p.value;});
+  const asUTC=Date.UTC(+v.year,+v.month-1,+v.day,+v.hour,+v.minute,+v.second);
+  return Math.round((asUTC-d.getTime())/60000);
+}
+function tzAbbr(zone,d){
+  const off=tzOffsetMinutes(zone,d);
+  if(zone==='Europe/Rome') return off===120?'CEST':'CET';
+  if(zone==='America/New_York') return off===-240?'EDT':'EST';
+  return '';
+}
 function clocks(){
-  const f=z=>new Date().toLocaleTimeString('en-GB',{timeZone:z,hour12:false});
-  const r='Rome '+f('Europe/Rome')+' (CET)', n='New York '+f('America/New_York')+' (EST)';
-  $('#ckR').textContent=f('Europe/Rome')+' (CET)';
-  $('#ckN').textContent=f('America/New_York')+' (EST)';
+  const d=new Date();
+  const f=z=>new Intl.DateTimeFormat('en-GB',{
+    timeZone:z,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'
+  }).format(d);
+  const zr='Europe/Rome', zn='America/New_York';
+  const ar=tzAbbr(zr,d), an=tzAbbr(zn,d);
+  const rt=f(zr)+' ('+ar+')', nt=f(zn)+' ('+an+')';
+  const r='Rome '+rt, n='New York '+nt;
+  $('#ckR').textContent=rt;
+  $('#ckN').textContent=nt;
   document.querySelectorAll('.fR').forEach(x=>x.textContent=r);
   document.querySelectorAll('.fN').forEach(x=>x.textContent=n);
-  document.querySelectorAll('.tR').forEach(x=>x.textContent=f('Europe/Rome')+' (CET)');
-  document.querySelectorAll('.tN').forEach(x=>x.textContent=f('America/New_York')+' (EST)');
+  document.querySelectorAll('.tR').forEach(x=>x.textContent=rt);
+  document.querySelectorAll('.tN').forEach(x=>x.textContent=nt);
 }
 clocks();setInterval(clocks,1000);
 
