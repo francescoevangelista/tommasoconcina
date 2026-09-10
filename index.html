@@ -66,7 +66,7 @@ body.dark #corner .mono{color:var(--darkdim)}
 .page{display:none;min-height:100vh}
 .page.on{display:block}
 .wrap{padding:calc(var(--pad) + 230px) var(--pad) 0}
-#project .wrap{padding-top:calc(var(--pad) + 132px)}
+#project .wrap{padding-top:calc(var(--pad) + 132px);padding-left:clamp(176px,12vw,220px)}
 
 /* ---------- HOME: spaccata a metà ---------- */
 #home{display:none;position:fixed;inset:0}
@@ -79,8 +79,8 @@ body.dark #corner .mono{color:var(--darkdim)}
 #home .tag .mono{font-family:var(--sans);font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:#8a8a8a;display:block;line-height:2}
 #home .clocks{position:absolute;left:var(--pad);bottom:var(--pad)}
-#home .clocks .mono{display:grid;grid-template-columns:max-content auto;column-gap:16px;
-  font-size:12px;word-spacing:-.3em;color:#7c7c7c;line-height:1.85;white-space:nowrap}
+#home .clocks .mono{display:grid;grid-template-columns:max-content auto;column-gap:10px;
+  font-size:11px;letter-spacing:.02em;word-spacing:0;color:#7c7c7c;line-height:1.7;white-space:nowrap}
 #home .clocks .mono b{font-weight:inherit}
 #home .clocks .mono i{font-style:normal}
 #home .slot{position:absolute;inset:0;overflow:hidden;background:#FDFDFE}
@@ -138,17 +138,19 @@ body.dark #corner .mono{color:var(--darkdim)}
 #project .links a{display:inline-block;margin:0 18px;font-size:12px;color:var(--dim);
   letter-spacing:.04em;text-decoration:underline;text-underline-offset:4px}
 #project .links a:hover{color:var(--ink)}
-/* Impaginazione libera su dodici colonne.
-   Di ogni immagine si decidono larghezza, colonna di partenza e scarto
-   verticale: e quello che serve per avere pagine mosse invece che file
-   allineate. Le proporzioni delle foto non si toccano mai. */
-#project .stream{flex:1;display:grid;grid-template-columns:repeat(12,1fr);
-  column-gap:2%;row-gap:58px;align-items:start}
-#project .it{grid-column:auto/span 6}
-#project .it.L{grid-column:1/span 12}
-#project .it.M{grid-column:auto/span 6}
-#project .it.S{grid-column:auto/span 4}
+/* Griglia a dodici colonne. Le pagine generali sono volutamente piu' mosse;
+   qui, nel progetto, gli stessi metadati vengono normalizzati in una composizione
+   piu' calma. Le proporzioni delle foto non si toccano mai. */
+#project .stream{flex:1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  column-gap:2%;row-gap:72px;align-items:start;
+  margin-left:clamp(150px,13vw,230px)}
+/* Le pagine generali restano molto mosse. Nei singoli progetti invece la
+   composizione e' editoriale e piu' regolare: coppie, margini coerenti,
+   nessun offset verticale casuale. Il margine a sinistra evita che il menu
+   finisca sopra le prime immagini senza costringerle a partire piu' in basso. */
+#project .it{min-width:0}
 #project .it .ph{background:var(--tint);overflow:hidden}
+#project .it .ph img{width:100%;height:auto;object-fit:contain}
 /* I video partono da soli, senza audio e senza scritte sopra.
    Un clic li porta a tutto schermo. Solo quelli con la traccia audio
    mostrano l'interruttore del suono. */
@@ -279,10 +281,10 @@ body.dark{background:var(--dark);color:#fff}
 /* ---------- FOOTER ---------- */
 .foot{margin-top:100px}
 .foot .cities{padding:0 var(--pad) 46px;display:flex;flex-direction:column;gap:5px}
-.foot .cities .c{display:grid;grid-template-columns:max-content auto;column-gap:16px;align-items:baseline}
-.foot .cities .c .city,.foot .cities .c .mono{white-space:nowrap;word-spacing:-.3em}
-.foot .cities .c .city{font-size:12px;color:#7c7c7c;letter-spacing:.02em}
-.foot .cities .c .mono{font-size:12px;color:#7c7c7c}
+.foot .cities .c{display:grid;grid-template-columns:max-content auto;column-gap:10px;align-items:baseline}
+.foot .cities .c .city,.foot .cities .c .mono{white-space:nowrap;word-spacing:0}
+.foot .cities .c .city{font-size:11px;color:#7c7c7c;letter-spacing:.02em}
+.foot .cities .c .mono{font-size:11px;color:#7c7c7c;letter-spacing:.02em}
 .foot .dk{background:var(--dark);color:#fff;padding:26px var(--pad);
   display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
 .foot .dk a{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f}
@@ -298,6 +300,7 @@ body.dark{background:var(--dark);color:#fff}
   #nav .wm{width:100%;margin-bottom:10px}
   #nav a{display:inline-block;margin:0;font-size:11px;letter-spacing:.11em;line-height:2}
   body.athome #nav{gap:0 18px}
+  body.athome #nav > a[data-go="work"]{width:100%}
   body.athome #nav .sub,body.athome #nav .sub2{display:none}
   #nav .sub{width:100%;display:flex;flex-wrap:wrap;gap:0 14px}
   #nav .sub.open{max-height:120px}
@@ -314,20 +317,19 @@ body.dark{background:var(--dark);color:#fff}
   #field{padding-bottom:40px;margin-top:34px}
   /* la citta non si spezza, non si allarga dopo la virgola, e sta staccata
      dall'orario invece che appiccicata */
-  .foot .cities .c{column-gap:12px}
-  #home .clocks .mono{column-gap:12px}
+  .foot .cities .c{column-gap:9px}
+  #home .clocks .mono{column-gap:9px;font-size:10.5px}
   .sp{position:relative!important;top:auto!important;left:auto!important;right:auto!important;
     width:100%!important;margin-bottom:34px}
   #project .pj{display:block}
   #project .head{position:static;text-align:left;margin-bottom:26px}
   #project .pmeta{margin-top:6px}
-  #project .wrap{padding-top:26px}
+  #project .wrap{padding:26px var(--pad) 0}
   #project .links{margin-top:56px;text-align:left}
   #project .links a{display:block;margin:0 0 10px}
   /* sul telefono tutto a piena larghezza, in ordine, senza scarti */
-  #project .stream{grid-template-columns:1fr;row-gap:30px}
-  #project .it,#project .it.L,#project .it.M,#project .it.S{
-    grid-column:1/span 1!important;margin-top:0!important}
+  #project .stream{grid-template-columns:1fr;row-gap:30px;margin-left:0}
+  #project .it{grid-column:1/span 1!important;margin-top:0!important}
   #project .nextwrap{padding:50px var(--pad) 0;text-align:left}
   #archive .row{grid-template-columns:1fr 84px;gap:10px}
   #archive .row .c{display:none}
@@ -519,15 +521,18 @@ const FOOT = `
 const homeR=$('#homeR');
 homeR.innerHTML='<div class="slot"></div>';
 
-/* video della home: se il file c'è prende il posto del crossfade */
-const v=document.createElement('video');
-v.className='reel';v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;
-v.setAttribute('muted','');v.setAttribute('playsinline','');v.preload='auto';
-v.poster='video/tc-poster.jpg';
-[['video/tc-home.webm','video/webm'],['video/tc-home.mp4','video/mp4']].forEach(([src,type])=>{
-  const so=document.createElement('source');so.src=src;so.type=type;v.appendChild(so);});
-v.addEventListener('playing',()=>{v.classList.add('on');});
-homeR.appendChild(v);v.play().catch(()=>{});
+/* Video home: per ora non c'e'. Con stringa vuota resta il gradiente senza
+   richieste 404. Quando arriva il file, basta mettere 'video/tc-home.mp4'. */
+const HOME_REEL='';
+if(HOME_REEL){
+  const v=document.createElement('video');
+  v.className='reel';v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;
+  v.setAttribute('muted','');v.setAttribute('playsinline','');v.preload='metadata';
+  v.src=HOME_REEL;
+  v.addEventListener('playing',()=>v.classList.add('on'));
+  v.addEventListener('error',()=>v.remove());
+  homeR.appendChild(v);v.play().catch(()=>{});
+}
 
 /* ---------- WORK: campo sparso ---------- */
 /* proporzione e larghezza relativa di ogni scheda, si ripetono a ciclo */
@@ -698,11 +703,32 @@ function openProject(id,silent){
   curF=p.c; curS=p.s||'all';
   const next=P[(pIdx+1)%P.length];
   const st=$('#pStream'); stopMedia(st); st.innerHTML='';
+  let pjCount=0;
+  /* Nei dati vecchi esistono coordinate molto libere (es. 4@8^70).
+     Servono per le prove 'mosse', ma Tommy ha chiarito che il singolo progetto
+     deve essere piu' normale. Qui conserviamo solo l'idea di grande/media/piccola
+     e normalizziamo tutto in una griglia editoriale stabile. */
+  const projectPlace=(sz,k)=>{
+    const b=(typeof sz==='string'||!sz)?{cls:(sz||'M').toUpperCase()}:sz;
+    let span=5;
+    if(b.cls==='L') span=10;
+    else if(b.cls==='S') span=4;
+    else if(b.cls==='M') span=5;
+    else if(b.sp){
+      if(b.sp>=10) span=10;
+      else if(b.sp>=7) span=6;
+      else if(b.sp>=5) span=5;
+      else span=5; // le piccole diventano un po' piu' grandi (Patty compresa)
+    }
+    if(span>=10) return {span, start:2};
+    if(span===6) return {span, start:(k%2===0?1:7)};
+    if(span===5) return {span, start:(k%2===0?2:8)};
+    return {span, start:(k%2===0?2:9)};
+  };
   const add=(html,sz)=>{
-    const b = (typeof sz==='string' || !sz) ? {cls:(sz||'M')} : sz;
-    const it=el('div','it '+(b.cls||''));
-    if(b.sp) it.style.gridColumn = (b.st?b.st:'auto')+'/span '+b.sp;
-    if(b.dy) it.style.marginTop = b.dy+'px';
+    const pos=projectPlace(sz,pjCount++);
+    const it=el('div','it');
+    it.style.gridColumn=pos.start+'/span '+pos.span;
     it.innerHTML=html; st.appendChild(it);
   };
   (p.media||[]).forEach(m=>{
@@ -712,7 +738,7 @@ function openProject(id,silent){
         ${m.a?'<span class="snd">Sound</span>':''}</div>`, mz);
     else add(`<div class="ph"><img src="${m.s}" loading="lazy" alt=""></div>`, mz);
   });
-  p.i.forEach(e=>add(`<div class="ph"><img src="${SRC(e)}" loading="lazy" alt=""></div>`, SZ(e)));
+  (p.i||[]).forEach(e=>add(`<div class="ph"><img src="${SRC(e)}" loading="lazy" alt=""></div>`, SZ(e)));
   /* La lightbox e solo per le fotografie. I video vanno a tutto schermo. */
   lbList=[]; const idx=[];
   [...st.querySelectorAll('.it')].forEach((it,i)=>{
