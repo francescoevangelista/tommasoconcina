@@ -98,6 +98,8 @@ body.dark #corner .mono{color:var(--darkdim)}
 @keyframes drift{0%{background-position:0% 20%}50%{background-position:100% 80%}100%{background-position:0% 20%}}
 @keyframes glow{0%{transform:translate3d(-6%,-4%,0)}50%{transform:translate3d(8%,6%,0)}100%{transform:translate3d(-6%,-4%,0)}}
 @media(prefers-reduced-motion:reduce){#home .slot::before,#home .slot::after{animation:none}}
+#home .reelposter{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;transition:opacity .8s ease;z-index:1}
+#home .reelposter.off{opacity:0}
 #home video.reel{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;z-index:2}
 #home video.reel.on{opacity:1}
 
@@ -537,14 +539,27 @@ homeR.innerHTML='<div class="slot"></div>';
    per evitare cache stale quando Tommy inviera un master successivo. */
 const HOME_REEL='video/tc-home-v1.mp4';
 const HOME_POSTER='video/tc-home-v1-poster.jpg';
+let homeReel=null;
 if(HOME_REEL){
+  /* Il poster e un elemento separato: resta visibile anche se autoplay tarda o
+     viene bloccato. Appena il video parte, il passaggio avviene in dissolvenza. */
+  const poster=document.createElement('img');
+  poster.className='reelposter';poster.src=HOME_POSTER;poster.alt='';
+  homeR.appendChild(poster);
+
   const v=document.createElement('video');
-  v.className='reel';v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;
-  v.setAttribute('muted','');v.setAttribute('playsinline','');v.preload='metadata';
-  v.src=HOME_REEL;v.poster=HOME_POSTER;
-  v.addEventListener('playing',()=>v.classList.add('on'));
-  v.addEventListener('error',()=>v.remove());
-  homeR.appendChild(v);v.play().catch(()=>{});
+  homeReel=v;
+  v.className='reel';v.autoplay=true;v.defaultMuted=true;v.muted=true;v.loop=true;v.playsInline=true;
+  v.setAttribute('autoplay','');v.setAttribute('muted','');v.setAttribute('playsinline','');
+  v.preload='metadata';v.src=HOME_REEL;v.poster=HOME_POSTER;
+  v.addEventListener('playing',()=>{v.classList.add('on');poster.classList.add('off');});
+  v.addEventListener('error',()=>{v.remove();poster.classList.remove('off');});
+  homeR.appendChild(v);
+}
+function playHomeReel(){
+  if(!homeReel)return;
+  homeReel.muted=true;
+  homeReel.play().catch(()=>{});
 }
 
 /* ---------- WORK: campo sparso ---------- */
@@ -911,6 +926,10 @@ function go(id,silent){
   syncNav(id);
   if(id==='archive') setTimeout(()=>{const i=$('#pw'); if(i&&!isMob()) i.focus();},80);
   if(id==='work') requestAnimationFrame(applyFilter);
+  /* go() ferma tutti i media prima del cambio pagina. Quando la destinazione e'
+     la home, riavvia esplicitamente il reel: vale sia al primo caricamento sia
+     quando si torna alla home dopo aver visitato un'altra pagina. */
+  if(id==='home') requestAnimationFrame(playHomeReel);
   window.scrollTo(0,0);
   requestAnimationFrame(()=>window.scrollTo(0,0));
   setTimeout(()=>window.scrollTo(0,0),60);
