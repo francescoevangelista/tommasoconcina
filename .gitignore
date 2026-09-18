@@ -9,3 +9,6 @@ tc-immagini*.py
 .DS_Store
 
 TOMMASO-CHECKLIST-LOCALE.md
+
+# cartella creata dagli strumenti, non va nel sito
+Claude outputs/

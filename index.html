@@ -43,17 +43,22 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 
 /* ================= NAV PERSISTENTE ================= */
 #nav{position:absolute;top:0;left:0;z-index:200;padding:var(--pad) 30px 18px var(--pad)}
-#nav .wm{font-weight:600;font-size:var(--t-nav);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;margin-bottom:26px}
-#nav a{display:block;font-weight:400;font-size:15px;letter-spacing:.14em;text-transform:uppercase;line-height:2.05;color:var(--dim);cursor:pointer}
+/* Il foglio dei mockup e' largo 1111. Sotto quella misura il campo immagini si
+   rimpicciolisce: se il menu restasse della stessa misura finirebbe sopra le
+   foto. Quindi sotto i 1111 rimpicciolisce anche lui, nella stessa proporzione. */
+#nav .wm{font-weight:600;font-size:min(var(--t-nav),1.53vw);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;margin-bottom:min(26px,2.34vw)}
+/* larghe quanto il testo e non quanto la colonna: altrimenti la zona
+   cliccabile invisibile finisce sopra le foto e si mangia i clic */
+#nav a{display:block;width:max-content;max-width:100%;font-weight:400;font-size:min(15px,1.35vw);letter-spacing:.14em;text-transform:uppercase;line-height:2.05;color:var(--dim);cursor:pointer}
 #nav a:hover,#nav a.on{color:var(--ink)}
 #nav .sub{max-height:0;overflow:hidden;opacity:0;
   transition:max-height .5s cubic-bezier(.72,0,.12,1),opacity .35s ease}
 #nav .sub.open{max-height:260px;opacity:1}
-#nav .sub a{font-style:italic;font-size:11.5px;letter-spacing:.12em;line-height:1.85;padding-left:15px}
+#nav .sub a{font-style:italic;font-size:min(11.5px,1.035vw);letter-spacing:.12em;line-height:1.85;padding-left:min(15px,1.35vw)}
 #nav .sub2{max-height:0;overflow:hidden;opacity:0;
   transition:max-height .45s cubic-bezier(.72,0,.12,1),opacity .3s ease}
 #nav .sub2.open{max-height:160px;opacity:1}
-#nav .sub2 a{font-size:11px;line-height:1.85;padding-left:31px}
+#nav .sub2 a{font-size:min(11px,.99vw);line-height:1.85;padding-left:min(31px,2.79vw)}
 body.dark #nav .wm{color:#fff}
 body.dark #nav a{color:var(--darkdim)}
 body.dark #nav a:hover,body.dark #nav a.on{color:#fff}
@@ -112,6 +117,12 @@ body.dark #corner .mono{color:var(--darkdim)}
 .filters span:first-child{padding-left:0}
 .filters span:hover,.filters span.on{color:var(--ink)}
 #field{position:relative;padding-bottom:40px;margin-top:124px}
+/* Il campo curato e' il foglio da 1111 di Tommy: parte dal bordo pagina, i
+   margini stanno gia' dentro le coordinate. Il ripiego invece resta dentro
+   i margini e comincia sotto il menu, cosi' non ci finisce mai sopra. */
+#work .wrap{padding:0}
+#field.curated{margin:0;padding:0;width:100%}
+#field:not(.curated){margin:0 var(--pad) 0}
 .sp{position:absolute;cursor:pointer;transition:top .5s cubic-bezier(.72,0,.12,1),left .5s cubic-bezier(.72,0,.12,1),width .5s cubic-bezier(.72,0,.12,1)}
 .sp .ph{background:var(--tint);overflow:hidden}
 .sp .ph img,.sp .ph video{width:100%;height:100%;object-fit:cover;display:block;
@@ -121,6 +132,35 @@ body.dark #corner .mono{color:var(--darkdim)}
 .sp .cap i{font-family:var(--serif);font-style:italic;font-weight:400;font-size:14px;letter-spacing:0;color:var(--ink)}
 .sp{transition:top .6s cubic-bezier(.72,0,.12,1),left .6s cubic-bezier(.72,0,.12,1),opacity .45s ease}
 .sp.hide{display:none}
+
+
+/* ---------- CURATED GENERAL PAGES / TOMMY MOCKUPS ---------- */
+#field.curated{position:relative;margin-top:0;padding-bottom:0}
+.csp{position:absolute;cursor:pointer;min-width:0}
+.csp .ph{position:relative;width:100%;height:100%;overflow:hidden;background:var(--tint)}
+.csp .ph>img,.csp .ph>video{display:block;width:100%;height:100%;object-fit:cover}
+.csp .cap{margin-top:7px;font-family:var(--sans);font-size:10px;color:#9a9a9a;line-height:1.35}
+.csp .cap i{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--ink)}
+.csp .ph .slideimg{position:absolute;inset:0;opacity:0;transition:opacity .65s ease}
+.csp .ph .slideimg.on{opacity:1}
+.csp.slider .ph{cursor:pointer}
+.csp.pending .ph::after{content:'temporary crop — replace master';position:absolute;left:8px;bottom:8px;
+  background:rgba(255,255,255,.84);padding:3px 5px;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:#777}
+@media(max-width:860px){
+  #nav .wm{font-size:var(--t-nav);margin-bottom:26px}
+  #nav a{font-size:15px}
+  #nav .sub a{font-size:11.5px;padding-left:15px}
+  #nav .sub2 a{font-size:11px;padding-left:31px}
+  #work .wrap{padding-top:26px}
+  #field.curated{height:auto!important}
+  .csp{position:relative!important;left:auto!important;top:auto!important;width:100%!important;height:auto!important;margin-bottom:34px}
+  .csp .ph{height:auto!important;aspect-ratio:auto!important}
+  .csp .ph>img,.csp .ph>video,.csp .ph .slideimg{position:relative!important;height:auto!important;opacity:1!important}
+  .csp .ph .slideimg:not(.on){display:none!important}
+}
+#project .it.crop .ph{height:100%}
+#project .it.crop .ph img{width:100%;height:100%;object-fit:cover}
+#project .it.pending .ph{outline:1px dashed #d6a08f}
 
 /* ---------- PROGETTO ---------- */
 /* Le informazioni stanno in testa, non in una colonna laterale: cosi le
@@ -154,6 +194,14 @@ body.dark #corner .mono{color:var(--darkdim)}
    composizione e' editoriale e piu' regolare: coppie, margini coerenti,
    nessun offset verticale casuale. Il margine a sinistra evita che il menu
    finisca sopra le prime immagini senza costringerle a partire piu' in basso. */
+/* Pagine progetto ricostruite sul foglio da 1111: stessa composizione dei
+   mockup, non piu' la griglia a dodici colonne. Su telefono torna la griglia. */
+#project .wrap.sheet{padding:0}
+#project .stream.canvas{display:block;position:relative;margin:0;width:100%;height:0}
+#project .stream.canvas .it{position:absolute;margin:0}
+#project .stream.canvas .it .ph{width:100%;height:100%;overflow:hidden}
+#project .stream.canvas .it .ph img{width:100%;height:100%;object-fit:cover}
+#project .stream.canvas .it.pending .ph{outline:1px dashed #d6a08f;background:#faf7f5}
 #project .it{min-width:0}
 #project .it .ph{background:var(--tint);overflow:hidden}
 #project .it .ph img{width:100%;height:auto;object-fit:contain}
@@ -562,112 +610,113 @@ function playHomeReel(){
   homeReel.play().catch(()=>{});
 }
 
-/* ---------- WORK: campo sparso ---------- */
-/* proporzione e larghezza relativa di ogni scheda, si ripetono a ciclo */
-const LAY=[
-  {r:'4/5',  f:.92, o:.04},
-  {r:'1/1',  f:.68, o:.22},
-  {r:'4/5',  f:.86, o:.00},
-  {r:'3/4',  f:.74, o:.18},
-  {r:'16/10',f:.98, o:.02},
-  {r:'4/5',  f:.62, o:.28},
-  {r:'1/1',  f:.80, o:.10},
-  {r:'3/4',  f:.90, o:.06},
-  {r:'1/1',  f:.70, o:.24},
-  {r:'4/5',  f:.84, o:.12},
-  {r:'3/4',  f:.66, o:.20}
-];
-function ratio(str){const [a,b]=str.split('/').map(Number);return a/b;}
+/* ---------- WORK / GENERAL PAGES: art direction from Tommy mockups ---------- */
 const field=$('#field');
-const CARDS=[];
-const coverOf=p=>{
-  if(p.i && p.i.length) return SRC(p.i[0]);
-  const m=(p.media||[]).find(x=>x.p||x.t==='img');
-  return m ? (m.p||m.s) : '';
-};
-/* Se un progetto e fatto di video, nella griglia si vede il video e non un fermo
-   immagine. Parte da solo, senza audio, e solo quando entra nello schermo. */
-const clipOf=p=>{
-  if(p.i && p.i.length) return null;
-  /* solo i video marcati card: gli altri restano fermo immagine, per non far
-     scaricare decine di megabyte a chi apre la pagina Work */
-  return (p.media||[]).find(x=>x.t==='vid' && x.card) || null;
-};
-P.forEach(p=>{
-  const pool = (p.i && p.i.length) ? p.i.map(SRC) : [coverOf(p)];
-  const n=Math.min(p.tiles||1, pool.length);
-  for(let j=0;j<n;j++) CARDS.push({p, src:pool[j % pool.length], last:j===n-1});
-});
-CARDS.forEach((c,k)=>{
-  const L=LAY[k%LAY.length];
-  const d=el('div','sp');
-  d.dataset.open=c.p.id;d.dataset.fc=c.p.c;d.dataset.fs=c.p.s||'';
-  d.dataset.k=k;
-  const clip=clipOf(c.p);
-  d.innerHTML=`<div class="ph" style="aspect-ratio:${L.r}">`
-    + (clip ? `<video src="${clip.s}" poster="${clip.p||''}" muted loop playsinline preload="none"></video>`
-            : `<img src="${c.src}" loading="lazy" alt="">`)
-    + `</div>`
-    + (c.last?`<div class="cap"><i>${c.p.n}</i>, ${c.p.c}</div>`:'');
-  field.appendChild(d);
-});
-
-/* i video della griglia partono quando si vedono e si fermano quando escono */
-if('IntersectionObserver' in window){
-  const oss=new IntersectionObserver(es=>es.forEach(e=>{
-    const v=e.target, sp=v.closest('.sp');
-    if(e.isIntersecting && sp && !sp.classList.contains('hide')) v.play().catch(()=>{});
-    else v.pause();
-  }),{rootMargin:'200px 0px',threshold:0});
-  field.querySelectorAll('.sp video').forEach(v=>oss.observe(v));
-} else {
-  field.querySelectorAll('.sp video').forEach(v=>{v.autoplay=true;v.play().catch(()=>{});});
+const pBy=id=>P.find(p=>p.id===id);
+const srcN=(id,n)=>{const p=pBy(id);return p&&p.i&&p.i[n-1]?SRC(p.i[n-1]):'';};
+const mediaCover=id=>{const p=pBy(id);if(!p)return '';const m=(p.media||[]).find(x=>x.p||x.t==='img');return m?(m.p||m.s):'';};
+const CURATED={
+all:{refW:1111,refH:4602,items:[{t:"New Art Corps",c:"Creative Direction",open:"nac",src:mediaCover('nac'),x:330,y:128,w:300,h:376},
+{t:"Rolex",c:"Styling",open:"rolex",src:srcN('rolex',27),x:717,y:168,w:266,h:383,pos:"center"},
+{t:"Holden",c:"Creative Direction",open:"holden",src:srcN('holden',1),x:56,y:583,w:276,h:385},
+{t:"’60s Mod",c:"Styling",open:"women",src:srcN('women',76),x:384,y:544,w:283,h:392,pos:"left center"},
+{t:"The Hollywood Reporter Roma",c:"Creative Direction",open:"thr",src:srcN('thr',1),x:735,y:595,w:297,h:395},
+{t:"In with the new",c:"Styling",open:"women",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+SW4gd2l0aCB0aGUgbmV3IG1hc3RlcjwvdGV4dD48L3N2Zz4=",x:200,y:984,w:303,h:424,pending:true},
+{t:"Roma Magazine",c:"Creative Direction",open:"roma",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+Um9tYSBNYWdhemluZSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:584,y:1016,w:286,h:367,pending:true},
+{t:"Interactive E-Commerce",c:"Creative Direction",open:"ecom",src:srcN('ecom',1),x:174,y:1472,w:774,h:387},
+{t:"Lodental",c:"Creative Direction",open:"loden",src:srcN('loden',11),x:142,y:1925,w:405,h:405},
+{t:"Nouveau Bohemian",c:"Styling",open:"women",src:srcN('women',23),x:625,y:1894,w:351,h:491,pos:"left center"},
+{t:"Luca Argentero",c:"Styling",open:"men",src:srcN('men',71),x:200,y:2425,w:359,h:480,pos:"left center"},
+{t:"Book Magazine",c:"Creative Direction",open:"book",src:srcN('book',41),x:608,y:2425,w:285,h:464,pos:"right center"},
+{t:"Forward Thinking",c:"Styling",open:"women",src:srcN('women',54),x:132,y:2961,w:803,h:425,pos:"right center"},
+{t:"Federica Tosi",c:"Creative Direction",open:null,src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+RmVkZXJpY2EgVG9zaSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:88,y:3454,w:344,h:436,pending:true},
+{t:"Battistoni",c:"Creative Direction",open:"batt",src:srcN('batt',3),x:520,y:3562,w:501,h:216},
+{t:"Effetto Notte",c:"Styling",open:"men",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+RWZmZXR0byBOb3R0ZSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:52,y:4027,w:319,h:423,pending:true},
+{t:"Patty B.",c:"Creative Direction",open:"patty",src:srcN('patty',3),x:401,y:3971,w:287,h:406},
+{t:"Alexandra Richards",c:"Styling",open:"women",src:srcN('women',41),x:729,y:4003,w:326,h:425,pos:"left center"}]},
+creative:{refW:1111,refH:2727,items:[{t:"New Art Corps",c:"Creative Direction",open:"nac",src:mediaCover('nac'),x:272,y:131,w:363,h:445},
+{t:"The Hollywood Reporter Roma",c:"Creative Direction",open:"thr",src:srcN('thr',1),x:700,y:184,w:324,h:424},
+{t:"Holden",c:"Creative Direction",open:"holden",src:srcN('holden',1),x:96,y:624,w:320,h:448},
+{t:"Roma Magazine",c:"Creative Direction",open:"roma",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+Um9tYSBNYWdhemluZSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:544,y:672,w:363,h:455,pending:true},
+{t:"Interactive E-Commerce",c:"Creative Direction",open:"ecom",src:srcN('ecom',1),x:152,y:1183,w:757,h:414},
+{t:"Federica Tosi",c:"Creative Direction",open:null,src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+RmVkZXJpY2EgVG9zaSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:81,y:1686,w:342,h:440,pending:true},
+{t:"Battistoni",c:"Creative Direction",open:"batt",src:srcN('batt',3),x:696,y:1823,w:144,h:176},
+{t:"Lodental",c:"Creative Direction",open:"loden",src:srcN('loden',11),x:173,y:2183,w:406,h:406},
+{t:"Patty B.",c:"Creative Direction",open:"patty",src:srcN('patty',3),x:713,y:2250,w:285,h:405}]},
+women:{refW:1111,refH:6042,items:[{t:'',c:'',open:'women',src:srcN('women',76),x:192,y:184,w:292,h:392,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',54),x:531,y:192,w:501,h:374,pos:"center"},
+{t:'',c:'',open:'women',src:srcN('women',4),x:760,y:616,w:290,h:412,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',9),x:73,y:623,w:299,h:420,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',15),x:419,y:648,w:291,h:359,pos:"center"},
+{t:'',c:'',open:'women',src:srcN('women',23),x:760,y:1067,w:289,h:424,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',49),x:446,y:1092,w:202,h:436,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',45),x:56,y:1115,w:296,h:391,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',83),x:104,y:1588,w:368,h:455,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',28),x:517,y:1628,w:491,h:372,pos:"right center"},
+{t:'',c:'',open:'women',src:srcN('women',79),x:696,y:2051,w:336,h:347,pos:"right center"},
+{t:'',c:'',open:'women',src:srcN('women',42),x:96,y:2099,w:592,h:363,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',82),x:120,y:2534,w:333,h:424,pos:"right center"},
+{t:'',c:'',open:'women',src:srcN('women',37),x:504,y:2558,w:559,h:376,pos:"center"},
+{t:'',c:'',open:'women',src:srcN('women',3),x:640,y:2976,w:335,h:446,pos:"right center"},
+{t:'',c:'',open:'women',src:srcN('women',62),x:81,y:3081,w:463,h:309,pos:"right center"},
+{t:'',c:'',open:'women',src:srcN('women',86),x:664,y:3457,w:336,h:432,pos:"center"},
+{t:'',c:'',open:'women',src:srcN('women',19),x:57,y:3545,w:559,h:383,pos:"center"},
+{t:'',c:'',open:'women',src:srcN('women',70),x:649,y:3923,w:183,h:519,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',60),x:153,y:3994,w:294,h:399,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',73),x:609,y:4458,w:359,h:480,pos:"right center"},
+{t:'',c:'',open:'women',src:srcN('women',64),x:72,y:4514,w:488,h:368,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',34),x:104,y:4945,w:344,h:459,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',24),x:554,y:4963,w:315,h:423,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',10),x:597,y:5437,w:387,h:427,pos:"left center"},
+{t:'',c:'',open:'women',src:srcN('women',31),x:160,y:5482,w:351,h:432,pos:"left center"}]},
+rolex:{refW:1111,refH:1600,items:[
+{t:'Heritage',c:'',open:'rolex',slides:[srcN('rolex',27),srcN('rolex',29),srcN('rolex',28),srcN('rolex',7),srcN('rolex',8),srcN('rolex',10)],x:384,y:160,w:478,h:344},
+{t:'Fearless',c:'',open:'rolex',slides:[srcN('rolex',22),srcN('rolex',23),srcN('rolex',24),srcN('rolex',25),srcN('rolex',26),srcN('rolex',9)],x:384,y:506,w:478,h:342},
+{t:'Testimonials / Men',c:'',open:'rolex',slides:["data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+Um9nZXIgRmVkZXJlciBtYXN0ZXI8L3RleHQ+PC9zdmc+",srcN('rolex',11),srcN('rolex',12),srcN('rolex',13),srcN('rolex',14),srcN('rolex',15),srcN('rolex',16),srcN('rolex',17),srcN('rolex',18),srcN('rolex',19),srcN('rolex',20),srcN('rolex',21),srcN('rolex',2),srcN('rolex',3),srcN('rolex',1)],x:305,y:864,w:328,h:440},
+{t:'Testimonials / Women',c:'',open:'rolex',slides:[srcN('rolex',5),srcN('rolex',4),srcN('rolex',6),srcN('rolex',30),srcN('rolex',31),srcN('rolex',32),srcN('rolex',33),srcN('rolex',34),srcN('rolex',35),srcN('rolex',36)],x:664,y:866,w:335,h:438}
+]}};
+const DEFAULT_CARDS=[];
+const coverOf=p=>{if(p.i&&p.i.length)return SRC(p.i[0]);const m=(p.media||[]).find(x=>x.p||x.t==='img');return m?(m.p||m.s):'';};
+P.forEach(p=>{const pool=(p.i&&p.i.length)?p.i.map(SRC):[coverOf(p)];const n=Math.min(p.tiles||1,pool.length);for(let j=0;j<n;j++)DEFAULT_CARDS.push({p,src:pool[j%pool.length],last:j===n-1});});
+let curF='all',curS='all',slideTimers=[];
+const isMob=()=>window.matchMedia('(max-width:860px)').matches;
+function currentCurated(){
+ if(curF==='all'&&curS==='all')return CURATED.all;
+ if(curF==='Creative Direction'&&curS==='all')return CURATED.creative;
+ if(curF==='Styling'&&curS==='all')return CURATED.women;
+ if(curF==='Styling'&&curS==='Women')return CURATED.women;
+ if(curF==='Styling'&&curS==='Rolex')return CURATED.rolex;
+ return null;
 }
-
-let curF='all',curS='all';
-const isMob = () => window.matchMedia('(max-width:860px)').matches;
-
-/* Le schede vengono impilate nella colonna piu corta: niente sovrapposizioni,
-   niente vuoti in fondo, e si ricalcola a ogni cambio di larghezza. */
-function layoutField(vis){
-  if(isMob()){
-    vis.forEach(sp=>{sp.style.top='';sp.style.left='';sp.style.width='';});
-    field.style.height='auto'; return;
-  }
-  const W=field.clientWidth;
-  if(!W) return;              // la pagina non e ancora visibile
-  const cols = W>1500 ? 4 : W>1050 ? 3 : 2;
-  const colW = W/cols;
-  const heights=new Array(cols).fill(0);
-  vis.forEach((sp,k)=>{
-    const L=LAY[(+sp.dataset.k)%LAY.length];
-    let ci=0; for(let i=1;i<cols;i++) if(heights[i]<heights[ci]) ci=i;
-    const w=colW*L.f*0.86;
-    const left=ci*colW + colW*L.o*0.5;
-    sp.style.width=w+'px';
-    sp.style.left=Math.min(left, W-w)+'px';
-    sp.style.top=heights[ci]+'px';
-    const capH = sp.querySelector('.cap') ? 46 : 0;
-    heights[ci] += w/ratio(L.r) + capH + 64;
-  });
-  field.style.height=(Math.max(...heights)+20)+'px';
+function clearSlideTimers(){slideTimers.forEach(clearInterval);slideTimers=[];}
+function makeGeneralCard(it){
+ const d=el('div','csp'+(it.slides?' slider':'')+(it.pending?' pending':''));if(it.open)d.dataset.open=it.open;
+ const ph=el('div','ph');
+ if(it.slides){
+  it.slides.filter(Boolean).forEach((s,k)=>{const im=document.createElement('img');im.className='slideimg'+(k?'':' on');im.src=s;im.loading='lazy';im.alt='';if(it.pos)im.style.objectPosition=it.pos;ph.appendChild(im);});
+  ph.addEventListener('click',()=>{const ims=[...ph.querySelectorAll('.slideimg')];if(ims.length<2)return;let n=ims.findIndex(x=>x.classList.contains('on'));n=(n+1)%ims.length;ims.forEach((x,k)=>x.classList.toggle('on',k===n));});
+  if(ph.children.length>1)slideTimers.push(setInterval(()=>{if(document.hidden)return;const ims=[...ph.querySelectorAll('.slideimg')];let n=ims.findIndex(x=>x.classList.contains('on'));n=(n+1)%ims.length;ims.forEach((x,k)=>x.classList.toggle('on',k===n));},4300));
+ }else{const im=document.createElement('img');im.src=it.src||'';im.loading='lazy';im.alt='';if(it.pos)im.style.objectPosition=it.pos;ph.appendChild(im);}
+ d.appendChild(ph);if(it.t)d.appendChild(el('div','cap',`<i>${it.t}</i>${it.c?', '+it.c:''}`));return d;
 }
-
-function applyFilter(){
-  const vis=[];
-  field.querySelectorAll('.sp').forEach(sp=>{
-    const okC = curF==='all' || sp.dataset.fc===curF;
-    const okS = curS==='all' || sp.dataset.fs===curS;
-    const ok = okC&&okS;
-    sp.classList.toggle('hide',!ok);
-    if(ok) vis.push(sp);
-  });
-  layoutField(vis);
+function placeCurated(view){
+ clearSlideTimers();field.innerHTML='';field.className='curated';field.style.marginTop='';view.items.forEach(it=>field.appendChild(makeGeneralCard(it)));
+ if(isMob()){field.style.height='auto';return;}const W=field.clientWidth,scale=W/view.refW;
+ [...field.children].forEach((d,i)=>{const it=view.items[i];d.style.left=(it.x*scale)+'px';d.style.top=(it.y*scale)+'px';d.style.width=(it.w*scale)+'px';d.style.height=(it.h*scale)+'px';});
+ field.style.height=(view.refH*scale)+'px';
 }
-
-applyFilter();
-window.addEventListener('load',applyFilter);
-let rsz; window.addEventListener('resize',()=>{clearTimeout(rsz);rsz=setTimeout(applyFilter,180);});
+function placeFallback(){
+ clearSlideTimers();field.innerHTML='';field.className='';const visible=DEFAULT_CARDS.filter(c=>(curF==='all'||c.p.c===curF)&&(curS==='all'||c.p.s===curS));
+ visible.forEach((c,k)=>{const d=el('div','sp');d.dataset.open=c.p.id;d.innerHTML=`<div class="ph" style="aspect-ratio:${['4/5','1/1','3/4','16/10'][k%4]}"><img src="${c.src}" loading="lazy" alt=""></div>`+(c.last?`<div class="cap"><i>${c.p.n}</i>, ${c.p.c}</div>`:'');field.appendChild(d);});
+ if(isMob()){field.style.marginTop='';field.style.height='auto';return;}
+ /* il ripiego non ha le coordinate di Tommy: si limita a partire sotto il menu */
+ const nb=$('#nav').getBoundingClientRect().bottom;
+ field.style.marginTop=Math.round(nb+56)+'px';
+ const W=field.clientWidth,cols=W>1500?4:W>1050?3:2,colW=W/cols,hs=new Array(cols).fill(0);
+ [...field.children].forEach((d,k)=>{let ci=hs.indexOf(Math.min(...hs));let w=colW*(.65+(k%3)*.1);d.style.width=w+'px';d.style.left=(ci*colW)+'px';d.style.top=hs[ci]+'px';hs[ci]+=w*1.2+65;});field.style.height=(Math.max(...hs)+20)+'px';
+}
+function applyFilter(){const v=currentCurated();if(v)placeCurated(v);else placeFallback();}
+applyFilter();window.addEventListener('load',applyFilter);let rsz;window.addEventListener('resize',()=>{clearTimeout(rsz);rsz=setTimeout(applyFilter,160);});
 
 /* Le categorie stanno nel menu, non piu sopra le immagini.
    Si aprono quando si e dentro Work o dentro un progetto. */
@@ -721,7 +770,81 @@ $('#pw').addEventListener('keydown',e=>{ if(e.key==='Enter'){e.preventDefault();
 $('#pw').addEventListener('input',()=>{ $('#pwErr').textContent=''; });
 $('#pwGo').addEventListener('click',tryPass);
 
-/* ---------- PROGETTO ---------- */
+/* ---------- PROGETTO: layout disegnati da Tommy ---------- */
+/* Il foglio e' largo 1111 come i mockup: tutto si ridimensiona insieme alla
+   finestra, le proporzioni delle foto non cambiano mai. */
+let curSheet=null;
+function layoutSheet(st,view){
+  /* la pagina puo' essere ancora nascosta quando si costruisce: in quel caso
+     clientWidth vale 0, quindi si prende la larghezza della finestra. */
+  const W=st.clientWidth||document.documentElement.clientWidth, s=W/view.refW;
+  [...st.children].forEach(it=>{
+    it.style.left =(it.dataset.cx*s)+'px';
+    it.style.top  =(it.dataset.cy*s)+'px';
+    it.style.width=(it.dataset.cw*s)+'px';
+    it.style.height=(it.dataset.ch*s)+'px';
+  });
+  st.style.height=(view.refH*s)+'px';
+}
+window.addEventListener('resize',()=>{if(curSheet&&!isMob())layoutSheet(curSheet.st,curSheet.sheet);});
+
+const PROJECT_CANVAS={
+holden:{refW:1111,refH:7322,items:[
+{x:568,y:144,w:383,h:504,src:srcN('holden',1)},
+{x:288,y:680,w:344,h:480,src:srcN('holden',17)},
+{x:712,y:697,w:208,h:463,src:''},
+{x:325,y:1219,w:303,h:514,src:''},
+{x:634,y:1219,w:307,h:514,src:srcN('holden',18)},
+{x:323,y:1744,w:309,h:551,src:srcN('holden',10)},
+{x:320,y:2304,w:320,h:552,src:srcN('holden',13)},
+{x:680,y:2352,w:264,h:464,src:srcN('holden',9)},
+{x:411,y:2891,w:260,h:426,src:srcN('holden',7)},
+{x:677,y:2891,w:296,h:426,src:''},
+{x:343,y:3357,w:545,h:386,src:srcN('holden',8)},
+{x:272,y:3776,w:320,h:560,src:srcN('holden',15)},
+{x:600,y:3776,w:320,h:560,src:srcN('holden',14)},
+{x:568,y:4360,w:400,h:504,src:srcN('holden',20),pos:"right center"},
+{x:267,y:4386,w:285,h:382,src:srcN('holden',20),pos:"left center"},
+{x:200,y:4920,w:360,h:472,src:srcN('holden',19),pos:"left center"},
+{x:680,y:4982,w:184,h:350,src:srcN('holden',19),pos:"right center"},
+{x:520,y:5424,w:351,h:440,src:srcN('holden',6)},
+{x:216,y:5896,w:656,h:376,src:srcN('holden',4)},
+{x:272,y:6304,w:320,h:560,src:srcN('holden',5)},
+{x:600,y:6304,w:320,h:560,src:srcN('holden',3)},
+{x:343,y:6896,w:545,h:386,src:srcN('holden',2)}
+]},
+patty:{refW:1111,refH:2887,items:[{x:600,y:163,w:412,h:549},{x:338,y:729,w:684,h:533},{x:330,y:1283,w:397,h:465},{x:330,y:1767,w:689,h:517},{x:476,y:2307,w:398,h:532}]},
+rolex:{refW:1111,refH:13566,items:[{x:659,y:129,w:347,h:469},{x:280,y:131,w:350,h:467},{x:294,y:625,w:691,h:463},{x:284,y:1112,w:356,h:467},{x:658,y:1114,w:350,h:467},{x:288,y:1614,w:720,h:487},{x:263,y:2141,w:377,h:504},{x:656,y:2142,w:352,h:503},{x:275,y:2685,w:733,h:463},{x:274,y:3171,w:350,h:460},{x:648,y:3172,w:344,h:459},{x:274,y:3655,w:350,h:461},{x:648,y:3655,w:344,h:464},{x:217,y:4143,w:775,h:488},{x:593,y:4659,w:383,h:500},{x:200,y:4660,w:381,h:500},{x:256,y:5200,w:716,h:496},{x:211,y:5744,w:764,h:441},{x:224,y:6226,w:744,h:503},{x:209,y:6767,w:376,h:498},{x:600,y:6768,w:373,h:498},{x:224,y:7307,w:753,h:323},{x:216,y:7655,w:392,h:520},{x:624,y:7655,w:392,h:528},{x:232,y:8207,w:751,h:497},{x:210,y:8727,w:398,h:343},{x:621,y:8727,w:395,h:341},{x:209,y:9097,w:812,h:543},{x:211,y:9664,w:396,h:524},{x:622,y:9666,w:393,h:524},{x:200,y:10216,w:826,h:432},{x:200,y:10673,w:404,h:543},{x:616,y:10677,w:395,h:540},{x:187,y:11243,w:829,h:556},{x:178,y:11825,w:427,h:302},{x:604,y:11825,w:428,h:302},{x:200,y:12150,w:808,h:542},{x:200,y:12718,w:806,h:536}]}
+};
+/* Holden: le prime 19 posizioni sono misurate sul mockup. Tre caselle sono
+   tratteggiate perche' quelle foto non esistono nel materiale del sito. Le
+   ultime tre posizioni stanno sotto la fine del mockup, che si interrompe. */
+const PROJECT_ART={
+patty:[
+{src:srcN('patty',3),sp:5,st:7},{src:srcN('patty',5),sp:9,st:3},{src:srcN('patty',2),sp:5,st:3},{src:srcN('patty',1),sp:9,st:3},{src:srcN('patty',4),sp:5,st:6}
+],
+holden:[
+{src:srcN('holden',1),sp:5,st:6},{src:srcN('holden',17),sp:8,st:2},{src:srcN('holden',18),sp:8,st:3},
+{src:srcN('holden',10),sp:5,st:3},{src:srcN('holden',13),sp:6,st:3},{src:srcN('holden',9),sp:4,st:9},{src:srcN('holden',7),sp:8,st:4},
+{src:srcN('holden',8),sp:7,st:4},{src:srcN('holden',15),sp:5,st:2},{src:srcN('holden',14),sp:5,st:7},
+{src:srcN('holden',20),sp:5,st:2,crop:true,pos:'left center',ratio:'4/5'},{src:srcN('holden',20),sp:5,st:7,crop:true,pos:'right center',ratio:'4/5'},
+{src:srcN('holden',19),sp:5,st:2,crop:true,pos:'left center',ratio:'4/5'},{src:srcN('holden',19),sp:5,st:7,crop:true,pos:'right center',ratio:'4/5'},
+{src:srcN('holden',6),sp:5,st:5},{src:srcN('holden',4),sp:8,st:2},{src:srcN('holden',5),sp:8,st:3},{src:srcN('holden',3),sp:7,st:4},{src:srcN('holden',2),sp:5,st:5}
+],
+rolex:[
+{src:srcN('rolex',27),sp:5,st:2},{src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+Um9nZXIgRmVkZXJlciBtYXN0ZXI8L3RleHQ+PC9zdmc+",sp:5,st:7,temp:true},{src:srcN('rolex',28),sp:10,st:2},
+{src:srcN('rolex',26),sp:5,st:2},{src:srcN('rolex',25),sp:5,st:7},{src:srcN('rolex',22),sp:10,st:2},
+{src:srcN('rolex',24),sp:5,st:2},{src:srcN('rolex',9),sp:5,st:7},{src:srcN('rolex',23),sp:10,st:2},
+{src:srcN('rolex',10),sp:5,st:2},{src:srcN('rolex',7),sp:5,st:7},{src:srcN('rolex',8),sp:10,st:2},
+{src:srcN('rolex',4),sp:5,st:2},{src:srcN('rolex',5),sp:5,st:7},{src:srcN('rolex',6),sp:10,st:2},
+{src:srcN('rolex',35),sp:5,st:2},{src:srcN('rolex',31),sp:5,st:7},{src:srcN('rolex',34),sp:10,st:2},
+{src:srcN('rolex',32),sp:5,st:2},{src:srcN('rolex',33),sp:5,st:7},{src:srcN('rolex',30),sp:10,st:2},
+{src:srcN('rolex',36),sp:5,st:2},{src:srcN('rolex',21),sp:5,st:7},{src:srcN('rolex',15),sp:5,st:2},{src:srcN('rolex',3),sp:5,st:7},
+{src:srcN('rolex',2),sp:10,st:2},{src:srcN('rolex',18),sp:5,st:2},{src:srcN('rolex',17),sp:5,st:7},{src:srcN('rolex',19),sp:10,st:2},
+{src:srcN('rolex',20),sp:5,st:2},{src:srcN('rolex',16),sp:5,st:7},{src:srcN('rolex',13),sp:10,st:2},
+{src:srcN('rolex',1),sp:5,st:2},{src:srcN('rolex',14),sp:5,st:7},{src:srcN('rolex',12),sp:10,st:2},{src:srcN('rolex',11),sp:10,st:2}
+]
+};
 let pIdx=0;
 function openProject(id,silent){
   if(!silent) location.hash='/p/'+id;
@@ -731,42 +854,45 @@ function openProject(id,silent){
   curF=p.c; curS=p.s||'all';
   const next=P[(pIdx+1)%P.length];
   const st=$('#pStream'); stopMedia(st); st.innerHTML='';
-  let pjCount=0;
-  /* Nei dati vecchi esistono coordinate molto libere (es. 4@8^70).
-     Servono per le prove 'mosse', ma Tommy ha chiarito che il singolo progetto
-     deve essere piu' normale. Qui conserviamo solo l'idea di grande/media/piccola
-     e normalizziamo tutto in una griglia editoriale stabile. */
-  const projectPlace=(sz,k)=>{
-    const b=(typeof sz==='string'||!sz)?{cls:(sz||'M').toUpperCase()}:sz;
-    let span=5;
-    if(b.cls==='L') span=10;
-    else if(b.cls==='S') span=4;
-    else if(b.cls==='M') span=5;
-    else if(b.sp){
-      if(b.sp>=10) span=10;
-      else if(b.sp>=7) span=6;
-      else if(b.sp>=5) span=5;
-      else span=5; // le piccole diventano un po' piu' grandi (Patty compresa)
-    }
-    if(span>=10) return {span, start:2};
-    if(span===6) return {span, start:(k%2===0?1:7)};
-    if(span===5) return {span, start:(k%2===0?2:8)};
-    return {span, start:(k%2===0?2:9)};
+  const addArt=(a)=>{
+    const it=el('div','it'+(a.crop?' crop':'')+(a.temp?' pending':''));
+    it.style.gridColumn=(a.st||1)+'/span '+(a.sp||6);
+    if(a.dy)it.style.marginTop=a.dy+'px';
+    const ph=el('div','ph');if(a.ratio)ph.style.aspectRatio=a.ratio;
+    const im=document.createElement('img');im.src=a.src;im.loading='lazy';im.alt='';if(a.pos)im.style.objectPosition=a.pos;
+    ph.appendChild(im);it.appendChild(ph);st.appendChild(it);
   };
-  const add=(html,sz)=>{
-    const pos=projectPlace(sz,pjCount++);
-    const it=el('div','it');
-    it.style.gridColumn=pos.start+'/span '+pos.span;
-    it.innerHTML=html; st.appendChild(it);
-  };
-  (p.media||[]).forEach(m=>{
-    const mz=(m.w||'M').toUpperCase();
-    if(m.t==='vid') add(`<div class="vid">
-        <video src="${m.s}" poster="${m.p||''}" muted loop playsinline preload="metadata"></video>
-        ${m.a?'<span class="snd">Sound</span>':''}</div>`, mz);
-    else add(`<div class="ph"><img src="${m.s}" loading="lazy" alt=""></div>`, mz);
-  });
-  (p.i||[]).forEach(e=>add(`<div class="ph"><img src="${SRC(e)}" loading="lazy" alt=""></div>`, SZ(e)));
+  const art=PROJECT_ART[p.id];
+  const sheet=PROJECT_CANVAS[p.id];
+  $('#project .wrap').classList.toggle('sheet', !!(art&&sheet&&!isMob()));
+  if(art&&sheet&&!isMob()){
+    st.className='stream canvas';
+    const list=art.filter(a=>a.src);
+    sheet.items.forEach((r,k)=>{
+      /* la casella puo' portarsi dietro la sua foto (Holden), altrimenti si
+         pesca dall'elenco del progetto nello stesso ordine (Rolex, Patty B.) */
+      const own=(r.src!==undefined), a=own?r:list[k];
+      const has=!!(a&&a.src);
+      const it=el('div','it'+(has?'':' pending'));
+      it.dataset.cx=r.x;it.dataset.cy=r.y;it.dataset.cw=r.w;it.dataset.ch=r.h;
+      const ph=el('div','ph');
+      const im=document.createElement('img');im.src=has?a.src:'';im.loading='lazy';im.alt='';
+      if(a&&a.pos)im.style.objectPosition=a.pos;
+      ph.appendChild(im);it.appendChild(ph);st.appendChild(it);
+    });
+    layoutSheet(st,sheet); curSheet={st,sheet};
+  }
+  else if(art){st.className='stream';curSheet=null;art.filter(a=>a.src).forEach(addArt);}
+  else{
+    st.className='stream';curSheet=null;
+    let pjCount=0;
+    const projectPlace=(sz,k)=>{const b=(typeof sz==='string'||!sz)?{cls:(sz||'M').toUpperCase()}:sz;let span=5;
+      if(b.cls==='L')span=10;else if(b.cls==='S')span=4;else if(b.cls==='M')span=5;else if(b.sp){if(b.sp>=10)span=10;else if(b.sp>=7)span=6;else span=5;}
+      if(span>=10)return {span,start:2};if(span===6)return {span,start:(k%2===0?1:7)};return {span,start:(k%2===0?2:8)};};
+    const add=(h,sz)=>{const pos=projectPlace(sz,pjCount++),it=el('div','it');it.style.gridColumn=pos.start+'/span '+pos.span;it.innerHTML=h;st.appendChild(it);};
+    (p.media||[]).forEach(m=>{const mz=(m.w||'M').toUpperCase();if(m.t==='vid')add(`<div class="vid"><video src="${m.s}" poster="${m.p||''}" muted loop playsinline preload="metadata"></video>${m.a?'<span class="snd">Sound</span>':''}</div>`,mz);else add(`<div class="ph"><img src="${m.s}" loading="lazy" alt=""></div>`,mz);});
+    (p.i||[]).forEach(e=>add(`<div class="ph"><img src="${SRC(e)}" loading="lazy" alt=""></div>`,SZ(e)));
+  }
   /* La lightbox e solo per le fotografie. I video vanno a tutto schermo. */
   lbList=[]; const idx=[];
   [...st.querySelectorAll('.it')].forEach((it,i)=>{
@@ -806,6 +932,7 @@ function openProject(id,silent){
   const na=$('#pNextA'); na.textContent=next.n; na.dataset.open=next.id;
 
   go('project',true);window.scrollTo(0,0);
+  if(curSheet&&!isMob())layoutSheet(curSheet.st,curSheet.sheet);
 }
 
 /* ---------- SLIDE LATERALI DI ABOUT E CONTACT ---------- */
