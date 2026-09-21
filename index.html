@@ -137,8 +137,8 @@ body.dark #corner .mono{color:var(--darkdim)}
 /* ---------- CURATED GENERAL PAGES / TOMMY MOCKUPS ---------- */
 #field.curated{position:relative;margin-top:0;padding-bottom:0}
 .csp{position:absolute;cursor:pointer;min-width:0}
-.csp .ph{position:relative;width:100%;height:100%;overflow:hidden;background:var(--tint)}
-.csp .ph>img,.csp .ph>video{display:block;width:100%;height:100%;object-fit:cover}
+.csp .ph{position:relative;width:100%;height:100%;overflow:hidden;background:#fff}
+.csp .ph>img,.csp .ph>video{display:block;width:100%;height:100%;object-fit:contain}
 .csp .cap{margin-top:7px;font-family:var(--sans);font-size:10px;color:#9a9a9a;line-height:1.35}
 .csp .cap i{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--ink)}
 .csp .ph .slideimg{position:absolute;inset:0;opacity:0;transition:opacity .65s ease}
@@ -615,59 +615,64 @@ const pBy=id=>P.find(p=>p.id===id);
 const srcN=(id,n)=>{const p=pBy(id);return p&&p.i&&p.i[n-1]?SRC(p.i[n-1]):'';};
 const mediaCover=id=>{const p=pBy(id);if(!p)return '';const m=(p.media||[]).find(x=>x.p||x.t==='img');return m?(m.p||m.s):'';};
 const CURATED={
-all:{refW:1111,refH:4602,items:[{t:"New Art Corps",c:"Creative Direction",open:"nac",src:"video/nac-logo-poster.jpg",x:330,y:128,w:300,h:345},
-{t:"Rolex",c:"Styling",open:"rolex",src:srcN('rolex',27),x:717,y:168,w:266,h:354,pos:"center"},
+all:{refW:1111,refH:4602,items:[{t:"New Art Corps",c:"Creative Direction",open:"nac",src:"video/nac-logo-poster.jpg",x:330,y:128,w:300,h:345,fit:"contain"},
+{t:"Rolex",c:"Styling",open:"rolex",src:"img/tommy-21sep/work/rolex-1927.jpeg",x:717,y:168,w:266,h:354,pos:"center"},
 {t:"Holden",c:"Creative Direction",open:"holden",src:srcN('holden',1),x:56,y:583,w:276,h:365},
-{t:"’60s Mod",c:"Styling",open:"women",src:srcN('women',76),x:384,y:544,w:283,h:368,pos:"left center"},
+{t:"’60s Mod",c:"Styling",open:"women",src:"img/tommy-21sep/work/60s-mod.jpeg",x:384,y:544,w:283,h:368,pos:"left center"},
 {t:"The Hollywood Reporter Roma",c:"Creative Direction",open:"thr",src:srcN('thr',1),x:735,y:595,w:297,h:370},
-{t:"In with the new",c:"Styling",open:"women",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+SW4gd2l0aCB0aGUgbmV3IG1hc3RlcjwvdGV4dD48L3N2Zz4=",x:200,y:984,w:303,h:392,pending:true},
-{t:"Roma Magazine",c:"Creative Direction",open:"roma",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+Um9tYSBNYWdhemluZSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:584,y:1016,w:286,h:342,pending:true},
+{t:"In with the new",c:"Styling",open:"women",src:"img/tommy-21sep/work/in-with-the-new.jpeg",x:200,y:984,w:303,h:392},
+{t:"Roma Magazine",c:"Creative Direction",open:"roma",src:"img/tommy-21sep/work/roma-magazine.jpeg",x:584,y:1016,w:286,h:342},
 {t:"Interactive E-Commerce",c:"Creative Direction",open:"ecom",src:srcN('ecom',1),x:174,y:1472,w:774,h:387},
 {t:"Lodental",c:"Creative Direction",open:"loden",src:srcN('loden',11),x:142,y:1925,w:405,h:405},
-{t:"Nouveau Bohemian",c:"Styling",open:"women",src:srcN('women',23),x:625,y:1894,w:351,h:471,pos:"left center"},
+{t:"Nouveau Bohemian",c:"Styling",open:"women",src:"img/tommy-21sep/work/nouveau-bohemian.jpeg",x:625,y:1894,w:351,h:471,pos:"left center"},
 {t:"Luca Argentero",c:"Styling",open:"men",src:srcN('men',71),x:200,y:2425,w:359,h:454,pos:"left center"},
-{t:"Book Magazine",c:"Creative Direction",open:"book",src:srcN('book',41),x:608,y:2425,w:285,h:418,pos:"right center"},
-{t:"Forward Thinking",c:"Styling",open:"women",src:srcN('women',54),x:132,y:2961,w:803,h:425,pos:"right center"},
-{t:"Federica Tosi",c:"Creative Direction",open:null,src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+RmVkZXJpY2EgVG9zaSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:88,y:3454,w:344,h:418,pending:true},
+{t:"Book Magazine",c:"Creative Direction",open:"book",src:"img/tommy-21sep/work/book-magazine.jpeg",x:608,y:2425,w:285,h:418,pos:"right center"},
+{t:"Forward Thinking",c:"Styling",open:"women",src:"img/tommy-21sep/work/forward-thinking.jpeg",x:132,y:2961,w:803,h:425,pos:"right center"},
+{t:"Federica Tosi",c:"Creative Direction",open:null,src:"img/tommy-21sep/work/federica-tosi.jpeg",x:88,y:3454,w:344,h:418},
 {t:"Battistoni",c:"Creative Direction",open:"batt",src:srcN('batt',3),x:520,y:3562,w:501,h:216},
-{t:"Effetto Notte",c:"Styling",open:"men",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+RWZmZXR0byBOb3R0ZSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:52,y:4027,w:319,h:401,pending:true},
-{t:"Patty B.",c:"Creative Direction",open:"patty",src:srcN('patty',3),x:401,y:3971,w:287,h:380},
+{t:"Effetto Notte",c:"Styling",open:"men",src:"img/tommy-21sep/work/effetto-notte.jpeg",x:52,y:4027,w:319,h:401},
+{t:"Patty B.",c:"Creative Direction",open:"patty",src:"img/tommy-21sep/work/patty-b.jpeg",x:401,y:3971,w:287,h:380},
 {t:"Alexandra Richards",c:"Styling",open:"women",src:srcN('women',41),x:729,y:4003,w:326,h:403,pos:"left center"}]},
-creative:{refW:1111,refH:2727,items:[{t:"New Art Corps",c:"Creative Direction",open:"nac",src:"video/nac-logo-poster.jpg",x:272,y:131,w:363,h:422},
+creative:{refW:1111,refH:2727,items:[{t:"New Art Corps",c:"Creative Direction",open:"nac",src:"video/nac-logo-poster.jpg",x:272,y:131,w:363,h:422,fit:"contain"},
 {t:"The Hollywood Reporter Roma",c:"Creative Direction",open:"thr",src:srcN('thr',1),x:700,y:184,w:324,h:401},
 {t:"Holden",c:"Creative Direction",open:"holden",src:srcN('holden',1),x:96,y:624,w:320,h:424},
-{t:"Roma Magazine",c:"Creative Direction",open:"roma",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+Um9tYSBNYWdhemluZSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:544,y:672,w:363,h:430,pending:true},
+{t:"Roma Magazine",c:"Creative Direction",open:"roma",src:"img/tommy-21sep/work/roma-magazine.jpeg",x:544,y:672,w:363,h:430},
 {t:"Interactive E-Commerce",c:"Creative Direction",open:"ecom",src:srcN('ecom',1),x:152,y:1183,w:757,h:393},
-{t:"Federica Tosi",c:"Creative Direction",open:null,src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nODAwJz48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZjRmM2YwJy8+PHRleHQgeD0nNTAlJyB5PSc1MCUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCcgZm9udC1zaXplPScyMicgZmlsbD0nIzk5OSc+RmVkZXJpY2EgVG9zaSBtYXN0ZXI8L3RleHQ+PC9zdmc+",x:81,y:1686,w:342,h:418,pending:true},
+{t:"Federica Tosi",c:"Creative Direction",open:null,src:"img/tommy-21sep/work/federica-tosi.jpeg",x:81,y:1686,w:342,h:418},
 {t:"Battistoni",c:"Creative Direction",open:"batt",src:srcN('batt',3),x:696,y:1823,w:144,h:176},
 {t:"Lodental",c:"Creative Direction",open:"loden",src:srcN('loden',11),x:173,y:2183,w:406,h:406},
-{t:"Patty B.",c:"Creative Direction",open:"patty",src:srcN('patty',3),x:713,y:2250,w:285,h:379}]},
-women:{refW:1111,refH:6042,items:[{t:'',c:'',open:'women',src:srcN('women',76),x:192,y:184,w:292,h:392,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',54),x:531,y:192,w:501,h:374,pos:"center"},
-{t:'',c:'',open:'women',src:srcN('women',4),x:760,y:616,w:290,h:412,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',9),x:73,y:623,w:299,h:420,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',15),x:419,y:648,w:291,h:359,pos:"center"},
-{t:'',c:'',open:'women',src:srcN('women',23),x:760,y:1067,w:289,h:424,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',49),x:446,y:1092,w:202,h:436,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',45),x:56,y:1115,w:296,h:391,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',83),x:104,y:1588,w:368,h:455,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',28),x:517,y:1628,w:491,h:372,pos:"right center"},
-{t:'',c:'',open:'women',src:srcN('women',79),x:696,y:2051,w:336,h:347,pos:"right center"},
-{t:'',c:'',open:'women',src:srcN('women',42),x:96,y:2099,w:592,h:363,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',82),x:120,y:2534,w:333,h:424,pos:"right center"},
-{t:'',c:'',open:'women',src:srcN('women',37),x:504,y:2558,w:559,h:376,pos:"center"},
-{t:'',c:'',open:'women',src:srcN('women',3),x:640,y:2976,w:335,h:446,pos:"right center"},
-{t:'',c:'',open:'women',src:srcN('women',62),x:81,y:3081,w:463,h:309,pos:"right center"},
-{t:'',c:'',open:'women',src:srcN('women',86),x:664,y:3457,w:336,h:432,pos:"center"},
-{t:'',c:'',open:'women',src:srcN('women',19),x:57,y:3545,w:559,h:383,pos:"center"},
-{t:'',c:'',open:'women',src:srcN('women',70),x:649,y:3923,w:183,h:519,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',60),x:153,y:3994,w:294,h:399,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',73),x:609,y:4458,w:359,h:480,pos:"right center"},
-{t:'',c:'',open:'women',src:srcN('women',64),x:72,y:4514,w:488,h:368,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',34),x:104,y:4945,w:344,h:459,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',24),x:554,y:4963,w:315,h:423,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',10),x:597,y:5437,w:387,h:427,pos:"left center"},
-{t:'',c:'',open:'women',src:srcN('women',31),x:160,y:5482,w:351,h:432,pos:"left center"}]},
+{t:"Patty B.",c:"Creative Direction",open:"patty",src:"img/tommy-21sep/work/patty-b.jpeg",x:713,y:2250,w:285,h:379}]},
+women:{refW:1111,refH:7280,items:[{t:"",c:"",open:"women",src:"img/tommy-21sep/women/01.jpeg",x:530,y:190,w:504,h:378,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/02.jpeg",x:72,y:621,w:297,h:394,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/03.jpeg",x:440,y:647,w:270,h:358,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/04.jpeg",x:779,y:614,w:273,h:407,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/05.jpeg",x:72,y:1108,w:297,h:395,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/06.jpeg",x:415,y:1077,w:295,h:391,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/07.jpeg",x:742,y:1128,w:288,h:403,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/08.jpeg",x:58,y:1575,w:295,h:390,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/09.jpeg",x:444,y:1549,w:200,h:440,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/10.jpeg",x:758,y:1527,w:293,h:420,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/11.jpeg",x:104,y:2045,w:369,h:459,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/12.jpeg",x:515,y:2088,w:494,h:373,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/13.jpeg",x:139,y:2558,w:549,h:360,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/14.jpeg",x:719,y:2511,w:311,h:322,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/15.jpeg",x:122,y:2969,w:331,h:422,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/16.jpeg",x:503,y:2993,w:559,h:375,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/17.jpeg",x:79,y:3513,w:463,h:313,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/18.jpeg",x:638,y:3412,w:336,h:443,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/19.jpeg",x:123,y:3899,w:330,h:389,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/20.jpeg",x:509,y:3888,w:548,h:393,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/21.jpeg",x:57,y:4353,w:557,h:386,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/22.jpeg",x:153,y:4801,w:295,h:401,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/23.jpeg",x:647,y:4734,w:186,h:527,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/24.jpeg",x:81,y:5265,w:367,h:472,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/25.jpeg",x:498,y:5334,w:510,h:332,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/26.jpeg",x:71,y:5810,w:487,h:367,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/27.jpeg",x:611,y:5754,w:359,h:479,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/28.jpeg",x:102,y:6241,w:348,h:462,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/29.jpeg",x:553,y:6259,w:317,h:427,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/30.jpeg",x:159,y:6778,w:348,h:434,fit:"contain"},
+{t:"",c:"",open:"women",src:"img/tommy-21sep/women/31.jpeg",x:595,y:6734,w:391,h:430,fit:"contain"}]},
 rolex:{refW:1111,refH:1600,items:[
 {t:'Heritage',c:'',open:'rolex',slides:[srcN('rolex',27),srcN('rolex',29),srcN('rolex',28),srcN('rolex',7),srcN('rolex',8),srcN('rolex',10)],x:384,y:160,w:478,h:318},
 {t:'Fearless',c:'',open:'rolex',slides:[srcN('rolex',22),srcN('rolex',23),srcN('rolex',24),srcN('rolex',25),srcN('rolex',26),srcN('rolex',9)],x:384,y:506,w:478,h:318},
@@ -692,7 +697,7 @@ function makeGeneralCard(it){
  const d=el('div','csp'+(it.slides?' slider':'')+(it.pending?' pending':''));if(it.open)d.dataset.open=it.open;
  const ph=el('div','ph');
  if(it.slides){
-  it.slides.filter(Boolean).forEach((s,k)=>{const im=document.createElement('img');im.className='slideimg'+(k?'':' on');im.src=s;im.loading='lazy';im.alt='';if(it.pos)im.style.objectPosition=it.pos;ph.appendChild(im);});
+  it.slides.filter(Boolean).forEach((s,k)=>{const im=document.createElement('img');im.className='slideimg'+(k?'':' on');im.src=s;im.loading='lazy';im.alt='';if(it.pos)im.style.objectPosition=it.pos;if(it.fit)im.style.objectFit=it.fit;ph.appendChild(im);});
   const advance=(dir=1)=>{const ims=[...ph.querySelectorAll('.slideimg')];if(ims.length<2)return;let n=ims.findIndex(x=>x.classList.contains('on'));n=(n+dir+ims.length)%ims.length;ims.forEach((x,k)=>x.classList.toggle('on',k===n));};
   ph.addEventListener('click',()=>advance(1));
   let sx=0,sdx=0;
@@ -700,7 +705,7 @@ function makeGeneralCard(it){
   ph.addEventListener('touchmove',e=>{sdx=e.touches[0].clientX-sx;},{passive:true});
   ph.addEventListener('touchend',()=>{if(Math.abs(sdx)>45)advance(sdx<0?1:-1);sx=sdx=0;});
   if(ph.children.length>1)slideTimers.push(setInterval(()=>{if(document.hidden)return;advance(1);},4300));
- }else{const im=document.createElement('img');im.src=it.src||'';im.loading='lazy';im.alt='';if(it.pos)im.style.objectPosition=it.pos;ph.appendChild(im);}
+ }else{const im=document.createElement('img');im.src=it.src||'';im.loading='lazy';im.alt='';if(it.pos)im.style.objectPosition=it.pos;if(it.fit)im.style.objectFit=it.fit;ph.appendChild(im);}
  d.appendChild(ph);if(it.t)d.appendChild(el('div','cap',`<i>${it.t}</i>${it.c?', '+it.c:''}`));return d;
 }
 function placeCurated(view){
@@ -824,7 +829,7 @@ rolex:{refW:1111,refH:13566,items:[{x:659,y:129,w:347,h:469},{x:280,y:131,w:350,
    mancanti sono in realta' crop sinistra/destra di master compositi gia' presenti. */
 const PROJECT_ART={
 patty:[
-{src:srcN('patty',3),sp:5,st:7},{src:srcN('patty',5),sp:9,st:3},{src:srcN('patty',2),sp:5,st:3},{src:srcN('patty',1),sp:9,st:3},{src:srcN('patty',4),sp:5,st:6}
+{src:"img/tommy-21sep/work/patty-b.jpeg",sp:5,st:7},{src:srcN('patty',5),sp:9,st:3},{src:srcN('patty',2),sp:5,st:3},{src:srcN('patty',1),sp:9,st:3},{src:srcN('patty',4),sp:5,st:6}
 ],
 holden:[
 {src:srcN('holden',1),sp:5,st:6},{src:srcN('holden',17),sp:8,st:2},{src:srcN('holden',18),sp:8,st:3},
