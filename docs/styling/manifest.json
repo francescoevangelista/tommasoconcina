@@ -1,0 +1,3861 @@
+{
+  "referenceArchive": "Styling.zip",
+  "referenceImageSize": [
+    2049,
+    2952
+  ],
+  "measuredAt": 1024,
+  "canvasReferenceWidth": 1111,
+  "date": "2026-10-06",
+  "decisions": [
+    "One full photograph per repeated boundary occurrence; first position preserved",
+    "Screenshot extractions authorized by Francesco; masters requested later",
+    "Rolex page 1 not supplied; no invented page 1 composition",
+    "Red layout instructions excluded from client UI"
+  ],
+  "frameOffsetsAt1024": {
+    "women": [
+      0,
+      1217,
+      2543,
+      4018,
+      5493
+    ],
+    "men": [
+      0,
+      1368,
+      2818,
+      4198,
+      5775
+    ]
+  },
+  "views": {
+    "stylingGeneral": {
+      "refW": 1111,
+      "refH": 16003.17,
+      "items": [
+        {
+          "src": "img/styling-2026/general-01-01.jpg",
+          "x": 245.2,
+          "y": 159.49,
+          "w": 318.98,
+          "h": 425.3,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-01-02.jpg",
+          "x": 624.94,
+          "y": 175.76,
+          "w": 290.77,
+          "h": 387.69,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-01-03.jpg",
+          "x": 98.73,
+          "y": 617.34,
+          "w": 334.17,
+          "h": 413.37,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 616,
+          "mediaH": 762
+        },
+        {
+          "src": "img/styling-2026/general-01-04.jpg",
+          "x": 508.85,
+          "y": 667.25,
+          "w": 470.87,
+          "h": 313.19,
+          "open": "rolex",
+          "alt": "Styling rolex photograph",
+          "fit": "contain",
+          "mediaW": 869,
+          "mediaH": 578
+        },
+        {
+          "src": "img/styling-2026/general-01-05.jpg",
+          "x": 45.57,
+          "y": 1127.27,
+          "w": 272.33,
+          "h": 398.18,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 502,
+          "mediaH": 734
+        },
+        {
+          "src": "img/styling-2026/general-01-07.jpg",
+          "x": 372.14,
+          "y": 1106.66,
+          "w": 338.51,
+          "h": 418.12,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 625,
+          "mediaH": 772
+        },
+        {
+          "src": "img/styling-2026/general-01-06.jpg",
+          "x": 742.11,
+          "y": 1061.09,
+          "w": 309.21,
+          "h": 412.29,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-02-01.jpg",
+          "x": 99.82,
+          "y": 1655.65,
+          "w": 529.46,
+          "h": 395.94,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 920,
+          "mediaH": 688
+        },
+        {
+          "src": "img/styling-2026/general-02-02.jpg",
+          "x": 704.14,
+          "y": 1627.44,
+          "w": 249.54,
+          "h": 390.59,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 460,
+          "mediaH": 720
+        },
+        {
+          "src": "img/styling-2026/general-02-04.jpg",
+          "x": 91.14,
+          "y": 2152.56,
+          "w": 256.05,
+          "h": 400.89,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 472,
+          "mediaH": 739
+        },
+        {
+          "src": "img/styling-2026/general-02-03.jpg",
+          "x": 403.61,
+          "y": 2108.08,
+          "w": 324.4,
+          "h": 486.6,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 494,
+          "mediaH": 741
+        },
+        {
+          "src": "img/styling-2026/general-02-05.jpg",
+          "x": 767.07,
+          "y": 2165.58,
+          "w": 266.9,
+          "h": 396.01,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 492,
+          "mediaH": 730
+        },
+        {
+          "src": "img/styling-2026/general-02-06.jpg",
+          "x": 99.82,
+          "y": 2652.73,
+          "w": 339.59,
+          "h": 452.79,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-02-07.jpg",
+          "x": 484.98,
+          "y": 2666.83,
+          "w": 568.52,
+          "h": 363.12,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 1049,
+          "mediaH": 670
+        },
+        {
+          "src": "img/styling-2026/general-03-01.jpg",
+          "x": 192.04,
+          "y": 3265.73,
+          "w": 292.94,
+          "h": 390.4,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 538,
+          "mediaH": 717
+        },
+        {
+          "src": "img/styling-2026/general-03-02.jpg",
+          "x": 548.99,
+          "y": 3286.35,
+          "w": 326.57,
+          "h": 436.51,
+          "open": "rolex",
+          "alt": "Styling rolex photograph",
+          "fit": "contain",
+          "mediaW": 603,
+          "mediaH": 806
+        },
+        {
+          "src": "img/styling-2026/general-03-03.jpg",
+          "x": 84.63,
+          "y": 3717.08,
+          "w": 363.46,
+          "h": 454.33,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1500
+        },
+        {
+          "src": "img/styling-2026/general-03-04.jpg",
+          "x": 517.53,
+          "y": 3781.09,
+          "w": 453.51,
+          "h": 364.11,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 837,
+          "mediaH": 672
+        },
+        {
+          "src": "img/styling-2026/general-03-07.jpg",
+          "x": 70.52,
+          "y": 4346.35,
+          "w": 291.85,
+          "h": 389.14,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-03-05.jpg",
+          "x": 403.61,
+          "y": 4234.6,
+          "w": 335.25,
+          "h": 451.7,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 619,
+          "mediaH": 834
+        },
+        {
+          "src": "img/styling-2026/general-03-06.jpg",
+          "x": 786.6,
+          "y": 4203.14,
+          "w": 287.51,
+          "h": 415.93,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1106,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-04-01.jpg",
+          "x": 103.07,
+          "y": 4812.89,
+          "w": 385.16,
+          "h": 514.27,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 710,
+          "mediaH": 948
+        },
+        {
+          "src": "img/styling-2026/general-04-02.jpg",
+          "x": 537.06,
+          "y": 4894.26,
+          "w": 487.15,
+          "h": 358.72,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 899,
+          "mediaH": 662
+        },
+        {
+          "src": "img/styling-2026/general-04-05.jpg",
+          "x": 84.63,
+          "y": 5463.86,
+          "w": 189.87,
+          "h": 428.56,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 350,
+          "mediaH": 790
+        },
+        {
+          "src": "img/styling-2026/general-04-03.jpg",
+          "x": 384.08,
+          "y": 5390.09,
+          "w": 304.87,
+          "h": 421.3,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 563,
+          "mediaH": 778
+        },
+        {
+          "src": "img/styling-2026/general-04-04.jpg",
+          "x": 730.18,
+          "y": 5326.07,
+          "w": 348.27,
+          "h": 361.75,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1421,
+          "mediaH": 1476
+        },
+        {
+          "src": "img/styling-2026/general-04-07.jpg",
+          "x": 67.27,
+          "y": 5948.84,
+          "w": 543.57,
+          "h": 398.87,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1003,
+          "mediaH": 736
+        },
+        {
+          "src": "img/styling-2026/general-04-06.jpg",
+          "x": 699.8,
+          "y": 5846.85,
+          "w": 348.27,
+          "h": 476.3,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 642,
+          "mediaH": 878
+        },
+        {
+          "src": "img/styling-2026/general-05-02.jpg",
+          "x": 104.16,
+          "y": 6513.02,
+          "w": 310.3,
+          "h": 401.44,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 572,
+          "mediaH": 740
+        },
+        {
+          "src": "img/styling-2026/general-05-01.jpg",
+          "x": 460.02,
+          "y": 6473.96,
+          "w": 589.13,
+          "h": 394.56,
+          "open": "rolex",
+          "alt": "Styling rolex photograph",
+          "fit": "contain",
+          "mediaW": 1087,
+          "mediaH": 728
+        },
+        {
+          "src": "img/styling-2026/general-05-03.jpg",
+          "x": 56.42,
+          "y": 7003.42,
+          "w": 327.66,
+          "h": 423.13,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1239,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-05-04.jpg",
+          "x": 490.4,
+          "y": 6940.5,
+          "w": 172.51,
+          "h": 520.77,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 319,
+          "mediaH": 963
+        },
+        {
+          "src": "img/styling-2026/general-05-05.jpg",
+          "x": 776.83,
+          "y": 7003.42,
+          "w": 290.77,
+          "h": 396.68,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 733,
+          "mediaH": 1000
+        },
+        {
+          "src": "img/styling-2026/general-05-06.jpg",
+          "x": 56.42,
+          "y": 7567.6,
+          "w": 518.61,
+          "h": 313.23,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 957,
+          "mediaH": 578
+        },
+        {
+          "src": "img/styling-2026/general-05-07.jpg",
+          "x": 659.66,
+          "y": 7533.97,
+          "w": 326.57,
+          "h": 418.68,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 780,
+          "mediaH": 1000
+        },
+        {
+          "src": "img/styling-2026/general-06-01.jpg",
+          "x": 104.16,
+          "y": 8097.06,
+          "w": 354.78,
+          "h": 473.83,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1198,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-06-02.jpg",
+          "x": 508.85,
+          "y": 8149.14,
+          "w": 554.42,
+          "h": 369.38,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1066
+        },
+        {
+          "src": "img/styling-2026/general-06-04.jpg",
+          "x": 71.61,
+          "y": 8621.1,
+          "w": 554.42,
+          "h": 369.73,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1067
+        },
+        {
+          "src": "img/styling-2026/general-06-03.jpg",
+          "x": 708.48,
+          "y": 8570.11,
+          "w": 354.78,
+          "h": 473.04,
+          "open": "rolex",
+          "alt": "Styling rolex photograph",
+          "fit": "contain",
+          "mediaW": 654,
+          "mediaH": 872
+        },
+        {
+          "src": "img/styling-2026/general-06-05.jpg",
+          "x": 48.82,
+          "y": 9055.08,
+          "w": 366.72,
+          "h": 454.6,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 676,
+          "mediaH": 838
+        },
+        {
+          "src": "img/styling-2026/general-06-06.jpg",
+          "x": 440.49,
+          "y": 9065.93,
+          "w": 317.89,
+          "h": 411.58,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 587,
+          "mediaH": 760
+        },
+        {
+          "src": "img/styling-2026/general-06-07.jpg",
+          "x": 782.26,
+          "y": 9124.52,
+          "w": 281.0,
+          "h": 385.16,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 518,
+          "mediaH": 710
+        },
+        {
+          "src": "img/styling-2026/general-07-01.jpg",
+          "x": 91.14,
+          "y": 9665.92,
+          "w": 334.17,
+          "h": 447.0,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 616,
+          "mediaH": 824
+        },
+        {
+          "src": "img/styling-2026/general-07-02.jpg",
+          "x": 469.79,
+          "y": 9698.47,
+          "w": 552.25,
+          "h": 384.85,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1115
+        },
+        {
+          "src": "img/styling-2026/general-07-03.jpg",
+          "x": 67.27,
+          "y": 10188.87,
+          "w": 508.85,
+          "h": 328.39,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 939,
+          "mediaH": 606
+        },
+        {
+          "src": "img/styling-2026/general-07-04.jpg",
+          "x": 624.94,
+          "y": 10181.27,
+          "w": 380.82,
+          "h": 516.44,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 702,
+          "mediaH": 952
+        },
+        {
+          "src": "img/styling-2026/general-07-05.jpg",
+          "x": 55.33,
+          "y": 10593.56,
+          "w": 369.97,
+          "h": 526.21,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 682,
+          "mediaH": 970
+        },
+        {
+          "src": "img/styling-2026/general-07-06.jpg",
+          "x": 483.89,
+          "y": 10769.32,
+          "w": 505.59,
+          "h": 327.31,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 933,
+          "mediaH": 604
+        },
+        {
+          "src": "img/styling-2026/general-08-02.jpg",
+          "x": 70.52,
+          "y": 11341.1,
+          "w": 527.29,
+          "h": 396.13,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1202
+        },
+        {
+          "src": "img/styling-2026/general-08-01.jpg",
+          "x": 631.45,
+          "y": 11227.18,
+          "w": 414.46,
+          "h": 559.3,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 764,
+          "mediaH": 1031
+        },
+        {
+          "src": "img/styling-2026/general-08-03.jpg",
+          "x": 33.63,
+          "y": 11836.92,
+          "w": 652.06,
+          "h": 434.71,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 1203,
+          "mediaH": 802
+        },
+        {
+          "src": "img/styling-2026/general-08-04.jpg",
+          "x": 713.9,
+          "y": 11867.3,
+          "w": 343.93,
+          "h": 428.56,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 634,
+          "mediaH": 790
+        },
+        {
+          "src": "img/styling-2026/general-08-05.jpg",
+          "x": 134.54,
+          "y": 12309.97,
+          "w": 361.29,
+          "h": 468.7,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 666,
+          "mediaH": 864
+        },
+        {
+          "src": "img/styling-2026/general-08-06.jpg",
+          "x": 555.5,
+          "y": 12331.67,
+          "w": 386.25,
+          "h": 424.71,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 713,
+          "mediaH": 784
+        },
+        {
+          "src": "img/styling-2026/general-09-01.jpg",
+          "x": 84.63,
+          "y": 12854.62,
+          "w": 429.64,
+          "h": 577.74,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 792,
+          "mediaH": 1065
+        },
+        {
+          "src": "img/styling-2026/general-09-02.jpg",
+          "x": 555.5,
+          "y": 12949.01,
+          "w": 518.61,
+          "h": 333.82,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 957,
+          "mediaH": 616
+        },
+        {
+          "src": "img/styling-2026/general-09-04.jpg",
+          "x": 164.91,
+          "y": 13462.2,
+          "w": 330.91,
+          "h": 437.14,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 757,
+          "mediaH": 1000
+        },
+        {
+          "src": "img/styling-2026/general-09-03.jpg",
+          "x": 614.09,
+          "y": 13373.23,
+          "w": 343.93,
+          "h": 459.34,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1198,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-09-06.jpg",
+          "x": 58.59,
+          "y": 13942.83,
+          "w": 543.57,
+          "h": 386.94,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1003,
+          "mediaH": 714
+        },
+        {
+          "src": "img/styling-2026/general-09-05.jpg",
+          "x": 692.21,
+          "y": 13922.22,
+          "w": 297.28,
+          "h": 384.08,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 548,
+          "mediaH": 708
+        },
+        {
+          "src": "img/styling-2026/general-10-01.jpg",
+          "x": 119.35,
+          "y": 14465.78,
+          "w": 398.18,
+          "h": 534.92,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1191,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-10-02.jpg",
+          "x": 573.94,
+          "y": 14466.87,
+          "w": 348.27,
+          "h": 450.26,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 642,
+          "mediaH": 830
+        }
+      ]
+    },
+    "women": {
+      "refW": 1111,
+      "refH": 7529.81,
+      "items": [
+        {
+          "src": "img/styling-2026/general-01-01.jpg",
+          "x": 193.12,
+          "y": 185.53,
+          "w": 288.6,
+          "h": 384.8,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-02-01.jpg",
+          "x": 532.72,
+          "y": 192.04,
+          "w": 499.08,
+          "h": 373.23,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 920,
+          "mediaH": 688
+        },
+        {
+          "src": "img/styling-2026/general-03-01.jpg",
+          "x": 73.78,
+          "y": 623.85,
+          "w": 292.94,
+          "h": 390.4,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 538,
+          "mediaH": 717
+        },
+        {
+          "src": "img/styling-2026/general-02-05.jpg",
+          "x": 442.66,
+          "y": 648.81,
+          "w": 237.61,
+          "h": 352.55,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 492,
+          "mediaH": 730
+        },
+        {
+          "src": "img/styling-2026/general-02-03.jpg",
+          "x": 782.26,
+          "y": 617.34,
+          "w": 267.99,
+          "h": 401.98,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 494,
+          "mediaH": 741
+        },
+        {
+          "src": "img/styling-2026/general-01-06.jpg",
+          "x": 73.78,
+          "y": 1109.92,
+          "w": 292.94,
+          "h": 390.59,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-02-06.jpg",
+          "x": 417.71,
+          "y": 1079.54,
+          "w": 289.68,
+          "h": 386.25,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-01-05.jpg",
+          "x": 745.37,
+          "y": 1131.61,
+          "w": 272.33,
+          "h": 398.18,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 502,
+          "mediaH": 734
+        },
+        {
+          "src": "img/styling-2026/general-03-07.jpg",
+          "x": 60.76,
+          "y": 1580.79,
+          "w": 286.43,
+          "h": 381.91,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-04-05.jpg",
+          "x": 450.26,
+          "y": 1559.09,
+          "w": 190.95,
+          "h": 431.01,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 350,
+          "mediaH": 790
+        },
+        {
+          "src": "img/styling-2026/general-03-06.jpg",
+          "x": 761.64,
+          "y": 1530.88,
+          "w": 286.43,
+          "h": 414.36,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1106,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-03-03.jpg",
+          "x": 106.33,
+          "y": 2050.58,
+          "w": 363.46,
+          "h": 454.33,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1500
+        },
+        {
+          "src": "img/styling-2026/general-04-02.jpg",
+          "x": 517.53,
+          "y": 2093.97,
+          "w": 487.15,
+          "h": 358.72,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 899,
+          "mediaH": 662
+        },
+        {
+          "src": "img/styling-2026/general-04-07.jpg",
+          "x": 142.13,
+          "y": 2564.85,
+          "w": 542.48,
+          "h": 398.07,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1003,
+          "mediaH": 736
+        },
+        {
+          "src": "img/styling-2026/general-04-04.jpg",
+          "x": 721.5,
+          "y": 2516.02,
+          "w": 305.96,
+          "h": 317.8,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1421,
+          "mediaH": 1476
+        },
+        {
+          "src": "img/styling-2026/general-05-07.jpg",
+          "x": 124.77,
+          "y": 3042.23,
+          "w": 326.57,
+          "h": 418.68,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 780,
+          "mediaH": 1000
+        },
+        {
+          "src": "img/styling-2026/general-06-02.jpg",
+          "x": 505.59,
+          "y": 3066.1,
+          "w": 554.42,
+          "h": 369.38,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1066
+        },
+        {
+          "src": "img/styling-2026/general-06-04.jpg",
+          "x": 81.37,
+          "y": 3589.05,
+          "w": 457.85,
+          "h": 305.33,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1067
+        },
+        {
+          "src": "img/styling-2026/general-09-04.jpg",
+          "x": 640.13,
+          "y": 3485.98,
+          "w": 330.91,
+          "h": 437.14,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 757,
+          "mediaH": 1000
+        },
+        {
+          "src": "img/styling-2026/general-10-01.jpg",
+          "x": 124.77,
+          "y": 3972.04,
+          "w": 326.57,
+          "h": 438.72,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1191,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-09-06.jpg",
+          "x": 511.02,
+          "y": 3962.28,
+          "w": 543.57,
+          "h": 386.94,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1003,
+          "mediaH": 714
+        },
+        {
+          "src": "img/styling-2026/general-07-02.jpg",
+          "x": 59.67,
+          "y": 4464.61,
+          "w": 552.25,
+          "h": 384.85,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1115
+        },
+        {
+          "src": "img/styling-2026/general-06-06.jpg",
+          "x": 668.34,
+          "y": 4375.65,
+          "w": 332.0,
+          "h": 429.84,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 587,
+          "mediaH": 760
+        },
+        {
+          "src": "img/styling-2026/general-05-05.jpg",
+          "x": 155.15,
+          "y": 4912.7,
+          "w": 290.77,
+          "h": 396.68,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 733,
+          "mediaH": 1000
+        },
+        {
+          "src": "img/styling-2026/general-05-04.jpg",
+          "x": 655.32,
+          "y": 4845.44,
+          "w": 172.51,
+          "h": 520.77,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 319,
+          "mediaH": 963
+        },
+        {
+          "src": "img/styling-2026/general-05-03.jpg",
+          "x": 83.54,
+          "y": 5377.07,
+          "w": 362.38,
+          "h": 467.96,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1239,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-07-06.jpg",
+          "x": 500.17,
+          "y": 5446.5,
+          "w": 505.59,
+          "h": 327.31,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 933,
+          "mediaH": 604
+        },
+        {
+          "src": "img/styling-2026/general-08-02.jpg",
+          "x": 73.78,
+          "y": 6032.38,
+          "w": 482.81,
+          "h": 362.71,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1600,
+          "mediaH": 1202
+        },
+        {
+          "src": "img/styling-2026/general-06-01.jpg",
+          "x": 613.0,
+          "y": 5975.96,
+          "w": 354.78,
+          "h": 473.83,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1198,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-09-03.jpg",
+          "x": 104.16,
+          "y": 6463.11,
+          "w": 343.93,
+          "h": 459.34,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 1198,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-07-04.jpg",
+          "x": 555.5,
+          "y": 6481.56,
+          "w": 311.38,
+          "h": 422.28,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 702,
+          "mediaH": 952
+        },
+        {
+          "src": "img/styling-2026/general-08-04.jpg",
+          "x": 161.66,
+          "y": 7001.25,
+          "w": 343.93,
+          "h": 428.56,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 634,
+          "mediaH": 790
+        },
+        {
+          "src": "img/styling-2026/general-08-06.jpg",
+          "x": 597.81,
+          "y": 6955.68,
+          "w": 386.25,
+          "h": 424.71,
+          "open": "women",
+          "alt": "Styling women photograph",
+          "fit": "contain",
+          "mediaW": 713,
+          "mediaH": 784
+        }
+      ]
+    },
+    "men": {
+      "refW": 1111,
+      "refH": 8208.54,
+      "items": [
+        {
+          "src": "img/styling-2026/general-01-02.jpg",
+          "x": 328.74,
+          "y": 162.74,
+          "w": 320.06,
+          "h": 426.75,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 1200,
+          "mediaH": 1600
+        },
+        {
+          "src": "img/styling-2026/general-02-04.jpg",
+          "x": 734.52,
+          "y": 194.21,
+          "w": 232.18,
+          "h": 363.52,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 472,
+          "mediaH": 739
+        },
+        {
+          "src": "img/styling-2026/general-02-07.jpg",
+          "x": 257.14,
+          "y": 628.19,
+          "w": 679.19,
+          "h": 433.8,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 1049,
+          "mediaH": 670
+        },
+        {
+          "src": "img/styling-2026/general-01-03.jpg",
+          "x": 148.64,
+          "y": 1101.24,
+          "w": 361.29,
+          "h": 446.92,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 616,
+          "mediaH": 762
+        },
+        {
+          "src": "img/styling-2026/general-02-02.jpg",
+          "x": 563.09,
+          "y": 1101.24,
+          "w": 333.08,
+          "h": 521.35,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 460,
+          "mediaH": 720
+        },
+        {
+          "src": "img/styling-2026/general-06-05.jpg",
+          "x": 156.23,
+          "y": 1667.58,
+          "w": 385.16,
+          "h": 477.46,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 676,
+          "mediaH": 838
+        },
+        {
+          "src": "img/styling-2026/general-06-07.jpg",
+          "x": 607.58,
+          "y": 1684.94,
+          "w": 294.02,
+          "h": 403.01,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 518,
+          "mediaH": 710
+        },
+        {
+          "src": "img/styling-2026/general-03-05.jpg",
+          "x": 192.04,
+          "y": 2218.75,
+          "w": 378.65,
+          "h": 510.17,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 619,
+          "mediaH": 834
+        },
+        {
+          "src": "img/styling-2026/general-04-01.jpg",
+          "x": 620.6,
+          "y": 2160.16,
+          "w": 385.16,
+          "h": 514.27,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 710,
+          "mediaH": 948
+        },
+        {
+          "src": "img/styling-2026/general-05-06.jpg",
+          "x": 82.46,
+          "y": 2861.04,
+          "w": 474.13,
+          "h": 286.36,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 957,
+          "mediaH": 578
+        },
+        {
+          "src": "img/styling-2026/general-01-07.jpg",
+          "x": 648.81,
+          "y": 2768.82,
+          "w": 266.9,
+          "h": 329.68,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 625,
+          "mediaH": 772
+        },
+        {
+          "src": "img/styling-2026/general-04-06.jpg",
+          "x": 150.81,
+          "y": 3178.94,
+          "w": 396.01,
+          "h": 541.58,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 642,
+          "mediaH": 878
+        },
+        {
+          "src": "img/styling-2026/general-08-05.jpg",
+          "x": 618.43,
+          "y": 3321.07,
+          "w": 361.29,
+          "h": 468.7,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 666,
+          "mediaH": 864
+        },
+        {
+          "src": "img/styling-2026/general-07-01.jpg",
+          "x": 88.97,
+          "y": 3772.41,
+          "w": 334.17,
+          "h": 447.0,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 616,
+          "mediaH": 824
+        },
+        {
+          "src": "img/styling-2026/general-03-04.jpg",
+          "x": 502.34,
+          "y": 3829.91,
+          "w": 453.51,
+          "h": 364.11,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 837,
+          "mediaH": 672
+        },
+        {
+          "src": "img/styling-2026/general-07-03.jpg",
+          "x": 67.27,
+          "y": 4287.77,
+          "w": 508.85,
+          "h": 328.39,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 939,
+          "mediaH": 606
+        },
+        {
+          "src": "img/styling-2026/general-04-03.jpg",
+          "x": 621.68,
+          "y": 4246.54,
+          "w": 355.87,
+          "h": 491.77,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 563,
+          "mediaH": 778
+        },
+        {
+          "src": "img/styling-2026/general-10-02.jpg",
+          "x": 74.86,
+          "y": 4752.13,
+          "w": 334.17,
+          "h": 432.02,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 642,
+          "mediaH": 830
+        },
+        {
+          "src": "img/styling-2026/general-09-02.jpg",
+          "x": 451.34,
+          "y": 4797.7,
+          "w": 547.91,
+          "h": 352.67,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 957,
+          "mediaH": 616
+        },
+        {
+          "src": "img/styling-2026/general-07-05.jpg",
+          "x": 101.99,
+          "y": 5277.25,
+          "w": 369.97,
+          "h": 526.21,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 682,
+          "mediaH": 970
+        },
+        {
+          "src": "img/styling-2026/men-04-03.jpg",
+          "x": 528.38,
+          "y": 5238.19,
+          "w": 435.07,
+          "h": 605.74,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 803,
+          "mediaH": 1118
+        },
+        {
+          "src": "img/styling-2026/general-08-03.jpg",
+          "x": 197.46,
+          "y": 5896.76,
+          "w": 693.29,
+          "h": 462.19,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 1203,
+          "mediaH": 802
+        },
+        {
+          "src": "img/styling-2026/general-08-01.jpg",
+          "x": 92.22,
+          "y": 6407.78,
+          "w": 414.46,
+          "h": 559.3,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 764,
+          "mediaH": 1031
+        },
+        {
+          "src": "img/styling-2026/men-05-02.jpg",
+          "x": 555.5,
+          "y": 6415.37,
+          "w": 361.29,
+          "h": 542.21,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 667,
+          "mediaH": 1001
+        },
+        {
+          "src": "img/styling-2026/men-05-04.jpg",
+          "x": 58.59,
+          "y": 7050.08,
+          "w": 520.78,
+          "h": 371.75,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 961,
+          "mediaH": 686
+        },
+        {
+          "src": "img/styling-2026/general-09-05.jpg",
+          "x": 606.49,
+          "y": 7018.61,
+          "w": 351.53,
+          "h": 454.16,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 548,
+          "mediaH": 708
+        },
+        {
+          "src": "img/styling-2026/general-05-02.jpg",
+          "x": 111.75,
+          "y": 7485.15,
+          "w": 429.64,
+          "h": 555.83,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 572,
+          "mediaH": 740
+        },
+        {
+          "src": "img/styling-2026/general-09-01.jpg",
+          "x": 602.15,
+          "y": 7564.35,
+          "w": 404.69,
+          "h": 544.19,
+          "open": "men",
+          "alt": "Styling men photograph",
+          "fit": "contain",
+          "mediaW": 792,
+          "mediaH": 1065
+        }
+      ]
+    },
+    "rolexProject": {
+      "refW": 1111,
+      "refH": 12802.36,
+      "items": [
+        {
+          "src": "img/styling-2026/rolex-02-01.jpg",
+          "x": 292.94,
+          "y": 173.59,
+          "w": 714.99,
+          "h": 479.73,
+          "open": "rolex",
+          "alt": "La Paz / Fearless",
+          "fit": "contain",
+          "mediaW": 1319,
+          "mediaH": 885
+        },
+        {
+          "src": "img/styling-2026/rolex-02-02.jpg",
+          "x": 262.56,
+          "y": 697.63,
+          "w": 377.57,
+          "h": 500.53,
+          "open": "rolex",
+          "alt": "Tree / Fearless",
+          "fit": "contain",
+          "mediaW": 697,
+          "mediaH": 924
+        },
+        {
+          "src": "img/styling-2026/rolex-02-03.jpg",
+          "x": 662.91,
+          "y": 697.63,
+          "w": 345.02,
+          "h": 501.25,
+          "open": "rolex",
+          "alt": "Ice / Fearless",
+          "fit": "contain",
+          "mediaW": 636,
+          "mediaH": 924
+        },
+        {
+          "src": "img/styling-2026/rolex-02-04.jpg",
+          "x": 292.94,
+          "y": 1243.37,
+          "w": 713.9,
+          "h": 528.52,
+          "open": "rolex",
+          "alt": "Underwater / Fearless",
+          "fit": "contain",
+          "mediaW": 1317,
+          "mediaH": 975
+        },
+        {
+          "src": "img/styling-2026/rolex-03-01.jpg",
+          "x": 278.83,
+          "y": 1797.92,
+          "w": 342.85,
+          "h": 457.67,
+          "open": "rolex",
+          "alt": "Heritage 1953",
+          "fit": "contain",
+          "mediaW": 633,
+          "mediaH": 845
+        },
+        {
+          "src": "img/styling-2026/rolex-03-02.jpg",
+          "x": 648.81,
+          "y": 1797.92,
+          "w": 341.76,
+          "h": 458.4,
+          "open": "rolex",
+          "alt": "Heritage skiing",
+          "fit": "contain",
+          "mediaW": 630,
+          "mediaH": 845
+        },
+        {
+          "src": "img/styling-2026/rolex-03-03.jpg",
+          "x": 277.75,
+          "y": 2280.73,
+          "w": 343.93,
+          "h": 458.22,
+          "open": "rolex",
+          "alt": "Heritage 1927 shore",
+          "fit": "contain",
+          "mediaW": 635,
+          "mediaH": 846
+        },
+        {
+          "src": "img/styling-2026/rolex-03-04.jpg",
+          "x": 648.81,
+          "y": 2281.81,
+          "w": 342.85,
+          "h": 457.85,
+          "open": "rolex",
+          "alt": "Heritage 1927 water",
+          "fit": "contain",
+          "mediaW": 632,
+          "mediaH": 844
+        },
+        {
+          "src": "img/styling-2026/rolex-03-05.jpg",
+          "x": 278.83,
+          "y": 2768.96,
+          "w": 712.82,
+          "h": 570.26,
+          "open": "rolex",
+          "alt": "Bianca",
+          "fit": "contain",
+          "mediaW": 1315,
+          "mediaH": 1052
+        },
+        {
+          "src": "img/styling-2026/rolex-04-01.jpg",
+          "x": 206.14,
+          "y": 3375.02,
+          "w": 368.89,
+          "h": 492.39,
+          "open": "rolex",
+          "alt": "Lindsey Vonn",
+          "fit": "contain",
+          "mediaW": 681,
+          "mediaH": 909
+        },
+        {
+          "src": "img/styling-2026/rolex-04-02.jpg",
+          "x": 601.07,
+          "y": 3375.02,
+          "w": 368.89,
+          "h": 492.03,
+          "open": "rolex",
+          "alt": "Sylvie Guillem",
+          "fit": "contain",
+          "mediaW": 680,
+          "mediaH": 907
+        },
+        {
+          "src": "img/styling-2026/rolex-04-03.jpg",
+          "x": 257.14,
+          "y": 3918.59,
+          "w": 713.9,
+          "h": 487.86,
+          "open": "rolex",
+          "alt": "Yuja Wang",
+          "fit": "contain",
+          "mediaW": 1317,
+          "mediaH": 900
+        },
+        {
+          "src": "img/styling-2026/rolex-04-04.jpg",
+          "x": 227.84,
+          "y": 4456.73,
+          "w": 372.14,
+          "h": 499.98,
+          "open": "rolex",
+          "alt": "Ana Ivanovic",
+          "fit": "contain",
+          "mediaW": 687,
+          "mediaH": 923
+        },
+        {
+          "src": "img/styling-2026/rolex-04-05.jpg",
+          "x": 615.17,
+          "y": 4456.73,
+          "w": 339.59,
+          "h": 488.23,
+          "open": "rolex",
+          "alt": "Caroline Wozniacki",
+          "fit": "contain",
+          "mediaW": 626,
+          "mediaH": 900
+        },
+        {
+          "src": "img/styling-2026/rolex-05-01.jpg",
+          "x": 223.5,
+          "y": 5000.11,
+          "w": 744.28,
+          "h": 497.09,
+          "open": "rolex",
+          "alt": "Diana Krall",
+          "fit": "contain",
+          "mediaW": 1373,
+          "mediaH": 917
+        },
+        {
+          "src": "img/styling-2026/rolex-05-02.jpg",
+          "x": 212.65,
+          "y": 5540.42,
+          "w": 372.14,
+          "h": 496.19,
+          "open": "rolex",
+          "alt": "Anoushka Shankar",
+          "fit": "contain",
+          "mediaW": 687,
+          "mediaH": 916
+        },
+        {
+          "src": "img/styling-2026/rolex-05-03.jpg",
+          "x": 599.98,
+          "y": 5540.42,
+          "w": 372.14,
+          "h": 496.91,
+          "open": "rolex",
+          "alt": "Zara Phillips",
+          "fit": "contain",
+          "mediaW": 686,
+          "mediaH": 916
+        },
+        {
+          "src": "img/styling-2026/rolex-05-04.jpg",
+          "x": 224.59,
+          "y": 6079.64,
+          "w": 743.2,
+          "h": 478.66,
+          "open": "rolex",
+          "alt": "Isabell Werth",
+          "fit": "contain",
+          "mediaW": 1371,
+          "mediaH": 883
+        },
+        {
+          "src": "img/styling-2026/rolex-06-01.jpg",
+          "x": 215.91,
+          "y": 6590.85,
+          "w": 389.5,
+          "h": 519.52,
+          "open": "rolex",
+          "alt": "Diana Krall portrait",
+          "fit": "contain",
+          "mediaW": 719,
+          "mediaH": 959
+        },
+        {
+          "src": "img/styling-2026/rolex-06-02.jpg",
+          "x": 626.02,
+          "y": 6591.94,
+          "w": 389.5,
+          "h": 520.24,
+          "open": "rolex",
+          "alt": "Cecilia Bartoli",
+          "fit": "contain",
+          "mediaW": 718,
+          "mediaH": 959
+        },
+        {
+          "src": "img/styling-2026/rolex-06-03.jpg",
+          "x": 233.27,
+          "y": 7143.1,
+          "w": 744.28,
+          "h": 496.55,
+          "open": "rolex",
+          "alt": "Adam Scott",
+          "fit": "contain",
+          "mediaW": 1373,
+          "mediaH": 916
+        },
+        {
+          "src": "img/styling-2026/rolex-06-04.jpg",
+          "x": 216.99,
+          "y": 7669.3,
+          "w": 389.5,
+          "h": 457.76,
+          "open": "rolex",
+          "alt": "Matteo Manassero",
+          "fit": "contain",
+          "mediaW": 719,
+          "mediaH": 845
+        },
+        {
+          "src": "img/styling-2026/rolex-06-05.jpg",
+          "x": 626.02,
+          "y": 7669.3,
+          "w": 389.5,
+          "h": 457.85,
+          "open": "rolex",
+          "alt": "Placido Domingo",
+          "fit": "contain",
+          "mediaW": 718,
+          "mediaH": 844
+        },
+        {
+          "src": "img/styling-2026/rolex-07-01.jpg",
+          "x": 212.65,
+          "y": 8159.61,
+          "w": 805.04,
+          "h": 538.32,
+          "open": "rolex",
+          "alt": "Gustavo Dudamel",
+          "fit": "contain",
+          "mediaW": 1485,
+          "mediaH": 993
+        },
+        {
+          "src": "img/styling-2026/rolex-07-02.jpg",
+          "x": 213.74,
+          "y": 8728.13,
+          "w": 388.42,
+          "h": 518.97,
+          "open": "rolex",
+          "alt": "Martin Kaymer",
+          "fit": "contain",
+          "mediaW": 717,
+          "mediaH": 958
+        },
+        {
+          "src": "img/styling-2026/rolex-07-03.jpg",
+          "x": 622.77,
+          "y": 8728.13,
+          "w": 389.5,
+          "h": 519.7,
+          "open": "rolex",
+          "alt": "Jo-Wilfried Tsonga",
+          "fit": "contain",
+          "mediaW": 718,
+          "mediaH": 958
+        },
+        {
+          "src": "img/styling-2026/rolex-07-04.jpg",
+          "x": 220.25,
+          "y": 9278.2,
+          "w": 805.04,
+          "h": 493.87,
+          "open": "rolex",
+          "alt": "Camilo Villegas",
+          "fit": "contain",
+          "mediaW": 1485,
+          "mediaH": 911
+        },
+        {
+          "src": "img/styling-2026/rolex-08-01.jpg",
+          "x": 201.8,
+          "y": 9804.62,
+          "w": 401.44,
+          "h": 535.79,
+          "open": "rolex",
+          "alt": "Gonzalo Pieres",
+          "fit": "contain",
+          "mediaW": 741,
+          "mediaH": 989
+        },
+        {
+          "src": "img/styling-2026/rolex-08-02.jpg",
+          "x": 616.26,
+          "y": 9804.62,
+          "w": 393.84,
+          "h": 536.51,
+          "open": "rolex",
+          "alt": "Carlo Janka",
+          "fit": "contain",
+          "mediaW": 726,
+          "mediaH": 989
+        },
+        {
+          "src": "img/styling-2026/rolex-08-03.jpg",
+          "x": 188.78,
+          "y": 10372.05,
+          "w": 826.74,
+          "h": 552.97,
+          "open": "rolex",
+          "alt": "Rodrigo Pessoa",
+          "fit": "contain",
+          "mediaW": 1525,
+          "mediaH": 1020
+        },
+        {
+          "src": "img/styling-2026/rolex-08-04.jpg",
+          "x": 201.8,
+          "y": 10956.85,
+          "w": 401.44,
+          "h": 405.77,
+          "open": "rolex",
+          "alt": "Yundi Li",
+          "fit": "contain",
+          "mediaW": 741,
+          "mediaH": 749
+        },
+        {
+          "src": "img/styling-2026/rolex-08-05.jpg",
+          "x": 627.11,
+          "y": 10956.85,
+          "w": 401.44,
+          "h": 410.66,
+          "open": "rolex",
+          "alt": "Robert Scheidt",
+          "fit": "contain",
+          "mediaW": 740,
+          "mediaH": 757
+        },
+        {
+          "src": "img/styling-2026/rolex-09-01.jpg",
+          "x": 206.14,
+          "y": 11391.91,
+          "w": 799.62,
+          "h": 533.98,
+          "open": "rolex",
+          "alt": "Paul Cayard",
+          "fit": "contain",
+          "mediaW": 1475,
+          "mediaH": 985
+        },
+        {
+          "src": "img/styling-2026/rolex-09-02.jpg",
+          "x": 206.14,
+          "y": 11955.01,
+          "w": 799.62,
+          "h": 533.44,
+          "open": "rolex",
+          "alt": "Tom Kristensen",
+          "fit": "contain",
+          "mediaW": 1475,
+          "mediaH": 984
+        }
+      ]
+    },
+    "rolex": {
+      "refW": 1111,
+      "refH": 1600,
+      "items": [
+        {
+          "x": 387.33,
+          "y": 161.66,
+          "w": 470.87,
+          "h": 314.28,
+          "open": "rolex",
+          "alt": "Rolex Heritage",
+          "fit": "contain",
+          "slides": [
+            "img/styling-2026/rolex-work-01.jpg",
+            "img/styling-2026/rolex-03-01.jpg",
+            "img/styling-2026/rolex-03-02.jpg",
+            "img/styling-2026/rolex-03-03.jpg",
+            "img/styling-2026/rolex-03-04.jpg",
+            "img/styling-2026/rolex-03-05.jpg"
+          ],
+          "projectLink": false,
+          "slideSizes": [
+            [
+              869,
+              580
+            ],
+            [
+              633,
+              845
+            ],
+            [
+              630,
+              845
+            ],
+            [
+              635,
+              846
+            ],
+            [
+              632,
+              844
+            ],
+            [
+              1315,
+              1052
+            ]
+          ]
+        },
+        {
+          "x": 387.33,
+          "y": 509.93,
+          "w": 471.96,
+          "h": 315.9,
+          "open": "rolex",
+          "alt": "Rolex Fearless",
+          "fit": "contain",
+          "slides": [
+            "img/styling-2026/rolex-work-02.jpg",
+            "img/styling-2026/rolex-02-01.jpg",
+            "img/styling-2026/rolex-02-02.jpg",
+            "img/styling-2026/rolex-02-03.jpg",
+            "img/styling-2026/rolex-02-04.jpg"
+          ],
+          "projectLink": false,
+          "slideSizes": [
+            [
+              871,
+              583
+            ],
+            [
+              1319,
+              885
+            ],
+            [
+              697,
+              924
+            ],
+            [
+              636,
+              924
+            ],
+            [
+              1317,
+              975
+            ]
+          ]
+        },
+        {
+          "x": 307.04,
+          "y": 866.88,
+          "w": 325.49,
+          "h": 436.51,
+          "open": "rolex",
+          "alt": "Rolex Men testimonials",
+          "fit": "contain",
+          "slides": [
+            "img/styling-2026/rolex-work-03.jpg",
+            "img/styling-2026/rolex-06-03.jpg",
+            "img/styling-2026/rolex-06-04.jpg",
+            "img/styling-2026/rolex-06-05.jpg",
+            "img/styling-2026/rolex-07-01.jpg",
+            "img/styling-2026/rolex-07-02.jpg",
+            "img/styling-2026/rolex-07-03.jpg",
+            "img/styling-2026/rolex-07-04.jpg",
+            "img/styling-2026/rolex-08-01.jpg",
+            "img/styling-2026/rolex-08-02.jpg",
+            "img/styling-2026/rolex-08-03.jpg",
+            "img/styling-2026/rolex-08-04.jpg",
+            "img/styling-2026/rolex-08-05.jpg",
+            "img/styling-2026/rolex-09-01.jpg",
+            "img/styling-2026/rolex-09-02.jpg"
+          ],
+          "projectLink": false,
+          "slideSizes": [
+            [
+              601,
+              806
+            ],
+            [
+              1373,
+              916
+            ],
+            [
+              719,
+              845
+            ],
+            [
+              718,
+              844
+            ],
+            [
+              1485,
+              993
+            ],
+            [
+              717,
+              958
+            ],
+            [
+              718,
+              958
+            ],
+            [
+              1485,
+              911
+            ],
+            [
+              741,
+              989
+            ],
+            [
+              726,
+              989
+            ],
+            [
+              1525,
+              1020
+            ],
+            [
+              741,
+              749
+            ],
+            [
+              740,
+              757
+            ],
+            [
+              1475,
+              985
+            ],
+            [
+              1475,
+              984
+            ]
+          ]
+        },
+        {
+          "x": 667.25,
+          "y": 866.88,
+          "w": 327.66,
+          "h": 437.24,
+          "open": "rolex",
+          "alt": "Rolex Women testimonials",
+          "fit": "contain",
+          "slides": [
+            "img/styling-2026/rolex-work-04.jpg",
+            "img/styling-2026/rolex-04-01.jpg",
+            "img/styling-2026/rolex-04-03.jpg",
+            "img/styling-2026/rolex-04-04.jpg",
+            "img/styling-2026/rolex-04-05.jpg",
+            "img/styling-2026/rolex-05-01.jpg",
+            "img/styling-2026/rolex-05-02.jpg",
+            "img/styling-2026/rolex-05-03.jpg",
+            "img/styling-2026/rolex-05-04.jpg",
+            "img/styling-2026/rolex-06-01.jpg",
+            "img/styling-2026/rolex-06-02.jpg"
+          ],
+          "projectLink": false,
+          "slideSizes": [
+            [
+              604,
+              806
+            ],
+            [
+              681,
+              909
+            ],
+            [
+              1317,
+              900
+            ],
+            [
+              687,
+              923
+            ],
+            [
+              626,
+              900
+            ],
+            [
+              1373,
+              917
+            ],
+            [
+              687,
+              916
+            ],
+            [
+              686,
+              916
+            ],
+            [
+              1371,
+              883
+            ],
+            [
+              719,
+              959
+            ],
+            [
+              718,
+              959
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "assets": [
+    {
+      "file": "img/styling-2026/general-01-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        226,
+        147,
+        520,
+        539
+      ],
+      "size": [
+        1200,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/work/60s-mod.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-01-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        576,
+        162,
+        844,
+        520
+      ],
+      "size": [
+        1200,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/work/in-with-the-new.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-01-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        91,
+        569,
+        399,
+        950
+      ],
+      "size": [
+        616,
+        762
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-01-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        469,
+        615,
+        903,
+        904
+      ],
+      "size": [
+        869,
+        578
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-01-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        42,
+        1039,
+        293,
+        1406
+      ],
+      "size": [
+        502,
+        734
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-01-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        684,
+        978,
+        969,
+        1359
+      ],
+      "size": [
+        1200,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/05.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-01-07.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE1.jpg",
+      "boxAt1024": [
+        343,
+        1020,
+        655,
+        1406
+      ],
+      "size": [
+        625,
+        772
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-02-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        92,
+        51,
+        580,
+        416
+      ],
+      "size": [
+        920,
+        688
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/01.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-02-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        649,
+        25,
+        879,
+        385
+      ],
+      "size": [
+        460,
+        720
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-02-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        372,
+        468,
+        671,
+        918
+      ],
+      "size": [
+        494,
+        741
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/04.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-02-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        84,
+        509,
+        320,
+        878
+      ],
+      "size": [
+        472,
+        739
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-02-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        707,
+        521,
+        953,
+        886
+      ],
+      "size": [
+        492,
+        730
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-02-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        92,
+        970,
+        405,
+        1387
+      ],
+      "size": [
+        1200,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/06.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-02-07.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE2.jpg",
+      "boxAt1024": [
+        447,
+        983,
+        971,
+        1318
+      ],
+      "size": [
+        1049,
+        670
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-03-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        177,
+        60,
+        447,
+        419
+      ],
+      "size": [
+        538,
+        717
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/02.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-03-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        506,
+        79,
+        807,
+        482
+      ],
+      "size": [
+        603,
+        806
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-03-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        78,
+        476,
+        413,
+        894
+      ],
+      "size": [
+        1200,
+        1500
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/11.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-03-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        477,
+        535,
+        895,
+        871
+      ],
+      "size": [
+        837,
+        672
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-03-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        372,
+        953,
+        681,
+        1370
+      ],
+      "size": [
+        619,
+        834
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-03-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        725,
+        924,
+        990,
+        1307
+      ],
+      "size": [
+        1106,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/10.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-03-07.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE3.jpg",
+      "boxAt1024": [
+        65,
+        1056,
+        334,
+        1415
+      ],
+      "size": [
+        1200,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/08.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-04-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        95,
+        11,
+        450,
+        485
+      ],
+      "size": [
+        710,
+        948
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-04-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        495,
+        86,
+        944,
+        417
+      ],
+      "size": [
+        899,
+        662
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-04-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        354,
+        543,
+        635,
+        932
+      ],
+      "size": [
+        563,
+        778
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-04-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        673,
+        484,
+        994,
+        816
+      ],
+      "size": [
+        1421,
+        1476
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/14.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-04-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        78,
+        611,
+        253,
+        1006
+      ],
+      "size": [
+        350,
+        790
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-04-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        645,
+        964,
+        966,
+        1403
+      ],
+      "size": [
+        642,
+        878
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-04-07.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE4.jpg",
+      "boxAt1024": [
+        62,
+        1058,
+        563,
+        1426
+      ],
+      "size": [
+        1003,
+        736
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-05-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        424,
+        67,
+        967,
+        431
+      ],
+      "size": [
+        1087,
+        728
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-05-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        96,
+        103,
+        382,
+        473
+      ],
+      "size": [
+        572,
+        740
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-05-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        52,
+        555,
+        354,
+        945
+      ],
+      "size": [
+        1239,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/24.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-05-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        452,
+        497,
+        611,
+        978
+      ],
+      "size": [
+        319,
+        963
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-05-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        716,
+        555,
+        984,
+        920
+      ],
+      "size": [
+        733,
+        1000
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/22.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-05-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        52,
+        1075,
+        530,
+        1364
+      ],
+      "size": [
+        957,
+        578
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-05-07.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE5.jpg",
+      "boxAt1024": [
+        608,
+        1044,
+        909,
+        1429
+      ],
+      "size": [
+        780,
+        1000
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/15.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-06-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        96,
+        88,
+        423,
+        525
+      ],
+      "size": [
+        1198,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/27.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-06-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        469,
+        136,
+        980,
+        477
+      ],
+      "size": [
+        1600,
+        1066
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/16.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-06-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        653,
+        524,
+        980,
+        960
+      ],
+      "size": [
+        654,
+        872
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-06-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        66,
+        571,
+        577,
+        912
+      ],
+      "size": [
+        1600,
+        1067
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/17.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-06-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        45,
+        971,
+        383,
+        1390
+      ],
+      "size": [
+        676,
+        838
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-06-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        406,
+        981,
+        699,
+        1361
+      ],
+      "size": [
+        587,
+        760
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-06-07.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE6.jpg",
+      "boxAt1024": [
+        721,
+        1035,
+        980,
+        1390
+      ],
+      "size": [
+        518,
+        710
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-07-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE7.jpg",
+      "boxAt1024": [
+        84,
+        59,
+        392,
+        471
+      ],
+      "size": [
+        616,
+        824
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-07-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE7.jpg",
+      "boxAt1024": [
+        433,
+        89,
+        942,
+        441
+      ],
+      "size": [
+        1600,
+        1115
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/21.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-07-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE7.jpg",
+      "boxAt1024": [
+        62,
+        541,
+        531,
+        844
+      ],
+      "size": [
+        939,
+        606
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-07-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE7.jpg",
+      "boxAt1024": [
+        576,
+        534,
+        927,
+        1010
+      ],
+      "size": [
+        702,
+        952
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-07-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE7.jpg",
+      "boxAt1024": [
+        51,
+        914,
+        392,
+        1399
+      ],
+      "size": [
+        682,
+        970
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-07-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE7.jpg",
+      "boxAt1024": [
+        446,
+        1076,
+        912,
+        1378
+      ],
+      "size": [
+        933,
+        604
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-08-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE8.jpg",
+      "boxAt1024": [
+        582,
+        23,
+        964,
+        538
+      ],
+      "size": [
+        764,
+        1031
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-08-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE8.jpg",
+      "boxAt1024": [
+        65,
+        128,
+        551,
+        492
+      ],
+      "size": [
+        1600,
+        1202
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/26.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-08-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE8.jpg",
+      "boxAt1024": [
+        31,
+        585,
+        632,
+        986
+      ],
+      "size": [
+        1203,
+        802
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-08-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE8.jpg",
+      "boxAt1024": [
+        658,
+        613,
+        975,
+        1008
+      ],
+      "size": [
+        634,
+        790
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-08-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE8.jpg",
+      "boxAt1024": [
+        124,
+        1021,
+        457,
+        1453
+      ],
+      "size": [
+        666,
+        864
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-08-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE8.jpg",
+      "boxAt1024": [
+        512,
+        1041,
+        868,
+        1433
+      ],
+      "size": [
+        713,
+        784
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-09-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE9.jpg",
+      "boxAt1024": [
+        78,
+        48,
+        474,
+        580
+      ],
+      "size": [
+        792,
+        1065
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-09-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE9.jpg",
+      "boxAt1024": [
+        512,
+        135,
+        990,
+        443
+      ],
+      "size": [
+        957,
+        616
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-09-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE9.jpg",
+      "boxAt1024": [
+        566,
+        526,
+        883,
+        948
+      ],
+      "size": [
+        1198,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/28.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-09-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE9.jpg",
+      "boxAt1024": [
+        152,
+        608,
+        457,
+        1012
+      ],
+      "size": [
+        757,
+        1000
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/18.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-09-05.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE9.jpg",
+      "boxAt1024": [
+        638,
+        1032,
+        912,
+        1386
+      ],
+      "size": [
+        548,
+        708
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-09-06.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE9.jpg",
+      "boxAt1024": [
+        54,
+        1051,
+        555,
+        1408
+      ],
+      "size": [
+        1003,
+        714
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/general-10-01.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE10.jpg",
+      "boxAt1024": [
+        110,
+        58,
+        477,
+        552
+      ],
+      "size": [
+        1191,
+        1600
+      ],
+      "status": "native-asset",
+      "note": "Copy of existing full photograph",
+      "native": "img/tommy-21sep/women/19.jpeg"
+    },
+    {
+      "file": "img/styling-2026/general-10-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING GENERALE10.jpg",
+      "boxAt1024": [
+        529,
+        59,
+        850,
+        474
+      ],
+      "size": [
+        642,
+        830
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/men-04-03.jpg",
+      "reference": "PAGINA X LAYOUT STYLING MEN4.jpg",
+      "boxAt1024": [
+        487,
+        630,
+        888,
+        1189
+      ],
+      "size": [
+        803,
+        1118
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/men-05-02.jpg",
+      "reference": "PAGINA X LAYOUT STYLING MEN5.jpg",
+      "boxAt1024": [
+        512,
+        138,
+        845,
+        638
+      ],
+      "size": [
+        667,
+        1001
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/men-05-04.jpg",
+      "reference": "PAGINA X LAYOUT STYLING MEN5.jpg",
+      "boxAt1024": [
+        54,
+        723,
+        534,
+        1066
+      ],
+      "size": [
+        961,
+        686
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-work-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX work.jpg",
+      "boxAt1024": [
+        357,
+        149,
+        791,
+        439
+      ],
+      "size": [
+        869,
+        580
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-work-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX work.jpg",
+      "boxAt1024": [
+        357,
+        470,
+        792,
+        761
+      ],
+      "size": [
+        871,
+        583
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-work-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX work.jpg",
+      "boxAt1024": [
+        283,
+        799,
+        583,
+        1202
+      ],
+      "size": [
+        601,
+        806
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-work-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX work.jpg",
+      "boxAt1024": [
+        615,
+        799,
+        917,
+        1202
+      ],
+      "size": [
+        604,
+        806
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-02-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX2.jpg",
+      "boxAt1024": [
+        270,
+        160,
+        929,
+        602
+      ],
+      "size": [
+        1319,
+        885
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-02-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX2.jpg",
+      "boxAt1024": [
+        242,
+        643,
+        590,
+        1105
+      ],
+      "size": [
+        697,
+        924
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-02-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX2.jpg",
+      "boxAt1024": [
+        611,
+        643,
+        929,
+        1105
+      ],
+      "size": [
+        636,
+        924
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-02-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX2.jpg",
+      "boxAt1024": [
+        270,
+        1146,
+        928,
+        1475
+      ],
+      "size": [
+        1317,
+        975
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX3.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-03-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX3.jpg",
+      "boxAt1024": [
+        257,
+        182,
+        573,
+        604
+      ],
+      "size": [
+        633,
+        845
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-03-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX3.jpg",
+      "boxAt1024": [
+        598,
+        182,
+        913,
+        604
+      ],
+      "size": [
+        630,
+        845
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-03-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX3.jpg",
+      "boxAt1024": [
+        256,
+        627,
+        573,
+        1050
+      ],
+      "size": [
+        635,
+        846
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-03-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX3.jpg",
+      "boxAt1024": [
+        598,
+        628,
+        914,
+        1050
+      ],
+      "size": [
+        632,
+        844
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-03-05.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX3.jpg",
+      "boxAt1024": [
+        257,
+        1077,
+        914,
+        1475
+      ],
+      "size": [
+        1315,
+        1052
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX4.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-04-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX4.jpg",
+      "boxAt1024": [
+        190,
+        161,
+        530,
+        615
+      ],
+      "size": [
+        681,
+        909
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-04-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX4.jpg",
+      "boxAt1024": [
+        554,
+        161,
+        894,
+        614
+      ],
+      "size": [
+        680,
+        907
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-04-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX4.jpg",
+      "boxAt1024": [
+        237,
+        662,
+        895,
+        1112
+      ],
+      "size": [
+        1317,
+        900
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-04-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX4.jpg",
+      "boxAt1024": [
+        210,
+        1158,
+        553,
+        1475
+      ],
+      "size": [
+        687,
+        923
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX5.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-04-05.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX4.jpg",
+      "boxAt1024": [
+        567,
+        1158,
+        880,
+        1475
+      ],
+      "size": [
+        626,
+        900
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX5.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-05-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX5.jpg",
+      "boxAt1024": [
+        206,
+        186,
+        892,
+        644
+      ],
+      "size": [
+        1373,
+        917
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-05-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX5.jpg",
+      "boxAt1024": [
+        196,
+        684,
+        539,
+        1142
+      ],
+      "size": [
+        687,
+        916
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-05-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX5.jpg",
+      "boxAt1024": [
+        553,
+        684,
+        896,
+        1142
+      ],
+      "size": [
+        686,
+        916
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-05-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX5.jpg",
+      "boxAt1024": [
+        207,
+        1181,
+        892,
+        1475
+      ],
+      "size": [
+        1371,
+        883
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX6.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-06-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX6.jpg",
+      "boxAt1024": [
+        199,
+        177,
+        558,
+        656
+      ],
+      "size": [
+        719,
+        959
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-06-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX6.jpg",
+      "boxAt1024": [
+        577,
+        178,
+        936,
+        657
+      ],
+      "size": [
+        718,
+        959
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-06-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX6.jpg",
+      "boxAt1024": [
+        215,
+        686,
+        901,
+        1144
+      ],
+      "size": [
+        1373,
+        916
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-06-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX6.jpg",
+      "boxAt1024": [
+        200,
+        1171,
+        559,
+        1475
+      ],
+      "size": [
+        719,
+        845
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX7.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-06-05.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX6.jpg",
+      "boxAt1024": [
+        577,
+        1171,
+        936,
+        1475
+      ],
+      "size": [
+        718,
+        844
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX7.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-07-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX7.jpg",
+      "boxAt1024": [
+        196,
+        149,
+        938,
+        645
+      ],
+      "size": [
+        1485,
+        993
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-07-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX7.jpg",
+      "boxAt1024": [
+        197,
+        673,
+        555,
+        1152
+      ],
+      "size": [
+        717,
+        958
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-07-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX7.jpg",
+      "boxAt1024": [
+        574,
+        673,
+        933,
+        1152
+      ],
+      "size": [
+        718,
+        958
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-07-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX7.jpg",
+      "boxAt1024": [
+        203,
+        1180,
+        945,
+        1475
+      ],
+      "size": [
+        1485,
+        911
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX8.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-08-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX8.jpg",
+      "boxAt1024": [
+        186,
+        190,
+        556,
+        684
+      ],
+      "size": [
+        741,
+        989
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-08-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX8.jpg",
+      "boxAt1024": [
+        568,
+        190,
+        931,
+        684
+      ],
+      "size": [
+        726,
+        989
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-08-03.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX8.jpg",
+      "boxAt1024": [
+        174,
+        713,
+        936,
+        1223
+      ],
+      "size": [
+        1525,
+        1020
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-08-04.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX8.jpg",
+      "boxAt1024": [
+        186,
+        1252,
+        556,
+        1475
+      ],
+      "size": [
+        741,
+        749
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX9.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-08-05.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX8.jpg",
+      "boxAt1024": [
+        578,
+        1252,
+        948,
+        1475
+      ],
+      "size": [
+        740,
+        757
+      ],
+      "status": "reference-extraction",
+      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX9.jpg; exact master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-09-01.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX9.jpg",
+      "boxAt1024": [
+        190,
+        175,
+        927,
+        667
+      ],
+      "size": [
+        1475,
+        985
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    },
+    {
+      "file": "img/styling-2026/rolex-09-02.jpg",
+      "reference": "PAGINA X LAYOUT ROLEX9.jpg",
+      "boxAt1024": [
+        190,
+        694,
+        927,
+        1186
+      ],
+      "size": [
+        1475,
+        984
+      ],
+      "status": "reference-extraction",
+      "note": "Exact photograph extracted from approved layout; original master to request"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "autoplayBefore": "img/styling-2026/rolex-work-01.jpg",
+  "autoplayAfter": "img/styling-2026/rolex-03-01.jpg",
+  "autoplayChanged": true,
+  "intervalMs": 7500,
+  "desktopClickChanged": true,
+  "hashAfterClick": "http://127.0.0.1:8765/?stylingQA=20261006d#/work/styling/rolex"
+}
