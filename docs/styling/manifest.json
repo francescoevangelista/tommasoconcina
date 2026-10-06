@@ -1526,7 +1526,7 @@
     },
     "rolexProject": {
       "refW": 1111,
-      "refH": 12802.36,
+      "refH": 12383.95,
       "items": [
         {
           "src": "img/styling-2026/rolex-02-01.jpg",
@@ -1569,17 +1569,17 @@
           "x": 292.94,
           "y": 1243.37,
           "w": 713.9,
-          "h": 528.52,
+          "h": 483.67,
           "open": "rolex",
           "alt": "Underwater / Fearless",
           "fit": "contain",
-          "mediaW": 1317,
-          "mediaH": 975
+          "mediaW": 1200,
+          "mediaH": 813
         },
         {
           "src": "img/styling-2026/rolex-03-01.jpg",
           "x": 278.83,
-          "y": 1797.92,
+          "y": 1753.07,
           "w": 342.85,
           "h": 457.67,
           "open": "rolex",
@@ -1591,7 +1591,7 @@
         {
           "src": "img/styling-2026/rolex-03-02.jpg",
           "x": 648.81,
-          "y": 1797.92,
+          "y": 1753.07,
           "w": 341.76,
           "h": 458.4,
           "open": "rolex",
@@ -1603,7 +1603,7 @@
         {
           "src": "img/styling-2026/rolex-03-03.jpg",
           "x": 277.75,
-          "y": 2280.73,
+          "y": 2235.88,
           "w": 343.93,
           "h": 458.22,
           "open": "rolex",
@@ -1615,7 +1615,7 @@
         {
           "src": "img/styling-2026/rolex-03-04.jpg",
           "x": 648.81,
-          "y": 2281.81,
+          "y": 2236.96,
           "w": 342.85,
           "h": 457.85,
           "open": "rolex",
@@ -1627,19 +1627,19 @@
         {
           "src": "img/styling-2026/rolex-03-05.jpg",
           "x": 278.83,
-          "y": 2768.96,
+          "y": 2724.11,
           "w": 712.82,
-          "h": 570.26,
+          "h": 482.34,
           "open": "rolex",
           "alt": "Bianca",
           "fit": "contain",
-          "mediaW": 1315,
-          "mediaH": 1052
+          "mediaW": 1200,
+          "mediaH": 812
         },
         {
           "src": "img/styling-2026/rolex-04-01.jpg",
           "x": 206.14,
-          "y": 3375.02,
+          "y": 3242.25,
           "w": 368.89,
           "h": 492.39,
           "open": "rolex",
@@ -1651,7 +1651,7 @@
         {
           "src": "img/styling-2026/rolex-04-02.jpg",
           "x": 601.07,
-          "y": 3375.02,
+          "y": 3242.25,
           "w": 368.89,
           "h": 492.03,
           "open": "rolex",
@@ -1663,7 +1663,7 @@
         {
           "src": "img/styling-2026/rolex-04-03.jpg",
           "x": 257.14,
-          "y": 3918.59,
+          "y": 3785.82,
           "w": 713.9,
           "h": 487.86,
           "open": "rolex",
@@ -1675,31 +1675,31 @@
         {
           "src": "img/styling-2026/rolex-04-04.jpg",
           "x": 227.84,
-          "y": 4456.73,
+          "y": 4323.96,
           "w": 372.14,
-          "h": 499.98,
+          "h": 255.85,
           "open": "rolex",
           "alt": "Ana Ivanovic",
           "fit": "contain",
-          "mediaW": 687,
-          "mediaH": 923
+          "mediaW": 1200,
+          "mediaH": 825
         },
         {
           "src": "img/styling-2026/rolex-04-05.jpg",
           "x": 615.17,
-          "y": 4456.73,
+          "y": 4323.96,
           "w": 339.59,
-          "h": 488.23,
+          "h": 452.97,
           "open": "rolex",
           "alt": "Caroline Wozniacki",
           "fit": "contain",
           "mediaW": 626,
-          "mediaH": 900
+          "mediaH": 835
         },
         {
           "src": "img/styling-2026/rolex-05-01.jpg",
           "x": 223.5,
-          "y": 5000.11,
+          "y": 4820.33,
           "w": 744.28,
           "h": 497.09,
           "open": "rolex",
@@ -1711,7 +1711,7 @@
         {
           "src": "img/styling-2026/rolex-05-02.jpg",
           "x": 212.65,
-          "y": 5540.42,
+          "y": 5360.64,
           "w": 372.14,
           "h": 496.19,
           "open": "rolex",
@@ -1723,7 +1723,7 @@
         {
           "src": "img/styling-2026/rolex-05-03.jpg",
           "x": 599.98,
-          "y": 5540.42,
+          "y": 5360.64,
           "w": 372.14,
           "h": 496.91,
           "open": "rolex",
@@ -1735,23 +1735,23 @@
         {
           "src": "img/styling-2026/rolex-05-04.jpg",
           "x": 224.59,
-          "y": 6079.64,
+          "y": 5899.86,
           "w": 743.2,
-          "h": 478.66,
+          "h": 507.85,
           "open": "rolex",
           "alt": "Isabell Werth",
           "fit": "contain",
-          "mediaW": 1371,
-          "mediaH": 883
+          "mediaW": 1200,
+          "mediaH": 820
         },
         {
           "src": "img/styling-2026/rolex-06-01.jpg",
           "x": 215.91,
-          "y": 6590.85,
+          "y": 6440.26,
           "w": 389.5,
           "h": 519.52,
           "open": "rolex",
-          "alt": "Diana Krall portrait",
+          "alt": "Sylvia Earle portrait",
           "fit": "contain",
           "mediaW": 719,
           "mediaH": 959
@@ -1759,7 +1759,7 @@
         {
           "src": "img/styling-2026/rolex-06-02.jpg",
           "x": 626.02,
-          "y": 6591.94,
+          "y": 6441.35,
           "w": 389.5,
           "h": 520.24,
           "open": "rolex",
@@ -1771,7 +1771,7 @@
         {
           "src": "img/styling-2026/rolex-06-03.jpg",
           "x": 233.27,
-          "y": 7143.1,
+          "y": 6992.51,
           "w": 744.28,
           "h": 496.55,
           "open": "rolex",
@@ -1783,31 +1783,31 @@
         {
           "src": "img/styling-2026/rolex-06-04.jpg",
           "x": 216.99,
-          "y": 7669.3,
+          "y": 7518.71,
           "w": 389.5,
-          "h": 457.76,
+          "h": 266.16,
           "open": "rolex",
           "alt": "Matteo Manassero",
           "fit": "contain",
-          "mediaW": 719,
-          "mediaH": 845
+          "mediaW": 1200,
+          "mediaH": 820
         },
         {
           "src": "img/styling-2026/rolex-06-05.jpg",
           "x": 626.02,
-          "y": 7669.3,
+          "y": 7518.71,
           "w": 389.5,
-          "h": 457.85,
+          "h": 267.46,
           "open": "rolex",
           "alt": "Placido Domingo",
           "fit": "contain",
-          "mediaW": 718,
-          "mediaH": 844
+          "mediaW": 1200,
+          "mediaH": 824
         },
         {
           "src": "img/styling-2026/rolex-07-01.jpg",
           "x": 212.65,
-          "y": 8159.61,
+          "y": 7818.63,
           "w": 805.04,
           "h": 538.32,
           "open": "rolex",
@@ -1819,7 +1819,7 @@
         {
           "src": "img/styling-2026/rolex-07-02.jpg",
           "x": 213.74,
-          "y": 8728.13,
+          "y": 8387.15,
           "w": 388.42,
           "h": 518.97,
           "open": "rolex",
@@ -1831,7 +1831,7 @@
         {
           "src": "img/styling-2026/rolex-07-03.jpg",
           "x": 622.77,
-          "y": 8728.13,
+          "y": 8387.15,
           "w": 389.5,
           "h": 519.7,
           "open": "rolex",
@@ -1843,19 +1843,19 @@
         {
           "src": "img/styling-2026/rolex-07-04.jpg",
           "x": 220.25,
-          "y": 9278.2,
+          "y": 8937.22,
           "w": 805.04,
-          "h": 493.87,
+          "h": 548.77,
           "open": "rolex",
           "alt": "Camilo Villegas",
           "fit": "contain",
-          "mediaW": 1485,
-          "mediaH": 911
+          "mediaW": 1200,
+          "mediaH": 818
         },
         {
           "src": "img/styling-2026/rolex-08-01.jpg",
           "x": 201.8,
-          "y": 9804.62,
+          "y": 9518.54,
           "w": 401.44,
           "h": 535.79,
           "open": "rolex",
@@ -1867,7 +1867,7 @@
         {
           "src": "img/styling-2026/rolex-08-02.jpg",
           "x": 616.26,
-          "y": 9804.62,
+          "y": 9518.54,
           "w": 393.84,
           "h": 536.51,
           "open": "rolex",
@@ -1879,7 +1879,7 @@
         {
           "src": "img/styling-2026/rolex-08-03.jpg",
           "x": 188.78,
-          "y": 10372.05,
+          "y": 10085.97,
           "w": 826.74,
           "h": 552.97,
           "open": "rolex",
@@ -1891,31 +1891,31 @@
         {
           "src": "img/styling-2026/rolex-08-04.jpg",
           "x": 201.8,
-          "y": 10956.85,
+          "y": 10670.77,
           "w": 401.44,
-          "h": 405.77,
+          "h": 278.33,
           "open": "rolex",
           "alt": "Yundi Li",
           "fit": "contain",
-          "mediaW": 741,
-          "mediaH": 749
+          "mediaW": 1200,
+          "mediaH": 832
         },
         {
           "src": "img/styling-2026/rolex-08-05.jpg",
           "x": 627.11,
-          "y": 10956.85,
+          "y": 10670.77,
           "w": 401.44,
-          "h": 410.66,
+          "h": 273.65,
           "open": "rolex",
           "alt": "Robert Scheidt",
           "fit": "contain",
-          "mediaW": 740,
-          "mediaH": 757
+          "mediaW": 1200,
+          "mediaH": 818
         },
         {
           "src": "img/styling-2026/rolex-09-01.jpg",
           "x": 206.14,
-          "y": 11391.91,
+          "y": 10973.5,
           "w": 799.62,
           "h": 533.98,
           "open": "rolex",
@@ -1927,7 +1927,7 @@
         {
           "src": "img/styling-2026/rolex-09-02.jpg",
           "x": 206.14,
-          "y": 11955.01,
+          "y": 11536.6,
           "w": 799.62,
           "h": 533.44,
           "open": "rolex",
@@ -1981,8 +1981,8 @@
               844
             ],
             [
-              1315,
-              1052
+              1200,
+              812
             ]
           ]
         },
@@ -2020,8 +2020,8 @@
               924
             ],
             [
-              1317,
-              975
+              1200,
+              813
             ]
           ]
         },
@@ -2061,12 +2061,12 @@
               916
             ],
             [
-              719,
-              845
+              1200,
+              820
             ],
             [
-              718,
-              844
+              1200,
+              824
             ],
             [
               1485,
@@ -2081,8 +2081,8 @@
               958
             ],
             [
-              1485,
-              911
+              1200,
+              818
             ],
             [
               741,
@@ -2097,12 +2097,12 @@
               1020
             ],
             [
-              741,
-              749
+              1200,
+              832
             ],
             [
-              740,
-              757
+              1200,
+              818
             ],
             [
               1475,
@@ -2150,12 +2150,12 @@
               900
             ],
             [
-              687,
-              923
+              1200,
+              825
             ],
             [
               626,
-              900
+              835
             ],
             [
               1373,
@@ -2170,8 +2170,8 @@
               916
             ],
             [
-              1371,
-              883
+              1200,
+              820
             ],
             [
               719,
@@ -3371,11 +3371,12 @@
         1475
       ],
       "size": [
-        1317,
-        975
+        1200,
+        813
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX3.jpg; exact master to request"
+      "status": "native-asset",
+      "note": "Complete matching landscape advertisement recovered from existing original; screenshot boundary fragments removed.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/023_ROLEX-TULUM-JWT.jpg"
     },
     {
       "file": "img/styling-2026/rolex-03-01.jpg",
@@ -3451,11 +3452,12 @@
         1475
       ],
       "size": [
-        1315,
-        1052
+        1200,
+        812
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX4.jpg; exact master to request"
+      "status": "supplied-master",
+      "note": "Complete supplied Bianca master; duplicate screenshot strip removed.",
+      "native": "Layouts/ROLEX:BIANCA (????).jpg"
     },
     {
       "file": "img/styling-2026/rolex-04-01.jpg",
@@ -3515,11 +3517,12 @@
         1475
       ],
       "size": [
-        687,
-        923
+        1200,
+        825
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX5.jpg; exact master to request"
+      "status": "native-temporary-variant",
+      "note": "Complete original landscape campaign used temporarily with Francesco authorization on 6 Oct; exact portrait master required. No stitched fragments.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/035_IVANOVIC-WEBSITE-FINAL.jpg"
     },
     {
       "file": "img/styling-2026/rolex-04-05.jpg",
@@ -3532,10 +3535,10 @@
       ],
       "size": [
         626,
-        900
+        835
       ],
       "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX5.jpg; exact master to request"
+      "note": "Validated screenshot overlap removed: 65px; RMS pixel error 17.29. Exact portrait master still requested."
     },
     {
       "file": "img/styling-2026/rolex-05-01.jpg",
@@ -3595,11 +3598,12 @@
         1475
       ],
       "size": [
-        1371,
-        883
+        1200,
+        820
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX6.jpg; exact master to request"
+      "status": "native-asset",
+      "note": "Complete matching landscape advertisement recovered from existing original; screenshot boundary fragments removed.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/030_WERTH-WEBSITE-FINAL-copy.jpg"
     },
     {
       "file": "img/styling-2026/rolex-06-01.jpg",
@@ -3659,11 +3663,12 @@
         1475
       ],
       "size": [
-        719,
-        845
+        1200,
+        820
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX7.jpg; exact master to request"
+      "status": "native-temporary-variant",
+      "note": "Complete original landscape campaign used temporarily with Francesco authorization on 6 Oct; exact portrait master required. No stitched fragments.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/015_MATTEO-MANASSERO-ROLEX-JWT.jpg"
     },
     {
       "file": "img/styling-2026/rolex-06-05.jpg",
@@ -3675,11 +3680,12 @@
         1475
       ],
       "size": [
-        718,
-        844
+        1200,
+        824
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX7.jpg; exact master to request"
+      "status": "native-temporary-variant",
+      "note": "Complete original landscape campaign used temporarily with Francesco authorization on 6 Oct; exact portrait master required. No stitched fragments.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/003_PLACIDO-DOMINGO-ROLEX-JWT.jpg"
     },
     {
       "file": "img/styling-2026/rolex-07-01.jpg",
@@ -3739,11 +3745,12 @@
         1475
       ],
       "size": [
-        1485,
-        911
+        1200,
+        818
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX8.jpg; exact master to request"
+      "status": "native-asset",
+      "note": "Complete matching landscape advertisement recovered from existing original; screenshot boundary fragments removed.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/019_CAMILO-VILLEGAS-ROLEX-JWT.jpg"
     },
     {
       "file": "img/styling-2026/rolex-08-01.jpg",
@@ -3803,11 +3810,12 @@
         1475
       ],
       "size": [
-        741,
-        749
+        1200,
+        832
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX9.jpg; exact master to request"
+      "status": "native-temporary-variant",
+      "note": "Complete original landscape campaign used temporarily with Francesco authorization on 6 Oct; exact portrait master required. No stitched fragments.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/001_YUNDI-LI-ROLEX-JWT.jpg"
     },
     {
       "file": "img/styling-2026/rolex-08-05.jpg",
@@ -3819,11 +3827,12 @@
         1475
       ],
       "size": [
-        740,
-        757
+        1200,
+        818
       ],
-      "status": "reference-extraction",
-      "note": "First occurrence completed with the boundary continuation in PAGINA X LAYOUT ROLEX9.jpg; exact master to request"
+      "status": "native-temporary-variant",
+      "note": "Complete original landscape campaign used temporarily with Francesco authorization on 6 Oct; exact portrait master required. No stitched fragments.",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/rolex/014_ROBERT-SCHEIDT-ROLEX-JWT.jpg"
     },
     {
       "file": "img/styling-2026/rolex-09-01.jpg",

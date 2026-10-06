@@ -1,0 +1,522 @@
+[
+  {
+    "label": "Styling generale — 1",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 2",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-02.jpg",
+    "y": 1600,
+    "page": 2,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 3",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-03.jpg",
+    "y": 3201,
+    "page": 3,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 4",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-04.jpg",
+    "y": 4801,
+    "page": 4,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 5",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-05.jpg",
+    "y": 6401,
+    "page": 5,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 6",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-06.jpg",
+    "y": 8002,
+    "page": 6,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 7",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-07.jpg",
+    "y": 9602,
+    "page": 7,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 8",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-08.jpg",
+    "y": 11202,
+    "page": 8,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 9",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-09.jpg",
+    "y": 12803,
+    "page": 9,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Styling generale — 10",
+    "route": "#/work/styling",
+    "reference": "references/stylingGeneral-10.jpg",
+    "y": 14403,
+    "page": 10,
+    "key": "stylingGeneral"
+  },
+  {
+    "label": "Women — 1",
+    "route": "#/work/styling/women",
+    "reference": "references/women-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "women"
+  },
+  {
+    "label": "Women — 2",
+    "route": "#/work/styling/women",
+    "reference": "references/women-02.jpg",
+    "y": 1320,
+    "page": 2,
+    "key": "women"
+  },
+  {
+    "label": "Women — 3",
+    "route": "#/work/styling/women",
+    "reference": "references/women-03.jpg",
+    "y": 2759,
+    "page": 3,
+    "key": "women"
+  },
+  {
+    "label": "Women — 4",
+    "route": "#/work/styling/women",
+    "reference": "references/women-04.jpg",
+    "y": 4359,
+    "page": 4,
+    "key": "women"
+  },
+  {
+    "label": "Women — 5",
+    "route": "#/work/styling/women",
+    "reference": "references/women-05.jpg",
+    "y": 5960,
+    "page": 5,
+    "key": "women"
+  },
+  {
+    "label": "Men — 1",
+    "route": "#/work/styling/men",
+    "reference": "references/men-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "men"
+  },
+  {
+    "label": "Men — 2",
+    "route": "#/work/styling/men",
+    "reference": "references/men-02.jpg",
+    "y": 1484,
+    "page": 2,
+    "key": "men"
+  },
+  {
+    "label": "Men — 3",
+    "route": "#/work/styling/men",
+    "reference": "references/men-03.jpg",
+    "y": 3057,
+    "page": 3,
+    "key": "men"
+  },
+  {
+    "label": "Men — 4",
+    "route": "#/work/styling/men",
+    "reference": "references/men-04.jpg",
+    "y": 4555,
+    "page": 4,
+    "key": "men"
+  },
+  {
+    "label": "Men — 5",
+    "route": "#/work/styling/men",
+    "reference": "references/men-05.jpg",
+    "y": 6266,
+    "page": 5,
+    "key": "men"
+  },
+  {
+    "label": "Rolex Work — 1",
+    "route": "#/work/styling/rolex",
+    "reference": "references/rolex-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "rolex"
+  },
+  {
+    "label": "Progetto Rolex — 2",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-02.jpg",
+    "y": 0,
+    "page": 2,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 3",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-03.jpg",
+    "y": 1556,
+    "page": 3,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 4",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-04.jpg",
+    "y": 3068,
+    "page": 4,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 5",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-05.jpg",
+    "y": 4619,
+    "page": 5,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 6",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-06.jpg",
+    "y": 6248,
+    "page": 6,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 7",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-07.jpg",
+    "y": 7657,
+    "page": 7,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 8",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-08.jpg",
+    "y": 9312,
+    "page": 8,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Progetto Rolex — 9",
+    "route": "#/p/rolex",
+    "reference": "references/rolexProject-09.jpg",
+    "y": 10784,
+    "page": 9,
+    "key": "rolexProject"
+  },
+  {
+    "label": "Creative Direction — 1",
+    "route": "#/work/creative-direction",
+    "reference": "references/creative-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "creative"
+  },
+  {
+    "label": "Creative Direction — 2",
+    "route": "#/work/creative-direction",
+    "reference": "references/creative-02.jpg",
+    "y": 1127,
+    "page": 2,
+    "key": "creative"
+  },
+  {
+    "label": "Work generale — 1",
+    "route": "#/work/all",
+    "reference": "references/all-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "all"
+  },
+  {
+    "label": "Work generale — 2",
+    "route": "#/work/all",
+    "reference": "references/all-02.jpg",
+    "y": 1528,
+    "page": 2,
+    "key": "all"
+  },
+  {
+    "label": "Work generale — 3",
+    "route": "#/work/all",
+    "reference": "references/all-03.jpg",
+    "y": 3167,
+    "page": 3,
+    "key": "all"
+  },
+  {
+    "label": "Holden — 1",
+    "route": "#/p/holden",
+    "reference": "references/holden-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "holden"
+  },
+  {
+    "label": "Holden — 2",
+    "route": "#/p/holden",
+    "reference": "references/holden-02.jpg",
+    "y": 1507,
+    "page": 2,
+    "key": "holden"
+  },
+  {
+    "label": "Holden — 3",
+    "route": "#/p/holden",
+    "reference": "references/holden-03.jpg",
+    "y": 2993,
+    "page": 3,
+    "key": "holden"
+  },
+  {
+    "label": "Holden — 4",
+    "route": "#/p/holden",
+    "reference": "references/holden-04.jpg",
+    "y": 4531,
+    "page": 4,
+    "key": "holden"
+  },
+  {
+    "label": "Holden — 5",
+    "route": "#/p/holden",
+    "reference": "references/holden-05.jpg",
+    "y": 6259,
+    "page": 5,
+    "key": "holden"
+  },
+  {
+    "label": "Holden — 6",
+    "route": "#/p/holden",
+    "reference": "references/holden-06.jpg",
+    "y": 8070,
+    "page": 6,
+    "key": "holden"
+  },
+  {
+    "label": "Holden — 7",
+    "route": "#/p/holden",
+    "reference": "references/holden-07.jpg",
+    "y": 9843,
+    "page": 7,
+    "key": "holden"
+  },
+  {
+    "label": "Battistoni — 1",
+    "route": "#/p/batt",
+    "reference": "references/batt-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "batt"
+  },
+  {
+    "label": "Battistoni — 2",
+    "route": "#/p/batt",
+    "reference": "references/batt-02.jpg",
+    "y": 1600,
+    "page": 2,
+    "key": "batt"
+  },
+  {
+    "label": "Battistoni — 3",
+    "route": "#/p/batt",
+    "reference": "references/batt-03.jpg",
+    "y": 3115,
+    "page": 3,
+    "key": "batt"
+  },
+  {
+    "label": "Battistoni — 4",
+    "route": "#/p/batt",
+    "reference": "references/batt-04.jpg",
+    "y": 4365,
+    "page": 4,
+    "key": "batt"
+  },
+  {
+    "label": "Battistoni — 5",
+    "route": "#/p/batt",
+    "reference": "references/batt-05.jpg",
+    "y": 5601,
+    "page": 5,
+    "key": "batt"
+  },
+  {
+    "label": "Book Magazine — 1",
+    "route": "#/p/book",
+    "reference": "references/book-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "book"
+  },
+  {
+    "label": "Book Magazine — 2",
+    "route": "#/p/book",
+    "reference": "references/book-02.jpg",
+    "y": 1629,
+    "page": 2,
+    "key": "book"
+  },
+  {
+    "label": "Book Magazine — 3",
+    "route": "#/p/book",
+    "reference": "references/book-03.jpg",
+    "y": 3229,
+    "page": 3,
+    "key": "book"
+  },
+  {
+    "label": "Book Magazine — 4",
+    "route": "#/p/book",
+    "reference": "references/book-04.jpg",
+    "y": 4829,
+    "page": 4,
+    "key": "book"
+  },
+  {
+    "label": "Patty B. — 1",
+    "route": "#/p/patty",
+    "reference": "references/patty-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "patty"
+  },
+  {
+    "label": "Patty B. — 2",
+    "route": "#/p/patty",
+    "reference": "references/patty-02.jpg",
+    "y": 1289,
+    "page": 2,
+    "key": "patty"
+  },
+  {
+    "label": "T3DV — 1",
+    "route": "#/p/ecom",
+    "reference": "references/ecom-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "ecom"
+  },
+  {
+    "label": "T3DV — 2",
+    "route": "#/p/ecom",
+    "reference": "references/ecom-02.jpg",
+    "y": 1378,
+    "page": 2,
+    "key": "ecom"
+  },
+  {
+    "label": "T3DV — 3",
+    "route": "#/p/ecom",
+    "reference": "references/ecom-03.jpg",
+    "y": 2807,
+    "page": 3,
+    "key": "ecom"
+  },
+  {
+    "label": "T3DV — 4",
+    "route": "#/p/ecom",
+    "reference": "references/ecom-04.jpg",
+    "y": 4407,
+    "page": 4,
+    "key": "ecom"
+  },
+  {
+    "label": "Lodental — 1",
+    "route": "#/p/loden",
+    "reference": "references/loden-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 2",
+    "route": "#/p/loden",
+    "reference": "references/loden-02.jpg",
+    "y": 1869,
+    "page": 2,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 4",
+    "route": "#/p/loden",
+    "reference": "references/loden-04.jpg",
+    "y": 3580,
+    "page": 4,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 5",
+    "route": "#/p/loden",
+    "reference": "references/loden-05.jpg",
+    "y": 5306,
+    "page": 5,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 6",
+    "route": "#/p/loden",
+    "reference": "references/loden-06.jpg",
+    "y": 6803,
+    "page": 6,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 7",
+    "route": "#/p/loden",
+    "reference": "references/loden-07.jpg",
+    "y": 8248,
+    "page": 7,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 8",
+    "route": "#/p/loden",
+    "reference": "references/loden-08.jpg",
+    "y": 10010,
+    "page": 8,
+    "key": "loden"
+  },
+  {
+    "label": "Lodental — 9",
+    "route": "#/p/loden",
+    "reference": "references/loden-09.jpg",
+    "y": 11846,
+    "page": 9,
+    "key": "loden"
+  },
+  {
+    "label": "New Art Corps — 1",
+    "route": "#/p/nac",
+    "reference": "references/nac-01.jpg",
+    "y": 0,
+    "page": 1,
+    "key": "nac"
+  }
+]

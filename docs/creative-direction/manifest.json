@@ -1,0 +1,4751 @@
+{
+  "referenceArchive": "Archive.zip",
+  "date": "2026-10-06",
+  "referenceImageSize": [
+    2049,
+    2952
+  ],
+  "measuredAt": 1024,
+  "views": {
+    "batt": {
+      "refW": 1111,
+      "refH": 7023.51,
+      "items": [
+        {
+          "src": "img/creative-2026/batt-01-01.jpg",
+          "x": 616.26,
+          "y": 195.29,
+          "w": 384.08,
+          "h": 543.03,
+          "mediaW": 708,
+          "mediaH": 1001,
+          "alt": "batt editorial 1.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-01-02.jpg",
+          "x": 354.78,
+          "y": 767.07,
+          "w": 645.55,
+          "h": 456.38,
+          "mediaW": 1191,
+          "mediaH": 842,
+          "alt": "batt editorial 1.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-01-03.jpg",
+          "x": 213.74,
+          "y": 1254.21,
+          "w": 384.08,
+          "h": 496.22,
+          "mediaW": 709,
+          "mediaH": 916,
+          "alt": "batt editorial 1.3",
+          "fit": "contain",
+          "pending": true,
+          "sourceIncomplete": true
+        },
+        {
+          "src": "img/creative-2026/batt-01-04.jpg",
+          "x": 616.26,
+          "y": 1254.21,
+          "w": 384.08,
+          "h": 496.92,
+          "mediaW": 708,
+          "mediaH": 916,
+          "alt": "batt editorial 1.4",
+          "fit": "contain",
+          "pending": true,
+          "sourceIncomplete": true
+        },
+        {
+          "src": "img/creative-2026/batt-02-01.jpg",
+          "x": 233.27,
+          "y": 1832.5,
+          "w": 640.13,
+          "h": 301.56,
+          "mediaW": 1747,
+          "mediaH": 823,
+          "alt": "batt editorial 2.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-02-02.jpg",
+          "x": 233.27,
+          "y": 2386.91,
+          "w": 810.47,
+          "h": 381.37,
+          "mediaW": 1749,
+          "mediaH": 823,
+          "alt": "batt editorial 2.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-02-03.jpg",
+          "x": 233.27,
+          "y": 2886.0,
+          "w": 810.47,
+          "h": 379.58,
+          "mediaW": 1753,
+          "mediaH": 821,
+          "alt": "batt editorial 2.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-03-01.jpg",
+          "x": 225.67,
+          "y": 3080.79,
+          "w": 809.38,
+          "h": 381.76,
+          "mediaW": 1747,
+          "mediaH": 824,
+          "alt": "batt editorial 3.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-03-02.jpg",
+          "x": 225.67,
+          "y": 3588.55,
+          "w": 809.38,
+          "h": 366.13,
+          "mediaW": 1784,
+          "mediaH": 807,
+          "alt": "batt editorial 3.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-03-03.jpg",
+          "x": 225.67,
+          "y": 4075.69,
+          "w": 809.38,
+          "h": 379.07,
+          "mediaW": 1753,
+          "mediaH": 821,
+          "alt": "batt editorial 3.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-04-01.jpg",
+          "x": 215.91,
+          "y": 4292.76,
+          "w": 809.38,
+          "h": 381.76,
+          "mediaW": 1747,
+          "mediaH": 824,
+          "alt": "batt editorial 4.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-04-02.jpg",
+          "x": 215.91,
+          "y": 4791.85,
+          "w": 809.38,
+          "h": 381.98,
+          "mediaW": 1746,
+          "mediaH": 824,
+          "alt": "batt editorial 4.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-04-03.jpg",
+          "x": 215.91,
+          "y": 5326.73,
+          "w": 809.38,
+          "h": 381.29,
+          "mediaW": 1747,
+          "mediaH": 823,
+          "alt": "batt editorial 4.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-05-01.jpg",
+          "x": 218.08,
+          "y": 5555.67,
+          "w": 809.38,
+          "h": 381.98,
+          "mediaW": 1746,
+          "mediaH": 824,
+          "alt": "batt editorial 5.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-05-02.jpg",
+          "x": 218.08,
+          "y": 6076.45,
+          "w": 809.38,
+          "h": 382.66,
+          "mediaW": 1745,
+          "mediaH": 825,
+          "alt": "batt editorial 5.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/batt-05-03.jpg",
+          "x": 218.08,
+          "y": 6495.24,
+          "w": 809.38,
+          "h": 428.27,
+          "mediaW": 1493,
+          "mediaH": 790,
+          "alt": "batt editorial 5.3",
+          "fit": "contain",
+          "pending": true,
+          "sourceIncomplete": true
+        }
+      ],
+      "frameOffsetsAt1024": [
+        0,
+        1475.0028082808283,
+        2870.859513951395,
+        4022.9174077407743,
+        5162.037335733573
+      ]
+    },
+    "book": {
+      "refW": 1111,
+      "refH": 6496.05,
+      "items": [
+        {
+          "src": "img/creative-2026/book-01-01.jpg",
+          "x": 324.4,
+          "y": 195.29,
+          "w": 340.68,
+          "h": 460.92,
+          "mediaW": 629,
+          "mediaH": 851,
+          "alt": "book editorial 1.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-01-02.jpg",
+          "x": 698.71,
+          "y": 195.29,
+          "w": 336.34,
+          "h": 461.65,
+          "mediaW": 620,
+          "mediaH": 851,
+          "alt": "book editorial 1.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-01-03.jpg",
+          "x": 342.85,
+          "y": 686.78,
+          "w": 661.83,
+          "h": 443.39,
+          "mediaW": 1221,
+          "mediaH": 818,
+          "alt": "book editorial 1.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-01-04.jpg",
+          "x": 363.46,
+          "y": 1157.65,
+          "w": 643.38,
+          "h": 482.54,
+          "mediaW": 1200,
+          "mediaH": 900,
+          "alt": "book editorial 1.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-02-01.jpg",
+          "x": 308.13,
+          "y": 1660.19,
+          "w": 677.02,
+          "h": 466.16,
+          "mediaW": 1249,
+          "mediaH": 860,
+          "alt": "book editorial 2.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-02-02.jpg",
+          "x": 318.98,
+          "y": 2172.29,
+          "w": 658.57,
+          "h": 478.62,
+          "mediaW": 1215,
+          "mediaH": 883,
+          "alt": "book editorial 2.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-02-03.jpg",
+          "x": 318.98,
+          "y": 2691.99,
+          "w": 658.57,
+          "h": 480.24,
+          "mediaW": 1215,
+          "mediaH": 886,
+          "alt": "book editorial 2.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-03-01.jpg",
+          "x": 359.12,
+          "y": 3284.38,
+          "w": 318.98,
+          "h": 460.33,
+          "mediaW": 589,
+          "mediaH": 850,
+          "alt": "book editorial 3.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-03-02.jpg",
+          "x": 701.97,
+          "y": 3284.38,
+          "w": 334.17,
+          "h": 461.11,
+          "mediaW": 616,
+          "mediaH": 850,
+          "alt": "book editorial 3.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-03-03.jpg",
+          "x": 347.19,
+          "y": 3785.63,
+          "w": 630.36,
+          "h": 472.77,
+          "mediaW": 1200,
+          "mediaH": 900,
+          "alt": "book editorial 3.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-03-04.jpg",
+          "x": 360.21,
+          "y": 4311.84,
+          "w": 622.77,
+          "h": 467.08,
+          "mediaW": 1200,
+          "mediaH": 900,
+          "alt": "book editorial 3.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-01.jpg",
+          "x": 118.26,
+          "y": 4876.02,
+          "w": 183.36,
+          "h": 149.72,
+          "mediaW": 1014,
+          "mediaH": 828,
+          "alt": "book editorial 4.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-02.jpg",
+          "x": 318.98,
+          "y": 4876.02,
+          "w": 193.12,
+          "h": 149.72,
+          "mediaW": 356,
+          "mediaH": 276,
+          "alt": "book editorial 4.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-03.jpg",
+          "x": 531.63,
+          "y": 4876.02,
+          "w": 183.36,
+          "h": 149.28,
+          "mediaW": 1017,
+          "mediaH": 828,
+          "alt": "book editorial 4.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-04.jpg",
+          "x": 735.6,
+          "y": 4876.02,
+          "w": 195.29,
+          "h": 149.72,
+          "mediaW": 360,
+          "mediaH": 276,
+          "alt": "book editorial 4.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-05.jpg",
+          "x": 118.26,
+          "y": 5030.08,
+          "w": 183.36,
+          "h": 134.54,
+          "mediaW": 1014,
+          "mediaH": 744,
+          "alt": "book editorial 4.5",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-06.jpg",
+          "x": 318.98,
+          "y": 5030.08,
+          "w": 193.12,
+          "h": 134.54,
+          "mediaW": 356,
+          "mediaH": 248,
+          "alt": "book editorial 4.6",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-07.jpg",
+          "x": 531.63,
+          "y": 5030.08,
+          "w": 183.36,
+          "h": 134.14,
+          "mediaW": 1017,
+          "mediaH": 744,
+          "alt": "book editorial 4.7",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-08.jpg",
+          "x": 735.6,
+          "y": 5030.08,
+          "w": 195.29,
+          "h": 134.54,
+          "mediaW": 360,
+          "mediaH": 248,
+          "alt": "book editorial 4.8",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-09.jpg",
+          "x": 118.26,
+          "y": 5180.89,
+          "w": 183.36,
+          "h": 141.04,
+          "mediaW": 1014,
+          "mediaH": 780,
+          "alt": "book editorial 4.9",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-10.jpg",
+          "x": 318.98,
+          "y": 5180.89,
+          "w": 193.12,
+          "h": 141.04,
+          "mediaW": 356,
+          "mediaH": 260,
+          "alt": "book editorial 4.10",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-11.jpg",
+          "x": 531.63,
+          "y": 5180.89,
+          "w": 183.36,
+          "h": 140.63,
+          "mediaW": 1017,
+          "mediaH": 780,
+          "alt": "book editorial 4.11",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-12.jpg",
+          "x": 735.6,
+          "y": 5180.89,
+          "w": 195.29,
+          "h": 141.04,
+          "mediaW": 360,
+          "mediaH": 260,
+          "alt": "book editorial 4.12",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-13.jpg",
+          "x": 118.26,
+          "y": 5328.44,
+          "w": 183.36,
+          "h": 137.25,
+          "mediaW": 1014,
+          "mediaH": 759,
+          "alt": "book editorial 4.13",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-14.jpg",
+          "x": 318.98,
+          "y": 5328.44,
+          "w": 193.12,
+          "h": 137.25,
+          "mediaW": 356,
+          "mediaH": 253,
+          "alt": "book editorial 4.14",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-15.jpg",
+          "x": 531.63,
+          "y": 5328.44,
+          "w": 183.36,
+          "h": 136.84,
+          "mediaW": 1017,
+          "mediaH": 759,
+          "alt": "book editorial 4.15",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-16.jpg",
+          "x": 735.6,
+          "y": 5328.44,
+          "w": 195.29,
+          "h": 137.25,
+          "mediaW": 1080,
+          "mediaH": 759,
+          "alt": "book editorial 4.16",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-17.jpg",
+          "x": 118.26,
+          "y": 5476.0,
+          "w": 183.36,
+          "h": 145.38,
+          "mediaW": 338,
+          "mediaH": 268,
+          "alt": "book editorial 4.17",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-18.jpg",
+          "x": 318.98,
+          "y": 5476.0,
+          "w": 193.12,
+          "h": 145.38,
+          "mediaW": 1068,
+          "mediaH": 804,
+          "alt": "book editorial 4.18",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-19.jpg",
+          "x": 531.63,
+          "y": 5476.0,
+          "w": 183.36,
+          "h": 144.96,
+          "mediaW": 1017,
+          "mediaH": 804,
+          "alt": "book editorial 4.19",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-20.jpg",
+          "x": 735.6,
+          "y": 5476.0,
+          "w": 195.29,
+          "h": 145.38,
+          "mediaW": 1080,
+          "mediaH": 804,
+          "alt": "book editorial 4.20",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-21.jpg",
+          "x": 118.26,
+          "y": 5630.06,
+          "w": 183.36,
+          "h": 145.38,
+          "mediaW": 338,
+          "mediaH": 268,
+          "alt": "book editorial 4.21",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-22.jpg",
+          "x": 318.98,
+          "y": 5630.06,
+          "w": 193.12,
+          "h": 145.38,
+          "mediaW": 356,
+          "mediaH": 268,
+          "alt": "book editorial 4.22",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-23.jpg",
+          "x": 531.63,
+          "y": 5630.06,
+          "w": 183.36,
+          "h": 144.96,
+          "mediaW": 339,
+          "mediaH": 268,
+          "alt": "book editorial 4.23",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-24.jpg",
+          "x": 735.6,
+          "y": 5630.06,
+          "w": 195.29,
+          "h": 145.38,
+          "mediaW": 1080,
+          "mediaH": 804,
+          "alt": "book editorial 4.24",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-25.jpg",
+          "x": 118.26,
+          "y": 5793.89,
+          "w": 183.36,
+          "h": 125.86,
+          "mediaW": 1014,
+          "mediaH": 696,
+          "alt": "book editorial 4.25",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-26.jpg",
+          "x": 318.98,
+          "y": 5793.89,
+          "w": 193.12,
+          "h": 125.86,
+          "mediaW": 1068,
+          "mediaH": 696,
+          "alt": "book editorial 4.26",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-27.jpg",
+          "x": 531.63,
+          "y": 5793.89,
+          "w": 183.36,
+          "h": 125.48,
+          "mediaW": 339,
+          "mediaH": 232,
+          "alt": "book editorial 4.27",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-28.jpg",
+          "x": 735.6,
+          "y": 5793.89,
+          "w": 195.29,
+          "h": 125.86,
+          "mediaW": 1080,
+          "mediaH": 696,
+          "alt": "book editorial 4.28",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-29.jpg",
+          "x": 118.26,
+          "y": 5930.6,
+          "w": 183.36,
+          "h": 141.04,
+          "mediaW": 1014,
+          "mediaH": 780,
+          "alt": "book editorial 4.29",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-30.jpg",
+          "x": 318.98,
+          "y": 5930.6,
+          "w": 193.12,
+          "h": 141.04,
+          "mediaW": 1068,
+          "mediaH": 780,
+          "alt": "book editorial 4.30",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-31.jpg",
+          "x": 531.63,
+          "y": 5930.6,
+          "w": 183.36,
+          "h": 140.63,
+          "mediaW": 1017,
+          "mediaH": 780,
+          "alt": "book editorial 4.31",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-32.jpg",
+          "x": 735.6,
+          "y": 5930.6,
+          "w": 195.29,
+          "h": 141.04,
+          "mediaW": 1080,
+          "mediaH": 780,
+          "alt": "book editorial 4.32",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-33.jpg",
+          "x": 118.26,
+          "y": 6082.49,
+          "w": 183.36,
+          "h": 143.21,
+          "mediaW": 338,
+          "mediaH": 264,
+          "alt": "book editorial 4.33",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-34.jpg",
+          "x": 318.98,
+          "y": 6082.49,
+          "w": 193.12,
+          "h": 143.21,
+          "mediaW": 1068,
+          "mediaH": 792,
+          "alt": "book editorial 4.34",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-35.jpg",
+          "x": 531.63,
+          "y": 6082.49,
+          "w": 183.36,
+          "h": 142.79,
+          "mediaW": 1017,
+          "mediaH": 792,
+          "alt": "book editorial 4.35",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-36.jpg",
+          "x": 735.6,
+          "y": 6082.49,
+          "w": 195.29,
+          "h": 143.21,
+          "mediaW": 1080,
+          "mediaH": 792,
+          "alt": "book editorial 4.36",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-37.jpg",
+          "x": 118.26,
+          "y": 6232.22,
+          "w": 183.36,
+          "h": 163.83,
+          "mediaW": 338,
+          "mediaH": 302,
+          "alt": "book editorial 4.37",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-38.jpg",
+          "x": 318.98,
+          "y": 6232.22,
+          "w": 193.12,
+          "h": 163.83,
+          "mediaW": 1068,
+          "mediaH": 906,
+          "alt": "book editorial 4.38",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-39.jpg",
+          "x": 531.63,
+          "y": 6232.22,
+          "w": 183.36,
+          "h": 163.35,
+          "mediaW": 1017,
+          "mediaH": 906,
+          "alt": "book editorial 4.39",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/book-04-40.jpg",
+          "x": 735.6,
+          "y": 6232.22,
+          "w": 195.29,
+          "h": 163.83,
+          "mediaW": 1080,
+          "mediaH": 906,
+          "alt": "book editorial 4.40",
+          "fit": "contain"
+        }
+      ],
+      "frameOffsetsAt1024": [
+        0,
+        1501.1852745274527,
+        2976.1852745274527,
+        4451.185274527453
+      ]
+    },
+    "holden": {
+      "refW": 1111,
+      "refH": 11323.94,
+      "items": [
+        {
+          "src": "img/creative-2026/holden-01-01.jpg",
+          "x": 572.86,
+          "y": 144.3,
+          "w": 375.4,
+          "h": 500.41,
+          "mediaW": 1039,
+          "mediaH": 1385,
+          "alt": "holden editorial 1.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-01-02.jpg",
+          "x": 291.85,
+          "y": 681.36,
+          "w": 337.42,
+          "h": 477.5,
+          "mediaW": 713,
+          "mediaH": 1009,
+          "alt": "holden editorial 1.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-01-03.jpg",
+          "x": 709.56,
+          "y": 681.36,
+          "w": 231.1,
+          "h": 477.39,
+          "mediaW": 426,
+          "mediaH": 880,
+          "alt": "holden editorial 1.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-01-04.jpg",
+          "x": 349.36,
+          "y": 1219.5,
+          "w": 270.16,
+          "h": 420.02,
+          "mediaW": 649,
+          "mediaH": 1009,
+          "alt": "holden editorial 1.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-01-05.jpg",
+          "x": 631.45,
+          "y": 1222.75,
+          "w": 310.3,
+          "h": 414.01,
+          "mediaW": 742,
+          "mediaH": 990,
+          "alt": "holden editorial 1.5",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-02-01.jpg",
+          "x": 282.09,
+          "y": 1665.56,
+          "w": 650.98,
+          "h": 867.97,
+          "mediaW": 1200,
+          "mediaH": 1600,
+          "alt": "holden editorial 2.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-02-02.jpg",
+          "x": 282.09,
+          "y": 2571.5,
+          "w": 650.98,
+          "h": 867.97,
+          "mediaW": 1200,
+          "mediaH": 1600,
+          "alt": "holden editorial 2.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-02-03.jpg",
+          "x": 335.25,
+          "y": 3488.3,
+          "w": 586.96,
+          "h": 415.03,
+          "mediaW": 1427,
+          "mediaH": 1009,
+          "alt": "holden editorial 2.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-03-01.jpg",
+          "x": 261.48,
+          "y": 3929.37,
+          "w": 578.28,
+          "h": 408.89,
+          "mediaW": 1427,
+          "mediaH": 1009,
+          "alt": "holden editorial 3.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-03-02.jpg",
+          "x": 260.39,
+          "y": 4370.95,
+          "w": 285.34,
+          "h": 507.27,
+          "mediaW": 900,
+          "mediaH": 1600,
+          "alt": "holden editorial 3.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-03-03.jpg",
+          "x": 562.01,
+          "y": 4367.69,
+          "w": 284.26,
+          "h": 505.35,
+          "mediaW": 900,
+          "mediaH": 1600,
+          "alt": "holden editorial 3.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-03-04.jpg",
+          "x": 269.07,
+          "y": 4935.13,
+          "w": 231.1,
+          "h": 358.08,
+          "mediaW": 475,
+          "mediaH": 736,
+          "alt": "holden editorial 3.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-03-05.jpg",
+          "x": 550.08,
+          "y": 4916.68,
+          "w": 283.17,
+          "h": 379.18,
+          "mediaW": 581,
+          "mediaH": 778,
+          "alt": "holden editorial 3.5",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-04-01.jpg",
+          "x": 206.14,
+          "y": 5346.85,
+          "w": 349.36,
+          "h": 465.99,
+          "mediaW": 644,
+          "mediaH": 859,
+          "alt": "holden editorial 4.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-04-02.jpg",
+          "x": 627.11,
+          "y": 5371.81,
+          "w": 288.6,
+          "h": 441.04,
+          "mediaW": 532,
+          "mediaH": 813,
+          "alt": "holden editorial 4.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-04-03.jpg",
+          "x": 519.7,
+          "y": 5854.61,
+          "w": 346.1,
+          "h": 432.54,
+          "mediaW": 1073,
+          "mediaH": 1341,
+          "alt": "holden editorial 4.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-04-04.jpg",
+          "x": 218.08,
+          "y": 6323.32,
+          "w": 652.06,
+          "h": 370.27,
+          "mediaW": 1592,
+          "mediaH": 904,
+          "alt": "holden editorial 4.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-04-05.jpg",
+          "x": 218.08,
+          "y": 6737.77,
+          "w": 657.49,
+          "h": 373.35,
+          "mediaW": 1592,
+          "mediaH": 904,
+          "alt": "holden editorial 4.5",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-05-01.jpg",
+          "x": 487.15,
+          "y": 7152.35,
+          "w": 393.84,
+          "h": 525.12,
+          "mediaW": 2250,
+          "mediaH": 3000,
+          "alt": "holden editorial 5.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-05-02.jpg",
+          "x": 202.89,
+          "y": 7737.14,
+          "w": 304.87,
+          "h": 541.99,
+          "mediaW": 900,
+          "mediaH": 1600,
+          "alt": "holden editorial 5.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-05-03.jpg",
+          "x": 566.35,
+          "y": 7778.37,
+          "w": 261.48,
+          "h": 464.85,
+          "mediaW": 900,
+          "mediaH": 1600,
+          "alt": "holden editorial 5.3",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-05-04.jpg",
+          "x": 556.58,
+          "y": 8318.68,
+          "w": 309.21,
+          "h": 549.71,
+          "mediaW": 900,
+          "mediaH": 1600,
+          "alt": "holden editorial 5.4",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-06-01.jpg",
+          "x": 282.09,
+          "y": 8898.77,
+          "w": 650.98,
+          "h": 867.97,
+          "mediaW": 1200,
+          "mediaH": 1600,
+          "alt": "holden editorial 6.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-06-02.jpg",
+          "x": 282.09,
+          "y": 9803.63,
+          "w": 650.98,
+          "h": 867.97,
+          "mediaW": 2250,
+          "mediaH": 3000,
+          "alt": "holden editorial 6.2",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-07-01.jpg",
+          "x": 266.9,
+          "y": 10724.77,
+          "w": 249.54,
+          "h": 453.43,
+          "mediaW": 1651,
+          "mediaH": 3000,
+          "alt": "holden editorial 7.1",
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/holden-07-02.jpg",
+          "x": 544.65,
+          "y": 10724.77,
+          "w": 366.72,
+          "h": 499.17,
+          "mediaW": 2204,
+          "mediaH": 3000,
+          "alt": "holden editorial 7.2",
+          "fit": "contain"
+        }
+      ],
+      "frameOffsetsAt1024": [
+        0,
+        1389.1305583624494,
+        2758.662258236038,
+        4176.146524662681,
+        5769.259399659992,
+        7437.925358255851,
+        9071.92733392719
+      ]
+    },
+    "creative": {
+      "refW": 1111,
+      "refH": 2732.12,
+      "items": [
+        {
+          "src": "img/creative-2026/creative-01-01.jpg",
+          "x": 275.58,
+          "y": 134.54,
+          "w": 358.04,
+          "h": 418.16,
+          "mediaW": 661,
+          "mediaH": 772,
+          "alt": "New Art Corps",
+          "fit": "contain",
+          "t": "New Art Corps",
+          "c": "Creative Direction",
+          "open": "nac"
+        },
+        {
+          "src": "img/creative-2026/creative-01-02.jpg",
+          "x": 700.88,
+          "y": 184.44,
+          "w": 322.23,
+          "h": 401.07,
+          "mediaW": 1075,
+          "mediaH": 1338,
+          "alt": "The Hollywood Reporter Roma",
+          "fit": "contain",
+          "t": "The Hollywood Reporter Roma",
+          "c": "Creative Direction",
+          "open": "thr"
+        },
+        {
+          "src": "img/creative-2026/creative-01-03.jpg",
+          "x": 97.65,
+          "y": 624.94,
+          "w": 317.89,
+          "h": 423.76,
+          "mediaW": 1039,
+          "mediaH": 1385,
+          "alt": "Holden",
+          "fit": "contain",
+          "t": "Holden",
+          "c": "Creative Direction",
+          "open": "holden"
+        },
+        {
+          "src": "img/creative-2026/creative-01-04.jpg",
+          "x": 546.82,
+          "y": 677.02,
+          "w": 360.21,
+          "h": 425.65,
+          "mediaW": 1354,
+          "mediaH": 1600,
+          "alt": "Roma Magazine",
+          "fit": "contain",
+          "t": "Roma Magazine",
+          "c": "Creative Direction",
+          "open": "roma"
+        },
+        {
+          "src": "img/creative-2026/creative-01-05.jpg",
+          "x": 176.85,
+          "y": 1183.69,
+          "w": 756.22,
+          "h": 388.05,
+          "mediaW": 1674,
+          "mediaH": 859,
+          "alt": "Interactive E-Commerce",
+          "fit": "contain",
+          "t": "Interactive E-Commerce",
+          "c": "Creative Direction",
+          "open": "ecom"
+        },
+        {
+          "src": "img/creative-2026/creative-02-01.jpg",
+          "x": 84.63,
+          "y": 1687.11,
+          "w": 335.25,
+          "h": 416.14,
+          "mediaW": 1289,
+          "mediaH": 1600,
+          "alt": "Federica Tosi",
+          "fit": "contain",
+          "t": "Federica Tosi",
+          "c": "Creative Direction",
+          "open": null
+        },
+        {
+          "src": "img/creative-2026/creative-02-02.jpg",
+          "x": 511.02,
+          "y": 1773.91,
+          "w": 504.51,
+          "h": 238.52,
+          "mediaW": 1745,
+          "mediaH": 825,
+          "alt": "Battistoni",
+          "fit": "contain",
+          "t": "Battistoni",
+          "c": "Creative Direction",
+          "open": "batt"
+        },
+        {
+          "src": "img/creative-2026/creative-02-03.jpg",
+          "x": 172.51,
+          "y": 2184.03,
+          "w": 405.78,
+          "h": 405.78,
+          "mediaW": 1080,
+          "mediaH": 1080,
+          "alt": "Lodental",
+          "fit": "contain",
+          "t": "Lodental",
+          "c": "Creative Direction",
+          "open": "loden"
+        },
+        {
+          "src": "img/creative-2026/creative-02-04.jpg",
+          "x": 713.9,
+          "y": 2254.55,
+          "w": 283.17,
+          "h": 377.57,
+          "mediaW": 2250,
+          "mediaH": 3000,
+          "alt": "Patty B.",
+          "fit": "contain",
+          "t": "Patty B.",
+          "c": "Creative Direction",
+          "open": "patty"
+        }
+      ],
+      "frameOffsetsAt1024": [
+        0,
+        1039
+      ]
+    },
+    "all": {
+      "refW": 1111,
+      "refH": 4693.25,
+      "items": [
+        {
+          "src": "img/creative-2026/all-01-01.jpg",
+          "x": 333.08,
+          "y": 134.54,
+          "w": 295.11,
+          "h": 344.39,
+          "mediaW": 545,
+          "mediaH": 636,
+          "alt": "New Art Corps",
+          "fit": "contain",
+          "t": "New Art Corps",
+          "c": "Creative Direction",
+          "open": "nac"
+        },
+        {
+          "src": "img/creative-2026/all-01-02.jpg",
+          "x": 718.24,
+          "y": 173.59,
+          "w": 261.48,
+          "h": 349.08,
+          "mediaW": 788,
+          "mediaH": 1052,
+          "alt": "Rolex",
+          "fit": "contain",
+          "t": "Rolex",
+          "c": "Styling",
+          "open": "rolex"
+        },
+        {
+          "src": "img/creative-2026/all-01-03.jpg",
+          "x": 58.59,
+          "y": 583.71,
+          "w": 272.33,
+          "h": 363.02,
+          "mediaW": 1039,
+          "mediaH": 1385,
+          "alt": "Holden",
+          "fit": "contain",
+          "t": "Holden",
+          "c": "Creative Direction",
+          "open": "holden"
+        },
+        {
+          "src": "img/creative-2026/all-01-04.jpg",
+          "x": 389.5,
+          "y": 546.82,
+          "w": 275.58,
+          "h": 367.44,
+          "mediaW": 1200,
+          "mediaH": 1600,
+          "alt": "\u201960s Mod",
+          "fit": "contain",
+          "t": "\u201960s Mod",
+          "c": "Styling",
+          "open": "women"
+        },
+        {
+          "src": "img/creative-2026/all-01-05.jpg",
+          "x": 735.6,
+          "y": 596.73,
+          "w": 295.11,
+          "h": 367.31,
+          "mediaW": 1075,
+          "mediaH": 1338,
+          "alt": "The Hollywood Reporter Roma",
+          "fit": "contain",
+          "t": "The Hollywood Reporter Roma",
+          "c": "Creative Direction",
+          "open": "thr"
+        },
+        {
+          "src": "img/creative-2026/all-01-06.jpg",
+          "x": 205.06,
+          "y": 991.65,
+          "w": 292.94,
+          "h": 390.59,
+          "mediaW": 1200,
+          "mediaH": 1600,
+          "alt": "In with the new",
+          "fit": "contain",
+          "t": "In with the new",
+          "c": "Styling",
+          "open": "men"
+        },
+        {
+          "src": "img/creative-2026/all-01-07.jpg",
+          "x": 584.79,
+          "y": 1022.03,
+          "w": 285.34,
+          "h": 337.18,
+          "mediaW": 1354,
+          "mediaH": 1600,
+          "alt": "Roma Magazine",
+          "fit": "contain",
+          "t": "Roma Magazine",
+          "c": "Creative Direction",
+          "open": "roma"
+        },
+        {
+          "src": "img/creative-2026/all-01-08.jpg",
+          "x": 174.68,
+          "y": 1472.29,
+          "w": 713.9,
+          "h": 366.33,
+          "mediaW": 1674,
+          "mediaH": 859,
+          "alt": "Interactive E-Commerce",
+          "fit": "contain",
+          "t": "Interactive E-Commerce",
+          "c": "Creative Direction",
+          "open": "ecom"
+        },
+        {
+          "src": "img/creative-2026/all-02-01.jpg",
+          "x": 142.13,
+          "y": 1924.34,
+          "w": 403.61,
+          "h": 403.61,
+          "mediaW": 1080,
+          "mediaH": 1080,
+          "alt": "Lodental",
+          "fit": "contain",
+          "t": "Lodental",
+          "c": "Creative Direction",
+          "open": "loden"
+        },
+        {
+          "src": "img/creative-2026/all-02-02.jpg",
+          "x": 626.02,
+          "y": 1893.96,
+          "w": 350.44,
+          "h": 467.25,
+          "mediaW": 1200,
+          "mediaH": 1600,
+          "alt": "Nouveau Bohemian",
+          "fit": "contain",
+          "t": "Nouveau Bohemian",
+          "c": "Styling",
+          "open": "women"
+        },
+        {
+          "src": "img/creative-2026/all-02-03.jpg",
+          "x": 203.97,
+          "y": 2428.84,
+          "w": 350.44,
+          "h": 262.83,
+          "mediaW": 1200,
+          "mediaH": 900,
+          "alt": "Luca Argentero",
+          "fit": "contain",
+          "t": "Luca Argentero",
+          "c": "Styling",
+          "open": "men"
+        },
+        {
+          "src": "img/creative-2026/all-02-04.jpg",
+          "x": 614.09,
+          "y": 2428.84,
+          "w": 273.41,
+          "h": 435.07,
+          "mediaW": 504,
+          "mediaH": 802,
+          "alt": "Book Magazine",
+          "fit": "contain",
+          "t": "Book Magazine",
+          "c": "Creative Direction",
+          "open": "book"
+        },
+        {
+          "src": "img/creative-2026/all-02-05.jpg",
+          "x": 180.1,
+          "y": 2963.73,
+          "w": 750.79,
+          "h": 561.46,
+          "mediaW": 920,
+          "mediaH": 688,
+          "alt": "Forward Thinking",
+          "fit": "contain",
+          "t": "Forward Thinking",
+          "c": "Styling",
+          "open": "women"
+        },
+        {
+          "src": "img/creative-2026/all-03-01.jpg",
+          "x": 94.39,
+          "y": 3619.58,
+          "w": 335.25,
+          "h": 416.14,
+          "mediaW": 1289,
+          "mediaH": 1600,
+          "alt": "Federica Tosi",
+          "fit": "contain",
+          "t": "Federica Tosi",
+          "c": "Creative Direction",
+          "open": null
+        },
+        {
+          "src": "img/creative-2026/all-03-02.jpg",
+          "x": 518.61,
+          "y": 3684.68,
+          "w": 504.51,
+          "h": 238.52,
+          "mediaW": 1745,
+          "mediaH": 825,
+          "alt": "Battistoni",
+          "fit": "contain",
+          "t": "Battistoni",
+          "c": "Creative Direction",
+          "open": "batt"
+        },
+        {
+          "src": "img/creative-2026/all-03-03.jpg",
+          "x": 52.08,
+          "y": 4194.61,
+          "w": 318.98,
+          "h": 398.64,
+          "mediaW": 945,
+          "mediaH": 1181,
+          "alt": "Effetto Notte",
+          "fit": "contain",
+          "t": "Effetto Notte",
+          "c": "Styling",
+          "open": "men"
+        },
+        {
+          "src": "img/creative-2026/all-03-04.jpg",
+          "x": 403.61,
+          "y": 4138.19,
+          "w": 284.26,
+          "h": 379.01,
+          "mediaW": 2250,
+          "mediaH": 3000,
+          "alt": "Patty B.",
+          "fit": "contain",
+          "t": "Patty B.",
+          "c": "Creative Direction",
+          "open": "patty"
+        },
+        {
+          "src": "img/creative-2026/all-03-05.jpg",
+          "x": 735.6,
+          "y": 4169.66,
+          "w": 318.98,
+          "h": 399.27,
+          "mediaW": 588,
+          "mediaH": 736,
+          "alt": "Alexandra Richards",
+          "fit": "contain",
+          "t": "Alexandra Richards",
+          "c": "Styling",
+          "open": "women"
+        }
+      ],
+      "frameOffsetsAt1024": [
+        0,
+        1408.6447813710756,
+        2919.139450173696
+      ]
+    },
+    "patty": {
+      "refW": 1111,
+      "refH": 2941.15,
+      "items": [
+        {
+          "src": "img/creative-2026/patty-01-01.jpg",
+          "alt": "Patty artwork 1\u20131",
+          "x": 602.15,
+          "y": 162.74,
+          "w": 406.86,
+          "h": 543.02,
+          "mediaW": 750,
+          "mediaH": 1001,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/patty-01-02.jpg",
+          "alt": "Patty artwork 1\u20132",
+          "x": 339.59,
+          "y": 731.26,
+          "w": 682.44,
+          "h": 526.87,
+          "mediaW": 1259,
+          "mediaH": 972,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/patty-01-03.jpg",
+          "alt": "Patty artwork 1\u20133",
+          "x": 339.59,
+          "y": 1284.59,
+          "w": 350.44,
+          "h": 465.81,
+          "mediaW": 647,
+          "mediaH": 860,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/patty-02-01.jpg",
+          "alt": "Patty artwork 2\u20131",
+          "x": 328.74,
+          "y": 1771.01,
+          "w": 690.04,
+          "h": 515.5,
+          "mediaW": 1273,
+          "mediaH": 951,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/patty-02-02.jpg",
+          "alt": "Patty artwork 2\u20132",
+          "x": 477.38,
+          "y": 2313.49,
+          "w": 394.93,
+          "h": 527.66,
+          "mediaW": 729,
+          "mediaH": 974,
+          "fit": "contain"
+        }
+      ],
+      "frameOffsetsAt1024": {
+        "1": 0,
+        "2": 1188.3299729972996
+      }
+    },
+    "ecom": {
+      "refW": 1111,
+      "refH": 5614.06,
+      "items": [
+        {
+          "t": "vid",
+          "src": "video/creative-2026/t3dv.mp4",
+          "poster": "img/creative-2026/ecom-video-poster.jpg",
+          "alt": "T3DV interactive walk-through",
+          "x": 278.83,
+          "y": 221.33,
+          "w": 692.21,
+          "h": 389.5,
+          "mediaW": 638,
+          "mediaH": 359
+        },
+        {
+          "src": "img/creative-2026/ecom-01-02.jpg",
+          "alt": "Ecom artwork 1\u20132",
+          "x": 278.83,
+          "y": 636.87,
+          "w": 692.21,
+          "h": 355.33,
+          "mediaW": 2400,
+          "mediaH": 1232,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-01-03.jpg",
+          "alt": "Ecom artwork 1\u20133",
+          "x": 278.83,
+          "y": 1017.69,
+          "w": 692.21,
+          "h": 478.2,
+          "mediaW": 2400,
+          "mediaH": 1658,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-01-04.jpg",
+          "alt": "Ecom artwork 1\u20134",
+          "x": 278.83,
+          "y": 1520.03,
+          "w": 692.21,
+          "h": 355.33,
+          "mediaW": 2400,
+          "mediaH": 1232,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-02-01.jpg",
+          "alt": "Ecom artwork 2\u20131",
+          "x": 283.17,
+          "y": 2016.94,
+          "w": 693.29,
+          "h": 355.89,
+          "mediaW": 2400,
+          "mediaH": 1232,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-02-02.jpg",
+          "alt": "Ecom artwork 2\u20132",
+          "x": 283.17,
+          "y": 2405.36,
+          "w": 693.29,
+          "h": 346.07,
+          "mediaW": 2400,
+          "mediaH": 1198,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-02-03.jpg",
+          "alt": "Ecom artwork 2\u20133",
+          "x": 284.26,
+          "y": 2782.92,
+          "w": 692.21,
+          "h": 355.33,
+          "mediaW": 2400,
+          "mediaH": 1232,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-03-01.jpg",
+          "alt": "Ecom artwork 3\u20131",
+          "x": 254.97,
+          "y": 3159.41,
+          "w": 691.12,
+          "h": 352.76,
+          "mediaW": 2400,
+          "mediaH": 1225,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-03-02.jpg",
+          "alt": "Ecom artwork 3\u20132",
+          "x": 250.63,
+          "y": 3629.19,
+          "w": 695.46,
+          "h": 354.68,
+          "mediaW": 2400,
+          "mediaH": 1224,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-03-03.jpg",
+          "alt": "Ecom artwork 3\u20133",
+          "x": 250.63,
+          "y": 4005.68,
+          "w": 695.46,
+          "h": 357.87,
+          "mediaW": 2400,
+          "mediaH": 1235,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-04-01.jpg",
+          "alt": "Ecom artwork 4\u20131",
+          "x": 259.31,
+          "y": 4429.9,
+          "w": 691.12,
+          "h": 334.04,
+          "mediaW": 2400,
+          "mediaH": 1160,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-04-02.jpg",
+          "alt": "Ecom artwork 4\u20132",
+          "x": 259.31,
+          "y": 4793.36,
+          "w": 691.12,
+          "h": 354.77,
+          "mediaW": 2400,
+          "mediaH": 1232,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/ecom-04-03.jpg",
+          "alt": "Ecom artwork 4\u20133",
+          "x": 259.31,
+          "y": 5177.43,
+          "w": 691.12,
+          "h": 336.63,
+          "mediaW": 2400,
+          "mediaH": 1169,
+          "fit": "contain"
+        }
+      ],
+      "frameOffsetsAt1024": {
+        "1": 0,
+        "2": 1270,
+        "3": 2587,
+        "4": 4062
+      }
+    },
+    "loden": {
+      "refW": 1111,
+      "refH": 15184.38,
+      "items": [
+        {
+          "src": "img/creative-2026/loden-01-01.jpg",
+          "alt": "Loden artwork 1\u20131",
+          "x": 380.82,
+          "y": 162.74,
+          "w": 585.88,
+          "h": 585.88,
+          "mediaW": 1080,
+          "mediaH": 1080,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-01-02.jpg",
+          "alt": "Loden artwork 1\u20132",
+          "x": 380.82,
+          "y": 777.92,
+          "w": 585.88,
+          "h": 585.88,
+          "mediaW": 1080,
+          "mediaH": 1080,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-01-03.jpg",
+          "alt": "Loden artwork 1\u20133",
+          "x": 543.57,
+          "y": 1392.0,
+          "w": 415.54,
+          "h": 623.31,
+          "mediaW": 762,
+          "mediaH": 1143,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-02-01.jpg",
+          "alt": "Loden artwork 2\u20131",
+          "x": 269.07,
+          "y": 2058.17,
+          "w": 699.8,
+          "h": 467.17,
+          "mediaW": 1468,
+          "mediaH": 980,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-02-02.jpg",
+          "alt": "Loden artwork 2\u20132",
+          "x": 269.07,
+          "y": 2567.02,
+          "w": 699.8,
+          "h": 466.85,
+          "mediaW": 1469,
+          "mediaH": 980,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-02-03.jpg",
+          "alt": "Loden artwork 2\u20133",
+          "x": 269.07,
+          "y": 3086.71,
+          "w": 699.8,
+          "h": 466.85,
+          "mediaW": 1469,
+          "mediaH": 980,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-04-01.jpg",
+          "alt": "Loden artwork 4\u20131",
+          "x": 297.28,
+          "y": 3704.06,
+          "w": 699.8,
+          "h": 466.53,
+          "mediaW": 2400,
+          "mediaH": 1600,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-04-02.jpg",
+          "alt": "Loden artwork 4\u20132",
+          "x": 297.28,
+          "y": 4203.14,
+          "w": 699.8,
+          "h": 699.8,
+          "mediaW": 1372,
+          "mediaH": 1372,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-04-03.jpg",
+          "alt": "Loden artwork 4\u20133",
+          "x": 447.0,
+          "y": 4970.21,
+          "w": 529.46,
+          "h": 443.18,
+          "mediaW": 1080,
+          "mediaH": 904,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-05-01.jpg",
+          "alt": "Loden artwork 5\u20131",
+          "x": 349.36,
+          "y": 5441.59,
+          "w": 632.53,
+          "h": 409.76,
+          "mediaW": 1167,
+          "mediaH": 756,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-05-02.jpg",
+          "alt": "Loden artwork 5\u20132",
+          "x": 349.36,
+          "y": 5878.83,
+          "w": 632.53,
+          "h": 405.43,
+          "mediaW": 1167,
+          "mediaH": 748,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-05-03.jpg",
+          "alt": "Loden artwork 5\u20133",
+          "x": 308.13,
+          "y": 6399.61,
+          "w": 325.49,
+          "h": 422.43,
+          "mediaW": 601,
+          "mediaH": 780,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-05-04.jpg",
+          "alt": "Loden artwork 5\u20134",
+          "x": 656.4,
+          "y": 6399.61,
+          "w": 373.23,
+          "h": 423.98,
+          "mediaW": 956,
+          "mediaH": 1086,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-06-01.jpg",
+          "alt": "Loden artwork 6\u20131",
+          "x": 541.4,
+          "y": 6924.12,
+          "w": 494.74,
+          "h": 494.74,
+          "mediaW": 913,
+          "mediaH": 913,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-06-02.jpg",
+          "alt": "Loden artwork 6\u20132",
+          "x": 426.39,
+          "y": 7451.41,
+          "w": 609.75,
+          "h": 406.78,
+          "mediaW": 1469,
+          "mediaH": 980,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-06-03.jpg",
+          "alt": "Loden artwork 6\u20133",
+          "x": 426.39,
+          "y": 7896.24,
+          "w": 609.75,
+          "h": 406.78,
+          "mediaW": 1469,
+          "mediaH": 980,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-07-01.jpg",
+          "alt": "Loden artwork 7\u20131",
+          "x": 387.33,
+          "y": 8372.54,
+          "w": 538.14,
+          "h": 479.61,
+          "mediaW": 993,
+          "mediaH": 885,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-07-02.jpg",
+          "alt": "Loden artwork 7\u20132",
+          "x": 481.72,
+          "y": 8929.13,
+          "w": 541.4,
+          "h": 496.42,
+          "mediaW": 999,
+          "mediaH": 916,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-07-03.jpg",
+          "alt": "Loden artwork 7\u20133",
+          "x": 542.48,
+          "y": 9479.2,
+          "w": 461.11,
+          "h": 651.74,
+          "mediaW": 2264,
+          "mediaH": 3200,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-08-01.jpg",
+          "alt": "Loden artwork 8\u20131",
+          "x": 369.97,
+          "y": 10167.07,
+          "w": 641.21,
+          "h": 647.09,
+          "mediaW": 2400,
+          "mediaH": 2422,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-08-02.jpg",
+          "alt": "Loden artwork 8\u20132",
+          "x": 634.7,
+          "y": 10837.57,
+          "w": 374.31,
+          "h": 498.0,
+          "mediaW": 690,
+          "mediaH": 918,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-08-03.jpg",
+          "alt": "Loden artwork 8\u20133",
+          "x": 292.94,
+          "y": 11386.56,
+          "w": 716.07,
+          "h": 583.97,
+          "mediaW": 1328,
+          "mediaH": 1083,
+          "fit": "contain"
+        },
+        {
+          "src": "img/creative-2026/loden-09-01.jpg",
+          "alt": "Loden artwork 9\u20131",
+          "x": 328.74,
+          "y": 11970.53,
+          "w": 716.07,
+          "h": 508.39,
+          "mediaW": 1424,
+          "mediaH": 1011,
+          "fit": "contain"
+        },
+        {
+          "t": "vid",
+          "src": "video/creative-2026/lodental-2-ragazze.mp4",
+          "poster": "img/creative-2026/lodental-2-ragazze-poster.jpg",
+          "alt": "Lodental campaign film",
+          "x": 347.19,
+          "y": 12594.39,
+          "w": 678.1,
+          "h": 381.91,
+          "mediaW": 625,
+          "mediaH": 352
+        },
+        {
+          "t": "vid",
+          "src": "video/creative-2026/girls-4k.mp4",
+          "poster": "img/creative-2026/girls-4k-poster.jpg",
+          "alt": "Lodental campaign film",
+          "x": 347.19,
+          "y": 13071.77,
+          "w": 678.1,
+          "h": 381.91,
+          "mediaW": 625,
+          "mediaH": 352
+        },
+        {
+          "t": "vid",
+          "src": "video/creative-2026/lodental-3.mp4",
+          "poster": "img/creative-2026/lodental-3-poster.jpg",
+          "alt": "Lodental campaign film",
+          "x": 347.19,
+          "y": 13549.15,
+          "w": 678.1,
+          "h": 381.91,
+          "mediaW": 625,
+          "mediaH": 352
+        },
+        {
+          "t": "vid",
+          "src": "video/creative-2026/lodental-2018.mp4",
+          "poster": "img/creative-2026/lodental-2018-poster.jpg",
+          "alt": "Lodental campaign film",
+          "x": 347.19,
+          "y": 14026.53,
+          "w": 678.1,
+          "h": 381.91,
+          "mediaW": 625,
+          "mediaH": 352
+        },
+        {
+          "src": "img/creative-2026/loden-09-06.jpg",
+          "alt": "Loden artwork 9\u20136",
+          "x": 328.74,
+          "y": 14547.32,
+          "w": 716.07,
+          "h": 537.06,
+          "mediaW": 1200,
+          "mediaH": 900,
+          "fit": "contain"
+        }
+      ],
+      "frameOffsetsAt1024": {
+        "1": 0,
+        "2": 1723,
+        "4": 3300,
+        "5": 4890.474074074074,
+        "6": 6269.905793245991,
+        "7": 7601.905793245991,
+        "8": 9225.905793245991,
+        "9": 10918.14359702637
+      }
+    },
+    "nac": {
+      "refW": 1111,
+      "refH": 1164.34,
+      "items": [
+        {
+          "src": "img/creative-2026/nac-01-01.jpg",
+          "alt": "Nac artwork 1\u20131",
+          "x": 290.77,
+          "y": 202.89,
+          "w": 234.35,
+          "h": 197.46,
+          "mediaW": 432,
+          "mediaH": 364,
+          "fit": "contain"
+        },
+        {
+          "t": "vid",
+          "src": "video/creative-2026/nac-logo-clean.mp4",
+          "poster": "img/creative-2026/nac-clean-poster.jpg",
+          "alt": "New Art Corps animation",
+          "x": 266.9,
+          "y": 507.76,
+          "w": 322.23,
+          "h": 556.58,
+          "mediaW": 297,
+          "mediaH": 513
+        },
+        {
+          "t": "vid",
+          "src": "video/newartcorps-scroll-vertical.mp4",
+          "poster": "video/newartcorps-scroll-poster.jpg",
+          "alt": "New Art Corps animation",
+          "x": 667.25,
+          "y": 202.89,
+          "w": 305.96,
+          "h": 542.48,
+          "mediaW": 282,
+          "mediaH": 500
+        },
+        {
+          "t": "vid",
+          "src": "video/creative-2026/nac-lettering-crop.mp4",
+          "poster": "img/creative-2026/nac-lettering-crop-poster.jpg",
+          "alt": "New Art Corps animation",
+          "x": 721.5,
+          "y": 880.99,
+          "w": 253.88,
+          "h": 145.38,
+          "mediaW": 320,
+          "mediaH": 194,
+          "rate": 1.3
+        }
+      ],
+      "frameOffsetsAt1024": {
+        "1": 0
+      }
+    }
+  },
+  "assets": [
+    {
+      "file": "img/creative-2026/batt-01-01.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI1.jpg",
+      "boxAt1024": [
+        568,
+        180,
+        922,
+        680
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        708,
+        1001
+      ]
+    },
+    {
+      "file": "img/creative-2026/batt-01-02.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI1.jpg",
+      "boxAt1024": [
+        327,
+        707,
+        922,
+        1128
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        1191,
+        842
+      ]
+    },
+    {
+      "file": "img/creative-2026/batt-01-03.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI1.jpg",
+      "boxAt1024": [
+        197,
+        1156,
+        551,
+        1475
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        709,
+        916
+      ]
+    },
+    {
+      "file": "img/creative-2026/batt-01-04.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI1.jpg",
+      "boxAt1024": [
+        568,
+        1156,
+        922,
+        1475
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        708,
+        916
+      ]
+    },
+    {
+      "file": "img/creative-2026/batt-02-01.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI2.jpg",
+      "boxAt1024": [
+        215,
+        214,
+        805,
+        635
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114811_Screen-Shot-2017-07-22-at-12-51-49-jpg.png",
+      "size": [
+        1747,
+        823
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-02-02.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI2.jpg",
+      "boxAt1024": [
+        215,
+        725,
+        962,
+        1076
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114832_Screen-Shot-2017-07-22-at-12-52-03-jpg.png",
+      "size": [
+        1749,
+        823
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-02-03.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI2.jpg",
+      "boxAt1024": [
+        215,
+        1185,
+        962,
+        1475
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114825_Screen-Shot-2017-07-22-at-12-52-30-jpg.png",
+      "size": [
+        1753,
+        821
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-03-01.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI3.jpg",
+      "boxAt1024": [
+        208,
+        190,
+        954,
+        574
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114818_Screen-Shot-2017-07-22-at-12-52-11-jpg.png",
+      "size": [
+        1747,
+        824
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-03-02.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI3.jpg",
+      "boxAt1024": [
+        208,
+        658,
+        954,
+        1011
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114839_Screen-Shot-2017-07-22-at-12-53-33-jpg.png",
+      "size": [
+        1784,
+        807
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-03-03.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI3.jpg",
+      "boxAt1024": [
+        208,
+        1107,
+        954,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/batt/001_Screen-Shot-2017-07-22-at-12-53-14.jpg",
+      "size": [
+        1753,
+        821
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/batt-04-01.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI4.jpg",
+      "boxAt1024": [
+        199,
+        202,
+        945,
+        541
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114846_Screen-Shot-2017-07-22-at-12-53-51-jpg.png",
+      "size": [
+        1747,
+        824
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-04-02.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI4.jpg",
+      "boxAt1024": [
+        199,
+        662,
+        945,
+        1014
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114797_Screen-Shot-2017-07-22-at-12-52-48.jpg",
+      "size": [
+        1746,
+        824
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-04-03.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI4.jpg",
+      "boxAt1024": [
+        199,
+        1155,
+        945,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/batt/004_Screen-Shot-2017-07-22-at-12-54-10.jpg",
+      "size": [
+        1747,
+        823
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/batt-05-01.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI5.jpg",
+      "boxAt1024": [
+        201,
+        214,
+        947,
+        568
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114860_Screen-Shot-2017-07-22-at-12-54-20.jpg",
+      "size": [
+        1746,
+        824
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-05-02.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI5.jpg",
+      "boxAt1024": [
+        201,
+        694,
+        947,
+        1049
+      ],
+      "status": "recovered-original",
+      "native": "https://d3zr9vspdnjxi.cloudfront.net/sites/tommaso1/bgr/3114804_Screen-Shot-2017-07-22-at-12-55-41.jpg",
+      "size": [
+        1745,
+        825
+      ],
+      "note": "Complete screenshot recovered from Tommaso original public portfolio; no artificial continuation."
+    },
+    {
+      "file": "img/creative-2026/batt-05-03.jpg",
+      "reference": "Battistoni_Layout/PAGINA X LAYOUT BATTISTONI5.jpg",
+      "boxAt1024": [
+        201,
+        1080,
+        947,
+        1475
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        1493,
+        790
+      ],
+      "note": "Final source screenshot ends before this website design is complete. Exact full image/continuation must be requested; provisional supplied portion retained."
+    },
+    {
+      "file": "img/creative-2026/book-01-01.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK1.jpg",
+      "boxAt1024": [
+        299,
+        180,
+        613,
+        605
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        629,
+        851
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-01-02.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK1.jpg",
+      "boxAt1024": [
+        644,
+        180,
+        954,
+        605
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        620,
+        851
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-01-03.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK1.jpg",
+      "boxAt1024": [
+        316,
+        633,
+        926,
+        1042
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        1221,
+        818
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-01-04.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK1.jpg",
+      "boxAt1024": [
+        335,
+        1067,
+        928,
+        1475
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/008_DOPPIA-LACROIX-SCHIAPARELLI1.jpg",
+      "size": [
+        1200,
+        900
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-02-01.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK2.jpg",
+      "boxAt1024": [
+        284,
+        29,
+        908,
+        459
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        1249,
+        860
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-02-02.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK2.jpg",
+      "boxAt1024": [
+        294,
+        501,
+        901,
+        942
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        1215,
+        883
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-02-03.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK2.jpg",
+      "boxAt1024": [
+        294,
+        980,
+        901,
+        1423
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        1215,
+        886
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-03-01.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK3.jpg",
+      "boxAt1024": [
+        331,
+        51,
+        625,
+        476
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        589,
+        850
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-03-02.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK3.jpg",
+      "boxAt1024": [
+        647,
+        51,
+        955,
+        476
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        616,
+        850
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-03-03.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK3.jpg",
+      "boxAt1024": [
+        320,
+        513,
+        901,
+        971
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/006_DOPPIA-APERTURA-ALAIA.jpg",
+      "size": [
+        1200,
+        900
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-03-04.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK3.jpg",
+      "boxAt1024": [
+        332,
+        998,
+        906,
+        1438
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/007_DOPPIA-ALAIA.jpg",
+      "size": [
+        1200,
+        900
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-01.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        43,
+        278,
+        181
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/022_DOPPIA-BOOK-COUTURE-CATHLEEN1.jpg",
+      "size": [
+        1014,
+        828
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-02.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        43,
+        472,
+        181
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        356,
+        276
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-03.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        43,
+        659,
+        181
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/018_DOPPIA-TARTARUGA-CARTIER.jpg",
+      "size": [
+        1017,
+        828
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-04.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        43,
+        858,
+        181
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        360,
+        276
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-05.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        185,
+        278,
+        309
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/024_DOPPIA-BOOK-COUTURE-CATHLEEN2.jpg",
+      "size": [
+        1014,
+        744
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-06.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        185,
+        472,
+        309
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        356,
+        248
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-07.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        185,
+        659,
+        309
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/016_DOPPIA-JEWELRY-CHOPARD.jpg",
+      "size": [
+        1017,
+        744
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-08.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        185,
+        858,
+        309
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        360,
+        248
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-09.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        324,
+        278,
+        454
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/023_DOPPIA-BOOK-COUTURE-CATHLEEN3.jpg",
+      "size": [
+        1014,
+        780
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-10.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        324,
+        472,
+        454
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        356,
+        260
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-11.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        324,
+        659,
+        454
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/012_DOPPIA-JEWELRY-TIFFANY1.jpg",
+      "size": [
+        1017,
+        780
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-12.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        324,
+        858,
+        454
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        360,
+        260
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-13.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        460,
+        278,
+        586
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/025_DOPPIA-BOOK-COUTURE-CATHLEEN4.jpg",
+      "size": [
+        1014,
+        759
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-14.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        460,
+        472,
+        586
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        356,
+        253
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-15.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        460,
+        659,
+        586
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/013_DOPPIA-JEWELRY-TIFFANY2.jpg",
+      "size": [
+        1017,
+        759
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-16.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        460,
+        858,
+        586
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/026_DOPPIA-BACKSTAGE1.jpg",
+      "size": [
+        1080,
+        759
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-17.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        596,
+        278,
+        730
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        338,
+        268
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-18.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        596,
+        472,
+        730
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/011_DOPPIA-DIOR-IMPRESSIONS.jpg",
+      "size": [
+        1068,
+        804
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-19.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        596,
+        659,
+        730
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/017_DOPPIA-VAN-CLEEF.jpg",
+      "size": [
+        1017,
+        804
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-20.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        596,
+        858,
+        730
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/027_DOPPIA-BACKSTAGE2.jpg",
+      "size": [
+        1080,
+        804
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-21.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        738,
+        278,
+        872
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        338,
+        268
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-22.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        738,
+        472,
+        872
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        356,
+        268
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-23.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        738,
+        659,
+        872
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        339,
+        268
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-24.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        738,
+        858,
+        872
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/034_DOPPIA-BACKSTAGE-UOMO1.jpg",
+      "size": [
+        1080,
+        804
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-25.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        889,
+        278,
+        1005
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/037_DOPPIA-AVEDON1.jpg",
+      "size": [
+        1014,
+        696
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-26.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        889,
+        472,
+        1005
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/020_DOPPIA-JEWELRY-BULGARI1.jpg",
+      "size": [
+        1068,
+        696
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-27.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        889,
+        659,
+        1005
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        339,
+        232
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-28.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        889,
+        858,
+        1005
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/035_DOPPIA-BACKSTAGE-UOMO2.jpg",
+      "size": [
+        1080,
+        696
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-29.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        1015,
+        278,
+        1145
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/038_DOPPIA-AVEDON2.jpg",
+      "size": [
+        1014,
+        780
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-30.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        1015,
+        472,
+        1145
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/021_DOPPIA-JEWELRY-BULGARI2.jpg",
+      "size": [
+        1068,
+        780
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-31.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        1015,
+        659,
+        1145
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/028_DOPPIA-CARTIER1.jpg",
+      "size": [
+        1017,
+        780
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-32.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        1015,
+        858,
+        1145
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/033_DOPPIA-SURF-CLUB1.jpg",
+      "size": [
+        1080,
+        780
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-33.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        1155,
+        278,
+        1287
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        338,
+        264
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-34.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        1155,
+        472,
+        1287
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/014_DOPPIA-JEWELRY-TESORI1.jpg",
+      "size": [
+        1068,
+        792
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-35.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        1155,
+        659,
+        1287
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/029_DOPPIA-AUDEMARS-PIGUET.jpg",
+      "size": [
+        1017,
+        792
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-36.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        1155,
+        858,
+        1287
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/039_DOPPIA-BEYOND-THE-VEIL.jpg",
+      "size": [
+        1080,
+        792
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-37.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        109,
+        1293,
+        278,
+        1444
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        338,
+        302
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-38.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        294,
+        1293,
+        472,
+        1444
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/019_DOPPIA-UCCELLI-CARTIER.jpg",
+      "size": [
+        1068,
+        906
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-39.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        490,
+        1293,
+        659,
+        1444
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/030_DOPPIA-WATCHES-RALPH-LAUREN.jpg",
+      "size": [
+        1017,
+        906
+      ]
+    },
+    {
+      "file": "img/creative-2026/book-04-40.jpg",
+      "reference": "Book_Magazine_Layout/PAGINA X LAYOUT BOOK4.jpg",
+      "boxAt1024": [
+        678,
+        1293,
+        858,
+        1444
+      ],
+      "status": "native-spread",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/book/032_DOPPIA-JUDE-LAW1.jpg",
+      "size": [
+        1080,
+        906
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-01-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN1.jpg",
+      "boxAt1024": [
+        528,
+        133,
+        874,
+        595
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/001_foto-cover-holden-x-newsletter-valentine-s-day.jpg",
+      "size": [
+        1039,
+        1385
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-01-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN1.jpg",
+      "boxAt1024": [
+        269,
+        628,
+        580,
+        1068
+      ],
+      "status": "native-panel",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/017_homepage-x-sito-mio1.jpg",
+      "size": [
+        713,
+        1009
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-01-03.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN1.jpg",
+      "boxAt1024": [
+        654,
+        628,
+        867,
+        1068
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        426,
+        880
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-01-04.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN1.jpg",
+      "boxAt1024": [
+        322,
+        1124,
+        571,
+        1475
+      ],
+      "status": "native-panel",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/018_homepage-x-sito-mio1copy.jpg",
+      "size": [
+        649,
+        1009
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-01-05.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN1.jpg",
+      "boxAt1024": [
+        582,
+        1127,
+        868,
+        1475
+      ],
+      "status": "native-panel",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/018_homepage-x-sito-mio1copy.jpg",
+      "size": [
+        742,
+        990
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-02-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN2.jpg",
+      "boxAt1024": [
+        302,
+        146,
+        662,
+        627
+      ],
+      "status": "native-asset",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/foto cover holden x newsletter montagna3 copy.jpg",
+      "size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-02-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN2.jpg",
+      "boxAt1024": [
+        482,
+        661,
+        842,
+        1143
+      ],
+      "status": "native-asset",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/holden x newsletter7 copy.jpg",
+      "size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-02-03.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN2.jpg",
+      "boxAt1024": [
+        309,
+        1186,
+        850,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/007_holden-x-sito-mio-3.jpg",
+      "size": [
+        1427,
+        1009
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-03-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN3.jpg",
+      "boxAt1024": [
+        241,
+        223,
+        774,
+        599
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/008_holden-x-sito-mio-4.jpg",
+      "size": [
+        1427,
+        1009
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-03-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN3.jpg",
+      "boxAt1024": [
+        240,
+        630,
+        503,
+        1095
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/015_holden-orange-2.jpg",
+      "size": [
+        900,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-03-03.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN3.jpg",
+      "boxAt1024": [
+        518,
+        627,
+        780,
+        1095
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/014_holden-rosa.jpg",
+      "size": [
+        900,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-03-04.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN3.jpg",
+      "boxAt1024": [
+        248,
+        1150,
+        461,
+        1475
+      ],
+      "status": "native-panel",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/020_holden-x-sito-mio-1.jpg",
+      "size": [
+        475,
+        736
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-03-05.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN3.jpg",
+      "boxAt1024": [
+        507,
+        1133,
+        768,
+        1475
+      ],
+      "status": "native-panel",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/020_holden-x-sito-mio-1.jpg",
+      "size": [
+        581,
+        778
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-04-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN4.jpg",
+      "boxAt1024": [
+        190,
+        112,
+        512,
+        541
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        644,
+        859
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-04-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN4.jpg",
+      "boxAt1024": [
+        578,
+        135,
+        844,
+        541
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        532,
+        813
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-04-03.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN4.jpg",
+      "boxAt1024": [
+        479,
+        580,
+        798,
+        978
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/006_holden-ns-duo-x-sito2.jpg",
+      "size": [
+        1073,
+        1341
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-04-04.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN4.jpg",
+      "boxAt1024": [
+        201,
+        1012,
+        802,
+        1355
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/004_holden-ns-duo2.jpg",
+      "size": [
+        1592,
+        904
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-04-05.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN4.jpg",
+      "boxAt1024": [
+        201,
+        1394,
+        807,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/005_holden-ns-duo1.jpg",
+      "size": [
+        1592,
+        904
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-05-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN5.jpg",
+      "boxAt1024": [
+        449,
+        183,
+        812,
+        667
+      ],
+      "status": "native-asset",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/foto cover holden x newsletter 40%off-1 copy.jpg",
+      "size": [
+        2250,
+        3000
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-05-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN5.jpg",
+      "boxAt1024": [
+        187,
+        722,
+        468,
+        1220
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/010_holden-blurry2.jpg",
+      "size": [
+        900,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-05-03.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN5.jpg",
+      "boxAt1024": [
+        522,
+        760,
+        763,
+        1188
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/009_holden-blurry3.jpg",
+      "size": [
+        900,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-05-04.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN5.jpg",
+      "boxAt1024": [
+        513,
+        1258,
+        798,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/013_holden-blurry.jpg",
+      "size": [
+        900,
+        1600
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/holden-06-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN6.jpg",
+      "boxAt1024": [
+        260,
+        124,
+        860,
+        924
+      ],
+      "status": "native-asset",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/holden graffiti copy.jpg",
+      "size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-06-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN6.jpg",
+      "boxAt1024": [
+        260,
+        958,
+        860,
+        1475
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/foto cover holden x newsletter WINTER SALE4 copy.jpg",
+      "size": [
+        2250,
+        3000
+      ],
+      "note": "Complete supplied master; no stitched boundary."
+    },
+    {
+      "file": "img/creative-2026/holden-07-01.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN7.jpg",
+      "boxAt1024": [
+        246,
+        173,
+        476,
+        591
+      ],
+      "status": "supplied-master-panel",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/HOLDEN FINALE.jpg",
+      "size": [
+        1651,
+        3000
+      ]
+    },
+    {
+      "file": "img/creative-2026/holden-07-02.jpg",
+      "reference": "Layout_Holden/PAGINA X LAYOUT HOLDEN7.jpg",
+      "boxAt1024": [
+        502,
+        173,
+        840,
+        591
+      ],
+      "status": "supplied-master-panel",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/HOLDEN FINALE.jpg",
+      "size": [
+        2204,
+        3000
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-01-01.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD1.jpg",
+      "boxAt1024": [
+        254,
+        124,
+        584,
+        510
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        661,
+        772
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-01-02.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD1.jpg",
+      "boxAt1024": [
+        646,
+        170,
+        943,
+        539
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/thr/001_MICHELE-BRAVI-1200-X-1493.jpg",
+      "size": [
+        1075,
+        1338
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-01-03.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD1.jpg",
+      "boxAt1024": [
+        90,
+        576,
+        383,
+        965
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/001_foto-cover-holden-x-newsletter-valentine-s-day.jpg",
+      "size": [
+        1039,
+        1385
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-01-04.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD1.jpg",
+      "boxAt1024": [
+        504,
+        624,
+        836,
+        1015
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/roma-magazine.jpeg",
+      "size": [
+        1354,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-01-05.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD1.jpg",
+      "boxAt1024": [
+        163,
+        1091,
+        860,
+        1447
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/ecom/001_t3dv-finalone-X-SITO.jpg",
+      "size": [
+        1674,
+        859
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-02-01.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD2.jpg",
+      "boxAt1024": [
+        78,
+        516,
+        387,
+        899
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/federica-tosi.jpeg",
+      "size": [
+        1289,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-02-02.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD2.jpg",
+      "boxAt1024": [
+        471,
+        596,
+        936,
+        819
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/batt/003_Screen-Shot-2017-07-22-at-12-55-41.jpg",
+      "size": [
+        1745,
+        825
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-02-03.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD2.jpg",
+      "boxAt1024": [
+        159,
+        974,
+        533,
+        1348
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/011_lodental-iacovissi.jpg",
+      "size": [
+        1080,
+        1080
+      ]
+    },
+    {
+      "file": "img/creative-2026/creative-02-04.jpg",
+      "reference": "Layout_Creative_Direction/PAGINA X LAYOUT CD2.jpg",
+      "boxAt1024": [
+        658,
+        1039,
+        919,
+        1388
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/patty/patty-b6623.jpg",
+      "size": [
+        2250,
+        3000
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-01.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        307,
+        124,
+        579,
+        442
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        545,
+        636
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-02.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        662,
+        160,
+        903,
+        484
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/rolex-1927.jpeg",
+      "size": [
+        788,
+        1052
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-03.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        54,
+        538,
+        305,
+        872
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/holden/001_foto-cover-holden-x-newsletter-valentine-s-day.jpg",
+      "size": [
+        1039,
+        1385
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-04.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        359,
+        504,
+        613,
+        842
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/styling-2026/general-01-01.jpg",
+      "size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-05.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        678,
+        550,
+        950,
+        890
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/thr/001_MICHELE-BRAVI-1200-X-1493.jpg",
+      "size": [
+        1075,
+        1338
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-06.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        189,
+        914,
+        459,
+        1274
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/in-with-the-new.jpeg",
+      "size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-07.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        539,
+        942,
+        802,
+        1251
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/roma-magazine.jpeg",
+      "size": [
+        1354,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-01-08.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE1.jpg",
+      "boxAt1024": [
+        161,
+        1357,
+        819,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/ecom/001_t3dv-finalone-X-SITO.jpg",
+      "size": [
+        1674,
+        859
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/all-02-01.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE2.jpg",
+      "boxAt1024": [
+        131,
+        365,
+        503,
+        739
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/011_lodental-iacovissi.jpg",
+      "size": [
+        1080,
+        1080
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-02-02.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE2.jpg",
+      "boxAt1024": [
+        577,
+        337,
+        900,
+        767
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/styling-2026/general-01-06.jpg",
+      "size": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-02-03.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE2.jpg",
+      "boxAt1024": [
+        188,
+        830,
+        511,
+        1248
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/men/071_Luca4.jpg",
+      "size": [
+        1200,
+        900
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/all-02-04.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE2.jpg",
+      "boxAt1024": [
+        566,
+        830,
+        818,
+        1231
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        504,
+        802
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-02-05.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE2.jpg",
+      "boxAt1024": [
+        166,
+        1323,
+        858,
+        1475
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/forward-thinking.jpeg",
+      "size": [
+        920,
+        688
+      ],
+      "note": "Complete native image or complete editorial panel replaces overlapping screenshot boundary segments."
+    },
+    {
+      "file": "img/creative-2026/all-03-01.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE3.jpg",
+      "boxAt1024": [
+        87,
+        417,
+        396,
+        802
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/federica-tosi.jpeg",
+      "size": [
+        1289,
+        1600
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-03-02.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE3.jpg",
+      "boxAt1024": [
+        478,
+        477,
+        943,
+        699
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/batt/003_Screen-Shot-2017-07-22-at-12-55-41.jpg",
+      "size": [
+        1745,
+        825
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-03-03.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE3.jpg",
+      "boxAt1024": [
+        48,
+        947,
+        342,
+        1314
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/img/tommy-21sep/work/effetto-notte.jpeg",
+      "size": [
+        945,
+        1181
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-03-04.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE3.jpg",
+      "boxAt1024": [
+        372,
+        895,
+        634,
+        1244
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/patty/patty-b6623.jpg",
+      "size": [
+        2250,
+        3000
+      ]
+    },
+    {
+      "file": "img/creative-2026/all-03-05.jpg",
+      "reference": "Layout_Work_Generale/PAGINA X LAYOUT WORK GENERALE3.jpg",
+      "boxAt1024": [
+        678,
+        924,
+        972,
+        1292
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "size": [
+        588,
+        736
+      ]
+    },
+    {
+      "file": "img/creative-2026/patty-01-01.jpg",
+      "reference": "Patty_b/PAGINA X LAYOUT PATTY B1.jpg",
+      "boxAt1024": [
+        555,
+        150,
+        930,
+        650
+      ],
+      "size": [
+        750,
+        1001
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "note": "Exact campaign artwork including logo and reference orientation; third image reconstructed with validated overlap, displayed once."
+    },
+    {
+      "file": "img/creative-2026/patty-01-02.jpg",
+      "reference": "Patty_b/PAGINA X LAYOUT PATTY B1.jpg",
+      "boxAt1024": [
+        313,
+        674,
+        942,
+        1160
+      ],
+      "size": [
+        1259,
+        972
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "note": "Exact campaign artwork including logo and reference orientation; third image reconstructed with validated overlap, displayed once."
+    },
+    {
+      "file": "img/creative-2026/patty-01-03.jpg",
+      "reference": "Patty_b/PAGINA X LAYOUT PATTY B1.jpg",
+      "boxAt1024": [
+        313,
+        1184,
+        670,
+        1660
+      ],
+      "size": [
+        647,
+        860
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "note": "Exact campaign artwork including logo and reference orientation; third image reconstructed with validated overlap, displayed once."
+    },
+    {
+      "file": "img/creative-2026/patty-02-01.jpg",
+      "reference": "Patty_b/PAGINA X LAYOUT PATTY B2.jpg",
+      "boxAt1024": [
+        303,
+        444,
+        939,
+        919
+      ],
+      "size": [
+        1273,
+        951
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "note": "Exact campaign artwork including logo and reference orientation; third image reconstructed with validated overlap, displayed once."
+    },
+    {
+      "file": "img/creative-2026/patty-02-02.jpg",
+      "reference": "Patty_b/PAGINA X LAYOUT PATTY B2.jpg",
+      "boxAt1024": [
+        440,
+        944,
+        804,
+        1431
+      ],
+      "size": [
+        729,
+        974
+      ],
+      "status": "reference-extraction",
+      "native": null,
+      "note": "Exact campaign artwork including logo and reference orientation; third image reconstructed with validated overlap, displayed once."
+    },
+    {
+      "file": "img/creative-2026/ecom-01-02.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV1.jpg",
+      "boxAt1024": [
+        257,
+        587,
+        895,
+        914
+      ],
+      "size": [
+        2400,
+        1232
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/floral finalone copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-01-03.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV1.jpg",
+      "boxAt1024": [
+        257,
+        938,
+        895,
+        1379
+      ],
+      "size": [
+        2400,
+        1658
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/punk finalone3crop copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-01-04.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV1.jpg",
+      "boxAt1024": [
+        257,
+        1401,
+        895,
+        1728
+      ],
+      "size": [
+        2400,
+        1232
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/veduta t3dv X SITO copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-02-01.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV2.jpg",
+      "boxAt1024": [
+        261,
+        589,
+        900,
+        917
+      ],
+      "size": [
+        2400,
+        1232
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/veduta t3dv X SITO.1 copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-02-02.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV2.jpg",
+      "boxAt1024": [
+        261,
+        947,
+        900,
+        1266
+      ],
+      "size": [
+        2400,
+        1198
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/Screenshot 2022-03-09 at 23.19.19 copy.png"
+    },
+    {
+      "file": "img/creative-2026/ecom-02-03.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV2.jpg",
+      "boxAt1024": [
+        262,
+        1295,
+        900,
+        1622
+      ],
+      "size": [
+        2400,
+        1232
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/veduta t3dv X SITO.2 copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-03-01.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV3.jpg",
+      "boxAt1024": [
+        235,
+        325,
+        872,
+        650
+      ],
+      "size": [
+        2400,
+        1225
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/Screenshot 2022-03-11 at 17.58.02 copy.png"
+    },
+    {
+      "file": "img/creative-2026/ecom-03-02.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV3.jpg",
+      "boxAt1024": [
+        231,
+        758,
+        872,
+        1085
+      ],
+      "size": [
+        2400,
+        1224
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/HALL ROTUNDA X SITO copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-03-03.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV3.jpg",
+      "boxAt1024": [
+        231,
+        1105,
+        872,
+        1435
+      ],
+      "size": [
+        2400,
+        1235
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/veduta t3dv X SITO.6 copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-04-01.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV4.jpg",
+      "boxAt1024": [
+        239,
+        21,
+        876,
+        329
+      ],
+      "size": [
+        2400,
+        1160
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/hublot diamond solo copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-04-02.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV4.jpg",
+      "boxAt1024": [
+        239,
+        356,
+        876,
+        683
+      ],
+      "size": [
+        2400,
+        1232
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/watches t3dv x sito copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/ecom-04-03.jpg",
+      "reference": "T3DV/PAGINA X LAYOUT T3DV4.jpg",
+      "boxAt1024": [
+        239,
+        710,
+        876,
+        1020
+      ],
+      "size": [
+        2400,
+        1169
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference-2/T3DV/T3DV/hublot blu silver copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-01-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL1.jpg",
+      "boxAt1024": [
+        351,
+        150,
+        891,
+        690
+      ],
+      "size": [
+        1080,
+        1080
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/011_lodental-iacovissi.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-01-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL1.jpg",
+      "boxAt1024": [
+        351,
+        717,
+        891,
+        1256
+      ],
+      "size": [
+        1080,
+        1080
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/010_lodental-iacovissi2.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-01-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL1.jpg",
+      "boxAt1024": [
+        501,
+        1283,
+        884,
+        1858
+      ],
+      "size": [
+        762,
+        1143
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/cappotti fabbrica.tiff"
+    },
+    {
+      "file": "img/creative-2026/loden-02-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL2.jpg",
+      "boxAt1024": [
+        248,
+        174,
+        893,
+        604
+      ],
+      "size": [
+        1468,
+        980
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/001_lodental-x-sito7.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-02-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL2.jpg",
+      "boxAt1024": [
+        248,
+        643,
+        893,
+        1084
+      ],
+      "size": [
+        1469,
+        980
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/007_lodental-x-sito4.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-02-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL2.jpg",
+      "boxAt1024": [
+        248,
+        1122,
+        893,
+        1552
+      ],
+      "size": [
+        1469,
+        980
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/005_lodental-x-sito2.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-04-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL4.jpg",
+      "boxAt1024": [
+        274,
+        114,
+        919,
+        543
+      ],
+      "size": [
+        2400,
+        1600
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/lodental:sergio rossi copy.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-04-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL4.jpg",
+      "boxAt1024": [
+        274,
+        574,
+        919,
+        1219
+      ],
+      "size": [
+        1372,
+        1372
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/PITTI 2018.tiff"
+    },
+    {
+      "file": "img/creative-2026/loden-04-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL4.jpg",
+      "boxAt1024": [
+        274,
+        1281,
+        919,
+        1926
+      ],
+      "size": [
+        1080,
+        904
+      ],
+      "status": "supplied-master-panel",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/insta6.jpg",
+      "note": "Only empty top/bottom margins removed; complete portrait and lettering retained."
+    },
+    {
+      "file": "img/creative-2026/loden-05-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL5.jpg",
+      "boxAt1024": [
+        322,
+        125,
+        905,
+        503
+      ],
+      "size": [
+        1167,
+        756
+      ],
+      "status": "reference-extraction",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/002_lodental-x-sito5.jpg",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 23.3, aspect delta 0.030)."
+    },
+    {
+      "file": "img/creative-2026/loden-05-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL5.jpg",
+      "boxAt1024": [
+        322,
+        528,
+        905,
+        902
+      ],
+      "size": [
+        1167,
+        748
+      ],
+      "status": "reference-extraction",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/003_lodental-x-sito6.jpg",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 25.8, aspect delta 0.040)."
+    },
+    {
+      "file": "img/creative-2026/loden-05-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL5.jpg",
+      "boxAt1024": [
+        284,
+        1008,
+        584,
+        1398
+      ],
+      "size": [
+        601,
+        780
+      ],
+      "status": "reference-extraction",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/170108_Lodental_Uomo_2231.jpg",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 40.7, aspect delta 0.134)."
+    },
+    {
+      "file": "img/creative-2026/loden-05-04.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL5.jpg",
+      "boxAt1024": [
+        605,
+        1008,
+        949,
+        1398
+      ],
+      "size": [
+        956,
+        1086
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/cappotto giallo e vaso.png"
+    },
+    {
+      "file": "img/creative-2026/loden-06-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL6.jpg",
+      "boxAt1024": [
+        499,
+        112,
+        955,
+        568
+      ],
+      "size": [
+        913,
+        913
+      ],
+      "status": "reference-extraction",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/lodental : iacovissi6.jpg",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 24.8, aspect delta 0.000)."
+    },
+    {
+      "file": "img/creative-2026/loden-06-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL6.jpg",
+      "boxAt1024": [
+        393,
+        598,
+        955,
+        973
+      ],
+      "size": [
+        1469,
+        980
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/004_lodental-x-sito3.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-06-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL6.jpg",
+      "boxAt1024": [
+        393,
+        1008,
+        955,
+        1382
+      ],
+      "size": [
+        1469,
+        980
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/006_lodental-x-sito1.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-07-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL7.jpg",
+      "boxAt1024": [
+        357,
+        115,
+        853,
+        557
+      ],
+      "size": [
+        993,
+        885
+      ],
+      "status": "reference-extraction",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/1800s austrian gentleman.tiff",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 61.4, aspect delta 0.109)."
+    },
+    {
+      "file": "img/creative-2026/loden-07-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL7.jpg",
+      "boxAt1024": [
+        444,
+        628,
+        943,
+        1086
+      ],
+      "size": [
+        999,
+        916
+      ],
+      "status": "reference-extraction",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/insta10.jpg",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 36.3, aspect delta 0.083)."
+    },
+    {
+      "file": "img/creative-2026/loden-07-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL7.jpg",
+      "boxAt1024": [
+        500,
+        1135,
+        925,
+        1736
+      ],
+      "size": [
+        2264,
+        3200
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/bon marche'.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-08-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL8.jpg",
+      "boxAt1024": [
+        341,
+        145,
+        932,
+        737
+      ],
+      "size": [
+        2400,
+        2422
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/IMG_8214.JPG"
+    },
+    {
+      "file": "img/creative-2026/loden-08-02.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL8.jpg",
+      "boxAt1024": [
+        585,
+        763,
+        930,
+        1222
+      ],
+      "size": [
+        690,
+        918
+      ],
+      "status": "reference-extraction",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/LODENTAL 'IN VETTA ' BAGS 2019 copy.jpg",
+      "note": "Exact complete reference artwork preserves logo position; native variant differs (RMS 13.6, aspect delta 0.002)."
+    },
+    {
+      "file": "img/creative-2026/loden-08-03.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL8.jpg",
+      "boxAt1024": [
+        270,
+        1269,
+        930,
+        1741
+      ],
+      "size": [
+        1328,
+        1083
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/009_cappe-lodental.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-09-01.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL9.jpg",
+      "boxAt1024": [
+        303,
+        115,
+        963,
+        584
+      ],
+      "size": [
+        1424,
+        1011
+      ],
+      "status": "native-asset",
+      "native": "/Users/francescoevangelista/Documents/GitHub/tommasoconcina/originali/loden/008_lodental-x-sito8.jpg"
+    },
+    {
+      "file": "img/creative-2026/loden-09-06.jpg",
+      "reference": "Lodental/PAGINA X LAYOUT LODENTAL9.jpg",
+      "boxAt1024": [
+        303,
+        2490,
+        963,
+        2985
+      ],
+      "size": [
+        1200,
+        900
+      ],
+      "status": "supplied-master",
+      "native": "/tmp/tc-creative-reference/Layout_Holden/HOLDEN/lodental instagram1.jpg"
+    },
+    {
+      "file": "img/creative-2026/nac-01-01.jpg",
+      "reference": "New_Artcotps/PAGINA X LAYOUT NEW ART CORPS.jpg",
+      "boxAt1024": [
+        268,
+        187,
+        484,
+        369
+      ],
+      "size": [
+        432,
+        364
+      ],
+      "status": "reference-extraction",
+      "native": null
+    }
+  ],
+  "decisions": [
+    "Work generale explicitly authorized",
+    "Holden cover enlargement explicitly authorized: match page 6 width 600 and natural full-image ratio",
+    "No reference annotations exposed",
+    "Repeated boundary photographs retained once and completed",
+    "Unpositioned supplied videos not injected into image-only mockups"
+  ],
+  "secondReferenceArchive": "Archive 2.zip",
+  "missingReferencePages": [
+    "Lodental page 3 absent in Archive 2.zip and extracted source folders"
+  ],
+  "openIssues": [
+    {
+      "project": "batt",
+      "file": "img/creative-2026/batt-05-03.jpg",
+      "issue": "Last provided frame cuts artwork at its bottom; complete source absent from provided archive and original public portfolio. Kept as an invisible technical slot, excluded from mobile and lightbox.",
+      "status": "requires-full-master"
+    },
+    {
+      "project": "loden",
+      "issue": "Page 3 missing from Archive 2.zip and extracted source folder; no invented content.",
+      "status": "requires-reference"
+    },
+    {
+      "project": "batt",
+      "file": "img/creative-2026/batt-01-03.jpg",
+      "issue": "Reference frames skip a middle strip of the advertisement; complete source absent. Hidden technical slot; requires full original.",
+      "status": "requires-full-master"
+    },
+    {
+      "project": "batt",
+      "file": "img/creative-2026/batt-01-04.jpg",
+      "issue": "Reference frames skip a middle strip of the advertisement; complete source absent. Hidden technical slot; requires full original.",
+      "status": "requires-full-master"
+    }
+  ]
+}
